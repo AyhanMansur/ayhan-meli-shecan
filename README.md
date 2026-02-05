@@ -81,7 +81,7 @@
 ---
 
 با عشق ❤️  
-برای روزهای سخت اینترنت ایران                                        All collected configs:
+برای روزهای سخت اینترنت ایران                                       👇🏼All collected configs
 ```
 https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_Sub.txt
 ```
