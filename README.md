@@ -190,3 +190,7 @@ Config List 14:
 https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub14.txt
 ```
 
+Config List 15:
+```
+https://singbox.umc-mansur91.workers.dev/b6c4fd0a-bc55-49ea-b278-5478e291aad3/sub#fvnm
+```
