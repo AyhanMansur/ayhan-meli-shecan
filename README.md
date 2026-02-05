@@ -196,5 +196,4 @@ https://singbox.umc-mansur91.workers.dev/b6c4fd0a-bc55-49ea-b278-5478e291aad3/su
 ```
 Config List 16:
 ```
-https://singbox.umc-mansur91.workers.dev/b6c4fd0a-bc55-49ea-b278-5478e291aad3/sub#fvnm
 ```https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/Countries/Kazakhstan.txt
