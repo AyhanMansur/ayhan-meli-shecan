@@ -12,7 +12,7 @@
 
 ## ⬇️ دانلود فایل کانفیگ اتصال
 
-[⬇️ دانلود مستقیم فایل melishekan-nv_01.npv](blob:https://github.com/6d2b1bb9-74cf-4e81-b846-fa4ecb8e11f3)
+[⬇️ دانلود مستقیم فایل melishekan-nv_01.npv](https://github.com/6d2b1bb9-74cf-4e81-b846-fa4ecb8e11f3)
 
 ---
 
