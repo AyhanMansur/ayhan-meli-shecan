@@ -81,4 +81,112 @@
 ---
 
 با عشق ❤️  
-برای روزهای سخت اینترنت ایران
+برای روزهای سخت اینترنت ایران                                        All collected configs:
+```
+https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_Sub.txt
+```
+
+If the above link doesn't work, try the base 64 configurations:
+```
+https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_base64_Sub.txt
+```
+
+
+### Splited by protocol:
+
+Vless:
+```
+https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/vless.txt
+```
+
+Vmess:
+```
+https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/vmess.txt
+```
+
+ss:
+```
+https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/ss.txt
+```
+
+ssr:
+```
+https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/ssr.txt
+```
+
+Trojan:
+```
+https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/trojan.txt
+```
+
+### Splited in 250 count of configs:
+
+Config List 1:
+```
+https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub1.txt
+```
+Config List 2:
+```
+https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub2.txt
+```
+
+Config List 3:
+```
+https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub3.txt
+```
+
+Config List 4:
+```
+https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub4.txt
+```
+
+Config List 5:
+```
+https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub5.txt
+```
+
+Config List 6:
+```
+https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub6.txt
+```
+
+Config List 7:
+```
+https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub7.txt
+```
+
+Config List 8:
+```
+https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub8.txt
+```
+
+Config List 9:
+```
+https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub9.txt
+```
+
+Config List 10:
+```
+https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub10.txt
+```
+
+Config List 11:
+```
+https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub11.txt
+```
+
+Config List 12:
+```
+https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub12.txt
+```
+
+Config List 13:
+```
+https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub13.txt
+```
+
+Config List 14:
+```
+https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub14.txt
+```
+
