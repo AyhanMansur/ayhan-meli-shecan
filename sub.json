@@ -1,0 +1,1256 @@
+{
+  "dns": {
+    "independent_cache": true,
+    "rules": [
+      {
+        "domain": [
+          "raw.githubusercontent.com"
+        ],
+        "server": "dns-direct"
+      },
+      {
+        "clash_mode": "Direct",
+        "server": "dns-direct"
+      },
+      {
+        "clash_mode": "Global",
+        "server": "dns-remote"
+      },
+      {
+        "action": "route",
+        "mode": "and",
+        "rules": [
+          {
+            "rule_set": "geosite-ir"
+          },
+          {
+            "rule_set": "geoip-ir"
+          }
+        ],
+        "server": "dns-direct",
+        "type": "logical"
+      },
+      {
+        "action": "reject",
+        "rule_set": [
+          "geosite-malware",
+          "geosite-phishing",
+          "geosite-cryptominers",
+          "geosite-category-ads-all"
+        ]
+      },
+      {
+        "disable_cache": true,
+        "inbound": "tun-in",
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "dns-fake"
+      }
+    ],
+    "servers": [
+      {
+        "detour": "🌐 Anonymous Multi",
+        "server": "8.8.8.8",
+        "tag": "dns-remote",
+        "type": "https"
+      },
+      {
+        "server": "8.8.8.8",
+        "server_port": 53,
+        "tag": "dns-direct",
+        "type": "udp"
+      },
+      {
+        "inet4_range": "198.18.0.0/15",
+        "inet6_range": "fc00::/18",
+        "tag": "dns-fake",
+        "type": "fakeip"
+      }
+    ],
+    "strategy": "ipv4_only"
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": true
+    },
+    "clash_api": {
+      "default_mode": "Rule",
+      "external_controller": "127.0.0.1:12081",
+      "external_ui": "ui",
+      "external_ui_download_detour": "direct",
+      "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
+    }
+  },
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "listen_port": 12080,
+      "set_system_proxy": true,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "tag": "mixed-in",
+      "type": "mixed"
+    }
+  ],
+  "log": {
+    "level": "warn",
+    "timestamp": true
+  },
+  "ntp": {
+    "domain_resolver": "dns-direct",
+    "enabled": true,
+    "interval": "30m",
+    "server": "time.cloudflare.com",
+    "server_port": 123,
+    "write_to_system": false
+  },
+  "outbounds": [
+    {
+      "outbounds": [
+        "👽 Best Ping 🚀",
+        "Trojan-2c142dcd",
+        "Trojan-905ff817",
+        "VLESS-1a8d70b5",
+        "Trojan-24b46b29",
+        "VLESS-d30fe3cd",
+        "VLESS-467aa366",
+        "VLESS-ca779ffa",
+        "VLESS-843b666d",
+        "VLESS-06f05eae",
+        "VLESS-879d62c4",
+        "VLESS-6605f1be",
+        "VLESS-17f0a4a8",
+        "VLESS-4c4ff2bb",
+        "VLESS-44e74ebe",
+        "VLESS-220305f9",
+        "VLESS-b01631cb",
+        "VLESS-a709c719",
+        "VLESS-e71a351f",
+        "VLESS-b212ff77",
+        "VLESS-437f725b",
+        "VLESS-11d64be7",
+        "VLESS-6aac3834",
+        "VLESS-6719bbf0",
+        "VLESS-b8a412d8",
+        "VLESS-1af454a3",
+        "VLESS-95e50e11",
+        "VLESS-9dbdb1f9",
+        "VLESS-907ba491",
+        "VLESS-4a6671c9",
+        "VLESS-c79126f4",
+        "VLESS-b0b93c13",
+        "VLESS-b832bed7",
+        "VLESS-caf5a65a",
+        "VLESS-2771e018",
+        "VLESS-cb2abf61",
+        "VLESS-1ae21a52",
+        "VLESS-f3a6e35f",
+        "VLESS-4a537f95",
+        "VLESS-32e4850b",
+        "VLESS-1e23cf42",
+        "direct"
+      ],
+      "tag": "🌐 Anonymous Multi",
+      "type": "selector"
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "interrupt_exist_connections": false,
+      "interval": "30s",
+      "outbounds": [
+        "Trojan-2c142dcd",
+        "Trojan-905ff817",
+        "VLESS-1a8d70b5",
+        "Trojan-24b46b29",
+        "VLESS-d30fe3cd",
+        "VLESS-467aa366",
+        "VLESS-ca779ffa",
+        "VLESS-843b666d",
+        "VLESS-06f05eae",
+        "VLESS-879d62c4",
+        "VLESS-6605f1be",
+        "VLESS-17f0a4a8",
+        "VLESS-4c4ff2bb",
+        "VLESS-44e74ebe",
+        "VLESS-220305f9",
+        "VLESS-b01631cb",
+        "VLESS-a709c719",
+        "VLESS-e71a351f",
+        "VLESS-b212ff77",
+        "VLESS-437f725b",
+        "VLESS-11d64be7",
+        "VLESS-6aac3834",
+        "VLESS-6719bbf0",
+        "VLESS-b8a412d8",
+        "VLESS-1af454a3",
+        "VLESS-95e50e11",
+        "VLESS-9dbdb1f9",
+        "VLESS-907ba491",
+        "VLESS-4a6671c9",
+        "VLESS-c79126f4",
+        "VLESS-b0b93c13",
+        "VLESS-b832bed7",
+        "VLESS-caf5a65a",
+        "VLESS-2771e018",
+        "VLESS-cb2abf61",
+        "VLESS-1ae21a52",
+        "VLESS-f3a6e35f",
+        "VLESS-4a537f95",
+        "VLESS-32e4850b",
+        "VLESS-1e23cf42"
+      ],
+      "tag": "👽 Best Ping 🚀",
+      "type": "urltest",
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "password": "b6c4fd0a-bc55-49ea-b278-5478e291aad3",
+      "server": "singbox.umc-mansur91.workers.dev",
+      "server_port": 80,
+      "tag": "Trojan-2c142dcd",
+      "tls": {
+        "alpn": [
+          "http/1.1"
+        ],
+        "enabled": true,
+        "insecure": false,
+        "record_fragment": false,
+        "server_name": "singbox.umc-mansur91.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "singbox.umc-mansur91.workers.dev"
+        },
+        "path": "/?ed=2048",
+        "type": "ws"
+      },
+      "type": "trojan"
+    },
+    {
+      "password": "b6c4fd0a-bc55-49ea-b278-5478e291aad3",
+      "server": "singbox.umc-mansur91.workers.dev",
+      "server_port": 443,
+      "tag": "Trojan-905ff817",
+      "tls": {
+        "alpn": [
+          "http/1.1"
+        ],
+        "enabled": true,
+        "insecure": false,
+        "record_fragment": false,
+        "server_name": "singbox.umc-mansur91.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "singbox.umc-mansur91.workers.dev"
+        },
+        "path": "/?ed=2048",
+        "type": "ws"
+      },
+      "type": "trojan"
+    },
+    {
+      "flow": "",
+      "server": "singbox.umc-mansur91.workers.dev",
+      "server_port": 443,
+      "tag": "VLESS-1a8d70b5",
+      "tls": {
+        "alpn": [
+          "http/1.1"
+        ],
+        "enabled": true,
+        "insecure": false,
+        "record_fragment": false,
+        "server_name": "singbox.umc-mansur91.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "singbox.umc-mansur91.workers.dev"
+        },
+        "path": "/?ed=2048",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "b6c4fd0a-bc55-49ea-b278-5478e291aad3"
+    },
+    {
+      "password": "b6c4fd0a-bc55-49ea-b278-5478e291aad3",
+      "server": "singbox.umc-mansur91.workers.dev",
+      "server_port": 443,
+      "tag": "Trojan-24b46b29",
+      "tls": {
+        "alpn": [
+          "http/1.1"
+        ],
+        "enabled": true,
+        "insecure": false,
+        "record_fragment": false,
+        "server_name": "singbox.umc-mansur91.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "singbox.umc-mansur91.workers.dev"
+        },
+        "path": "/?ed=2048",
+        "type": "ws"
+      },
+      "type": "trojan"
+    },
+    {
+      "flow": "",
+      "server": "singbox.umc-mansur91.workers.dev",
+      "server_port": 80,
+      "tag": "VLESS-d30fe3cd",
+      "tls": {
+        "enabled": false
+      },
+      "transport": {
+        "headers": {
+          "Host": "singbox.umc-mansur91.workers.dev"
+        },
+        "path": "/?ed=2048",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "b6c4fd0a-bc55-49ea-b278-5478e291aad3"
+    },
+    {
+      "flow": "",
+      "server": "104.18.26.90",
+      "server_port": 2053,
+      "tag": "VLESS-467aa366",
+      "tls": {
+        "alpn": [
+          "http/1.1"
+        ],
+        "enabled": true,
+        "insecure": false,
+        "record_fragment": false,
+        "server_name": "jan-12days.umc-mansur91.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "jan-12days.umc-mansur91.workers.dev"
+        },
+        "path": "/",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "ae4fdfdb-949f-4287-9e55-069b7b3c2376"
+    },
+    {
+      "flow": "",
+      "server": "162.159.24.198",
+      "server_port": 443,
+      "tag": "VLESS-ca779ffa",
+      "tls": {
+        "alpn": [
+          "http/1.1"
+        ],
+        "enabled": true,
+        "insecure": false,
+        "record_fragment": false,
+        "server_name": "telegram-users.umc-mansur91.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "172.64.50.250",
+      "server_port": 443,
+      "tag": "VLESS-843b666d",
+      "tls": {
+        "alpn": [
+          "http/1.1"
+        ],
+        "enabled": true,
+        "insecure": false,
+        "record_fragment": false,
+        "server_name": "telegram-users.umc-mansur91.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "cloudflare.182682.xyz",
+      "server_port": 80,
+      "tag": "VLESS-06f05eae",
+      "tls": {
+        "enabled": false
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "104.17.104.194",
+      "server_port": 80,
+      "tag": "VLESS-879d62c4",
+      "tls": {
+        "enabled": false
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "104.17.171.148",
+      "server_port": 80,
+      "tag": "VLESS-6605f1be",
+      "tls": {
+        "enabled": false
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "telegram-users.umc-mansur91.workers.dev",
+      "server_port": 443,
+      "tag": "VLESS-17f0a4a8",
+      "tls": {
+        "alpn": [
+          "http/1.1"
+        ],
+        "enabled": true,
+        "insecure": false,
+        "record_fragment": false,
+        "server_name": "telegram-users.umc-mansur91.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "104.18.26.90",
+      "server_port": 2053,
+      "tag": "VLESS-4c4ff2bb",
+      "tls": {
+        "alpn": [
+          "http/1.1"
+        ],
+        "enabled": true,
+        "insecure": false,
+        "record_fragment": false,
+        "server_name": "jan-12days.umc-mansur91.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "cfip.1323123.xyz",
+      "server_port": 80,
+      "tag": "VLESS-44e74ebe",
+      "tls": {
+        "enabled": false
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "104.17.27.54",
+      "server_port": 80,
+      "tag": "VLESS-220305f9",
+      "tls": {
+        "enabled": false
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "cf.090227.xyz",
+      "server_port": 80,
+      "tag": "VLESS-b01631cb",
+      "tls": {
+        "enabled": false
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "104.17.183.72",
+      "server_port": 80,
+      "tag": "VLESS-a709c719",
+      "tls": {
+        "enabled": false
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "104.17.178.37",
+      "server_port": 80,
+      "tag": "VLESS-e71a351f",
+      "tls": {
+        "enabled": false
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "cf.877771.xyz",
+      "server_port": 80,
+      "tag": "VLESS-b212ff77",
+      "tls": {
+        "enabled": false
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "104.19.157.130",
+      "server_port": 80,
+      "tag": "VLESS-437f725b",
+      "tls": {
+        "enabled": false
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "104.19.155.182",
+      "server_port": 80,
+      "tag": "VLESS-11d64be7",
+      "tls": {
+        "enabled": false
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "104.19.155.182",
+      "server_port": 443,
+      "tag": "VLESS-6aac3834",
+      "tls": {
+        "alpn": [
+          "http/1.1"
+        ],
+        "enabled": true,
+        "insecure": false,
+        "record_fragment": false,
+        "server_name": "telegram-users.umc-mansur91.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "104.17.178.37",
+      "server_port": 443,
+      "tag": "VLESS-6719bbf0",
+      "tls": {
+        "alpn": [
+          "http/1.1"
+        ],
+        "enabled": true,
+        "insecure": false,
+        "record_fragment": false,
+        "server_name": "telegram-users.umc-mansur91.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "104.19.157.130",
+      "server_port": 443,
+      "tag": "VLESS-b8a412d8",
+      "tls": {
+        "alpn": [
+          "http/1.1"
+        ],
+        "enabled": true,
+        "insecure": false,
+        "record_fragment": false,
+        "server_name": "telegram-users.umc-mansur91.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "104.17.124.75",
+      "server_port": 443,
+      "tag": "VLESS-1af454a3",
+      "tls": {
+        "alpn": [
+          "http/1.1"
+        ],
+        "enabled": true,
+        "insecure": false,
+        "record_fragment": false,
+        "server_name": "telegram-users.umc-mansur91.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "104.17.104.194",
+      "server_port": 443,
+      "tag": "VLESS-95e50e11",
+      "tls": {
+        "alpn": [
+          "http/1.1"
+        ],
+        "enabled": true,
+        "insecure": false,
+        "record_fragment": false,
+        "server_name": "telegram-users.umc-mansur91.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "cf.0sm.com",
+      "server_port": 443,
+      "tag": "VLESS-9dbdb1f9",
+      "tls": {
+        "alpn": [
+          "http/1.1"
+        ],
+        "enabled": true,
+        "insecure": false,
+        "record_fragment": false,
+        "server_name": "telegram-users.umc-mansur91.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "104.17.183.72",
+      "server_port": 443,
+      "tag": "VLESS-907ba491",
+      "tls": {
+        "alpn": [
+          "http/1.1"
+        ],
+        "enabled": true,
+        "insecure": false,
+        "record_fragment": false,
+        "server_name": "telegram-users.umc-mansur91.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "cf.0sm.com",
+      "server_port": 80,
+      "tag": "VLESS-4a6671c9",
+      "tls": {
+        "enabled": false
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "104.17.102.110",
+      "server_port": 80,
+      "tag": "VLESS-c79126f4",
+      "tls": {
+        "enabled": false
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "162.159.41.237",
+      "server_port": 80,
+      "tag": "VLESS-b0b93c13",
+      "tls": {
+        "enabled": false
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "104.17.124.75",
+      "server_port": 80,
+      "tag": "VLESS-b832bed7",
+      "tls": {
+        "enabled": false
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "172.64.50.250",
+      "server_port": 80,
+      "tag": "VLESS-caf5a65a",
+      "tls": {
+        "enabled": false
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "162.159.24.198",
+      "server_port": 80,
+      "tag": "VLESS-2771e018",
+      "tls": {
+        "enabled": false
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "cfip.1323123.xyz",
+      "server_port": 443,
+      "tag": "VLESS-cb2abf61",
+      "tls": {
+        "alpn": [
+          "http/1.1"
+        ],
+        "enabled": true,
+        "insecure": false,
+        "record_fragment": false,
+        "server_name": "telegram-users.umc-mansur91.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "cloudflare-ip.mofashi.ltd",
+      "server_port": 80,
+      "tag": "VLESS-1ae21a52",
+      "tls": {
+        "enabled": false
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "198.41.223.112",
+      "server_port": 80,
+      "tag": "VLESS-f3a6e35f",
+      "tls": {
+        "enabled": false
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "173.245.59.174",
+      "server_port": 80,
+      "tag": "VLESS-4a537f95",
+      "tls": {
+        "enabled": false
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "173.245.59.174",
+      "server_port": 443,
+      "tag": "VLESS-32e4850b",
+      "tls": {
+        "alpn": [
+          "http/1.1"
+        ],
+        "enabled": true,
+        "insecure": false,
+        "record_fragment": false,
+        "server_name": "telegram-users.umc-mansur91.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    },
+    {
+      "flow": "",
+      "server": "cf.090227.xyz",
+      "server_port": 443,
+      "tag": "VLESS-1e23cf42",
+      "tls": {
+        "alpn": [
+          "http/1.1"
+        ],
+        "enabled": true,
+        "insecure": false,
+        "record_fragment": false,
+        "server_name": "telegram-users.umc-mansur91.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "headers": {
+          "Host": "telegram-users.umc-mansur91.workers.dev"
+        },
+        "path": "%2F",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "23848835-ca85-4260-9625-0f3f9d222409"
+    }
+  ],
+  "route": {
+    "auto_detect_interface": true,
+    "default_domain_resolver": {
+      "rewrite_ttl": 60,
+      "server": "dns-direct",
+      "strategy": "prefer_ipv4"
+    },
+    "final": "🌐 Anonymous Multi",
+    "rule_set": [
+      {
+        "download_detour": "direct",
+        "format": "binary",
+        "tag": "geosite-malware",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-malware.srs"
+      },
+      {
+        "download_detour": "direct",
+        "format": "binary",
+        "tag": "geoip-malware",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-malware.srs"
+      },
+      {
+        "download_detour": "direct",
+        "format": "binary",
+        "tag": "geosite-phishing",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-phishing.srs"
+      },
+      {
+        "download_detour": "direct",
+        "format": "binary",
+        "tag": "geoip-phishing",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-phishing.srs"
+      },
+      {
+        "download_detour": "direct",
+        "format": "binary",
+        "tag": "geosite-cryptominers",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-cryptominers.srs"
+      },
+      {
+        "download_detour": "direct",
+        "format": "binary",
+        "tag": "geosite-category-ads-all",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-category-ads-all.srs"
+      },
+      {
+        "download_detour": "direct",
+        "format": "binary",
+        "tag": "geosite-ir",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-ir.srs"
+      },
+      {
+        "download_detour": "direct",
+        "format": "binary",
+        "tag": "geoip-ir",
+        "type": "remote",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-ir.srs"
+      }
+    ],
+    "rules": [
+      {
+        "action": "hijack-dns",
+        "ip_cidr": "172.18.0.2"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "🌐 Anonymous Multi"
+      },
+      {
+        "action": "sniff"
+      },
+      {
+        "action": "hijack-dns",
+        "protocol": "dns"
+      },
+      {
+        "action": "reject",
+        "network": "udp"
+      },
+      {
+        "action": "reject",
+        "rule_set": [
+          "geosite-malware",
+          "geosite-phishing",
+          "geosite-cryptominers",
+          "geosite-category-ads-all"
+        ]
+      },
+      {
+        "action": "reject",
+        "rule_set": [
+          "geoip-malware",
+          "geoip-phishing"
+        ]
+      },
+      {
+        "action": "route",
+        "outbound": "direct",
+        "rule_set": [
+          "geosite-ir"
+        ]
+      },
+      {
+        "action": "route",
+        "outbound": "direct",
+        "rule_set": [
+          "geoip-ir"
+        ]
+      },
+      {
+        "ip_cidr": [
+          "10.0.0.0/8",
+          "100.64.0.0/10",
+          "127.0.0.0/8",
+          "169.254.0.0/16",
+          "172.16.0.0/12",
+          "192.168.0.0/16",
+          "::1/128",
+          "fc00::/7",
+          "fe80::/10"
+        ],
+        "outbound": "direct"
+      }
+    ]
+  }
+}
