@@ -11,11 +11,7 @@
 ---
 
 ## ⬇️ دانلود فایل کانفیگ اتصال
-
-[⬇️ دانلود مستقیم فایلAyhan Configs🇮🇷🍔🏔.npvt](https://release-assets.githubusercontent.com/github-production-release-asset/1150956360/4e7e9170-2802-4882-bc42-c0416a86fc39?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-02-06T01%3A38%3A40Z&rscd=attachment%3B+filename%3DAyhan.Configs.npvt&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-02-06T00%3A38%3A06Z&ske=2026-02-06T01%3A38%3A40Z&sks=b&skv=2018-11-09&sig=97e4Sl7Og%2Bmhjg0iefMg40056Gue0AyIZJhB5fUt8ds%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3MDMzOTEwMSwibmJmIjoxNzcwMzM4ODAxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.jmYGPn5O8Q3JzOJ17Xjjt1LTxKhVj-I0XTzXBnNutJY&response-content-disposition=attachment%3B%20filename%3DAyhan.Configs.npvt&response-content-type=application%2Foctet-stream)
-
----
-
+[⬇️ دانلود مستقیم فایلAyhan Configs🇮🇷🍔🏔.npvt](https://github.com/AyhanMansur/ayhan-meli-shecan/releases/download/Ayhan.Configs.npvt/Ayhan.Configs.npvt)
 ## 📥 نصب برنامه (Npv Tunnel)
 
 ### 📱 آیفون (iOS)
@@ -34,7 +30,7 @@
 1️⃣ **دانلود فایل کانفیگ**  
 روی لینک زیر بزنید تا فایل کانفیگ دانلود شود:  
 
-[⬇️ دانلود مستقیم فایلAyhan Configs🇮🇷🍔🏔.npvt](https://release-assets.githubusercontent.com/github-production-release-asset/1150956360/4e7e9170-2802-4882-bc42-c0416a86fc39?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-02-06T01%3A38%3A40Z&rscd=attachment%3B+filename%3DAyhan.Configs.npvt&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-02-06T00%3A38%3A06Z&ske=2026-02-06T01%3A38%3A40Z&sks=b&skv=2018-11-09&sig=97e4Sl7Og%2Bmhjg0iefMg40056Gue0AyIZJhB5fUt8ds%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3MDMzOTEwMSwibmJmIjoxNzcwMzM4ODAxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.jmYGPn5O8Q3JzOJ17Xjjt1LTxKhVj-I0XTzXBnNutJY&response-content-disposition=attachment%3B%20filename%3DAyhan.Configs.npvt&response-content-type=application%2Foctet-stream)
+[⬇️ دانلود مستقیم فایلAyhan Configs🇮🇷🍔🏔.npvt](https://github.com/AyhanMansur/ayhan-meli-shecan/releases/download/Ayhan.Configs.npvt/Ayhan.Configs.npvt)
 
 2️⃣ **رفتن به پوشه دانلودها**  
 بعد از دانلود، فایل با نام  
