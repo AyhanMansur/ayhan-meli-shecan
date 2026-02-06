@@ -105,5 +105,4 @@ vless://e9347aed-fa5c-11f0-a1cb-920006d3a56e@spn.node.walkerpubg.ir:80?security=
 vless://e9347aed-fa5c-11f0-a1cb-920006d3a56e@ast.node.walkerpubg.ir:80?security=&type=tcp&path=/&headerType=http&host=mir-data-60.myket.ir&encryption=none#%F0%9F%87%A6%F0%9F%87%B9%20Austria
 vless://e9347aed-fa5c-11f0-a1cb-920006d3a56e@swt.node.walkerpubg.ir:80?security=&type=tcp&path=/&headerType=http&host=mir-data-60.myket.ir&encryption=none#%F0%9F%87%A8%F0%9F%87%AD%20Switzerland
 vless://e9347aed-fa5c-11f0-a1cb-920006d3a56e@nor.node.walkerpubg.ir:80?security=&type=tcp&path=/&headerType=http&host=mir-data-60.myket.ir&encryption=none#%F0%9F%87%B3%F0%9F%87%B4%20Norway
-vless://23848835-ca85-4260-9625-0f3f9d222409@172.64.50.250:80?path=%252F&security=none&encryption=none&host=telegram-users.umc-mansur91.workers.dev&type=ws#super%20%F0%9F%8F%83%E2%80%8D%E2%99%80%EF%B8%8F
 vless://ae4fdfdb-949f-4287-9e55-069b7b3c2376@188.114.99.199:8443?encryption=none&security=tls&type=ws&host=jan-12days.umc-mansur91.workers.dev&path=/&sni=jan-12days.umc-mansur91.workers.dev&fp=chrome#DE_keji_8443_WS_TLS_0
