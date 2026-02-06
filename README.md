@@ -197,3 +197,7 @@ https://singbox.umc-mansur91.workers.dev/b6c4fd0a-bc55-49ea-b278-5478e291aad3/su
 Config List 16:
 ```
 https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/Countries/Kazakhstan.txt
+
+Config List 17: best performance  ⚡️
+```
+https://raw.githubusercontent.com/AyhanMansur/ayhan-meli-shecan/refs/heads/main/sub.txt
