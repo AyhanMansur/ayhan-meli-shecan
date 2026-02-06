@@ -62,3 +62,4 @@ vless://@:-1?path=%2F%3Fed%3D2048&security=&encryption=none&host=singbox.umc-man
 vless://@:-1?path=%2F%3Fed%3D2048&security=tls&encryption=none&insecure=1&host=singbox.umc-mansur91.workers.dev&fp=chrome&type=ws&allowInsecure=1&sni=singbox.umc-mansur91.workers.dev#GYD-443-WS-TLS
 vless://@:-1?path=%2F%3Fed%3D2048&security=&encryption=none&host=singbox.umc-mansur91.workers.dev&type=ws#GYD-80-WS
 vless://@:-1?path=%2F%3Fed%3D2048&security=tls&encryption=none&insecure=1&host=singbox.umc-mansur91.workers.dev&fp=chrome&type=ws&allowInsecure=1&sni=singbox.umc-mansur91.workers.dev
+vless://ae4fdfdb-949f-4287-9e55-069b7b3c2376@104.18.26.90:2053?encryption=none&security=tls&type=ws&host=jan-12days.umc-mansur91.workers.dev&path=/&sni=jan-12days.umc-mansur91.workers.dev&fp=chrome&alpn=http/1.1#vles90
