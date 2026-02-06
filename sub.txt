@@ -83,9 +83,3 @@ vless://e9347aed-fa5c-11f0-a1cb-920006d3a56e@cz.node.walkerpubg.ir:80?security=&
 vless://e9347aed-fa5c-11f0-a1cb-920006d3a56e@swd.node.walkerpubg.ir:80?security=&type=tcp&path=/&headerType=http&host=mir-data-60.myket.ir&encryption=none#%F0%9F%87%B8%F0%9F%87%AA%20Sweden
 vless://e9347aed-fa5c-11f0-a1cb-920006d3a56e@rom.node.walkerpubg.ir:80?security=&type=tcp&path=/&headerType=http&host=mir-data-60.myket.ir&encryption=none#%F0%9F%87%B7%F0%9F%87%B4%20Romania
 vless://e9347aed-fa5c-11f0-a1cb-920006d3a56e@est.node.walkerpubg.ir:80?security=&type=tcp&path=/&headerType=http&host=mir-data-60.myket.ir&encryption=none#%F0%9F%87%AA%F0%9F%87%AA%20Estonia
-vless://e9347aed-fa5c-11f0-a1cb-920006d3a56e@pol.node.walkerpubg.ir:80?security=&type=tcp&path=/&headerType=http&host=mir-data-60.myket.ir&encryption=none#%F0%9F%87%B5%F0%9F%87%B1%20Poland
-vless://e9347aed-fa5c-11f0-a1cb-920006d3a56e@bel.node.walkerpubg.ir:80?security=&type=tcp&path=/&headerType=http&host=mir-data-60.myket.ir&encryption=none#%F0%9F%87%A7%F0%9F%87%AA%20Belgium
-vless://e9347aed-fa5c-11f0-a1cb-920006d3a56e@spn.node.walkerpubg.ir:80?security=&type=tcp&path=/&headerType=http&host=mir-data-60.myket.ir&encryption=none#%F0%9F%87%AA%F0%9F%87%B8%20Spain
-vless://e9347aed-fa5c-11f0-a1cb-920006d3a56e@ast.node.walkerpubg.ir:80?security=&type=tcp&path=/&headerType=http&host=mir-data-60.myket.ir&encryption=none#%F0%9F%87%A6%F0%9F%87%B9%20Austria
-vless://e9347aed-fa5c-11f0-a1cb-920006d3a56e@swt.node.walkerpubg.ir:80?security=&type=tcp&path=/&headerType=http&host=mir-data-60.myket.ir&encryption=none#%F0%9F%87%A8%F0%9F%87%AD%20Switzerland
-vless://e9347aed-fa5c-11f0-a1cb-920006d3a56e@nor.node.walkerpubg.ir:80?security=&type=tcp&path=/&headerType=http&host=mir-data-60.myket.ir&encryption=none#%F0%9F%87%B3%F0%9F%87%B4%20Norway
