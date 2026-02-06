@@ -1,4 +1,4 @@
-vless://ae4fdfdb-949f-4287-9e55-069b7b3c2376@104.18.26.90:2053?path=%2F&security=tls&alpn=http%2F1.1&encryption=none&insecure=1&host=jan-15days.umc-mansur91.workers.dev&fp=chrome&type=ws&allowInsecure=1&sni=jan-15days.umc-mansur91.workers.dev#vles90
+vless://ae4fdfdb-949f-4287-9e55-069b7b3c2376@104.18.26.90:2053?path=%2F&security=tls&alpn=http%2F1.1&encryption=none&insecure=1&host=jan-15days.umc-mansur91.workers.dev&fp=chrome&type=ws&allowInsecure=1&sni=jan-12days.umc-mansur91.workers.dev#vles90
 trojan://ae4fdfdb-949f-4287-9e55-069b7b3c2376@172.67.216.161:2053?path=%2F&security=tls&alpn=h3%2Ch2%2Chttp%2F1.1&insecure=1&host=jan-15days.umc-mansur91.workers.dev&fp=chrome&type=ws&allowInsecure=1&sni=jan-12days.umc-mansur91.workers.dev#Ayhan_WS_TLS
 trojan://ae4fdfdb-949f-4287-9e55-069b7b3c2376@172.67.216.161:2053?path=%2F&security=tls&alpn=h3%2Ch2%2Chttp%2F1.1&insecure=1&host=jan-15days.umc-mansur91.workers.dev&fp=chrome&type=ws&allowInsecure=1&sni=jan-15days.umc-mansur91.workers.dev#Ayhan_WS_TLS
 vless://23848835-ca85-4260-9625-0f3f9d222409@104.17.27.54:80?path=%252F&security=&encryption=none&host=telegram-users.umc-mansur91.workers.dev&type=ws#%E7%A7%BB%E5%8A%A8-80-WS
@@ -83,3 +83,4 @@ vless://e9347aed-fa5c-11f0-a1cb-920006d3a56e@cz.node.walkerpubg.ir:80?security=&
 vless://e9347aed-fa5c-11f0-a1cb-920006d3a56e@swd.node.walkerpubg.ir:80?security=&type=tcp&path=/&headerType=http&host=mir-data-60.myket.ir&encryption=none#%F0%9F%87%B8%F0%9F%87%AA%20Sweden
 vless://e9347aed-fa5c-11f0-a1cb-920006d3a56e@rom.node.walkerpubg.ir:80?security=&type=tcp&path=/&headerType=http&host=mir-data-60.myket.ir&encryption=none#%F0%9F%87%B7%F0%9F%87%B4%20Romania
 vless://e9347aed-fa5c-11f0-a1cb-920006d3a56e@est.node.walkerpubg.ir:80?security=&type=tcp&path=/&headerType=http&host=mir-data-60.myket.ir&encryption=none#%F0%9F%87%AA%F0%9F%87%AA%20Estonia
+
