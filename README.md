@@ -12,7 +12,7 @@
 
 ## ⬇️ دانلود فایل کانفیگ اتصال
 
-[⬇️ دانلود مستقیم فایل melishekan-nv_01.npv](https://raw.githubusercontent.com/AyhanMansur/ayhan-meli-shecan/main/Ayhan%20Configs🇮🇷🍔🏔.npvt)
+[⬇️ دانلود مستقیم فایلAyhan Configs🇮🇷🍔🏔.npvt](https://raw.githubusercontent.com/AyhanMansur/ayhan-meli-shecan/main/Ayhan%20Configs🇮🇷🍔🏔.npvt)
 
 ---
 
@@ -34,7 +34,7 @@
 1️⃣ **دانلود فایل کانفیگ**  
 روی لینک زیر بزنید تا فایل کانفیگ دانلود شود:  
 
-[⬇️ دانلود فایل کانفیگ melishekan-nv_01.npv](https://raw.githubusercontent.com/AyhanMansur/ayhan-meli-shecan/main/Ayhan%20Configs🇮🇷🍔🏔.npvt)
+[⬇️ دانلود مستقیم فایلAyhan Configs🇮🇷🍔🏔.npvt](https://raw.githubusercontent.com/AyhanMansur/ayhan-meli-shecan/main/Ayhan%20Configs🇮🇷🍔🏔.npvt)
 
 2️⃣ **رفتن به پوشه دانلودها**  
 بعد از دانلود، فایل با نام  
