@@ -1,86 +1,26 @@
-{
-  "log": {
-    "level": "info",
-    "timestamp": true
-  },
-  "dns": {
-    "servers": [
-      {
-        "tag": "dns-remote",
-        "address": "https://8.8.8.8/dns-query",
-        "strategy": "ipv4_only"
-      },
-      {
-        "tag": "dns-direct",
-        "address": "1.1.1.1",
-        "detour": "direct"
-      }
-    ],
-    "rules": [
-      {
-        "outbound": "any",
-        "server": "dns-remote"
-      }
-    ]
-  },
-  "inbounds": [
-    {
-      "type": "tun",
-      "tag": "tun-in",
-      "address": [
-        "172.19.0.1/30"
-      ],
-      "auto_route": true,
-      "strict_route": true,
-      "stack": "gvisor",
-      "sniff": true
-    }
-  ],
-  "outbounds": [
-    {
-      "type": "vless",
-      "tag": "PROXY-NODE",
-      "server": "104.24.197.23",
-      "server_port": 443,
-      "uuid": "71492ecb-dd71-4263-b7a9-a034f54e299f",
-      "tls": {
-        "enabled": true,
-        "server_name": "morning-fire-1e0d.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/?ed=2048",
-        "headers": {
-          "Host": "morning-fire-1e0d.umc-mansur13.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "direct",
-      "tag": "direct"
-    },
-    {
-      "type": "dns",
-      "tag": "dns-out"
-    }
-  ],
-  "route": {
-    "rules": [
-      {
-        "protocol": "dns",
-        "outbound": "dns-out"
-      },
-      {
-        "domain_suffix": [
-          ".ir"
-        ],
-        "outbound": "direct"
-      }
-    ],
-    "final": "PROXY-NODE"
-  }
-}
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@morning-fire-1e0d.umc-mansur13.workers.dev:443?security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&path=/?ed%3D2048&host=morning-fire-1e0d.umc-mansur13.workers.dev&encryption=none#%E5%8E%9F%E7%94%9F%E5%9C%B0%E5%9D%80-443-WS-TLS
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@cloudflare.182682.xyz:443?security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&path=/?ed%3D2048&host=morning-fire-1e0d.umc-mansur13.workers.dev&encryption=none#cloudflare.182682.xyz-443-WS-TLS
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@cdn.2020111.xyz:443?security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&path=/?ed%3D2048&host=morning-fire-1e0d.umc-mansur13.workers.dev&encryption=none#cdn.2020111.xyz-443-WS-TLS
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@cf.0sm.com:443?security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&path=/?ed%3D2048&host=morning-fire-1e0d.umc-mansur13.workers.dev&encryption=none#cf.0sm.com-443-WS-TLS
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@cf.090227.xyz:443?security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&path=/?ed%3D2048&host=morning-fire-1e0d.umc-mansur13.workers.dev&encryption=none#cf.090227.xyz-443-WS-TLS
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@cfip.1323123.xyz:443?security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&path=/?ed%3D2048&host=morning-fire-1e0d.umc-mansur13.workers.dev&encryption=none#cfip.1323123.xyz-443-WS-TLS
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@cloudflare-ip.mofashi.ltd:443?security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&path=/?ed%3D2048&host=morning-fire-1e0d.umc-mansur13.workers.dev&encryption=none#cloudflare-ip.mofashi.ltd-443-WS-TLS
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@115155.xyz:443?security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&path=/?ed%3D2048&host=morning-fire-1e0d.umc-mansur13.workers.dev&encryption=none#115155.xyz-443-WS-TLS
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@cdn.tzpro.xyz:443?security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&path=/?ed%3D2048&host=morning-fire-1e0d.umc-mansur13.workers.dev&encryption=none#cdn.tzpro.xyz-443-WS-TLS
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@cf.877771.xyz:443?security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&path=/?ed%3D2048&host=morning-fire-1e0d.umc-mansur13.workers.dev&encryption=none#cf.877771.xyz-443-WS-TLS
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@104.19.56.192:443?security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&path=/?ed%3D2048&host=morning-fire-1e0d.umc-mansur13.workers.dev&encryption=none#%E7%A7%BB%E5%8A%A8-HKG-443-WS-TLS
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@104.19.46.186:443?security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&path=/?ed%3D2048&host=morning-fire-1e0d.umc-mansur13.workers.dev&encryption=none#%E7%A7%BB%E5%8A%A8-HKG-443-WS-TLS
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@104.16.243.107:443?security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&path=/?ed%3D2048&host=morning-fire-1e0d.umc-mansur13.workers.dev&encryption=none#%E7%A7%BB%E5%8A%A8-HKG-443-WS-TLS
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@104.17.168.159:443?security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&path=/?ed%3D2048&host=morning-fire-1e0d.umc-mansur13.workers.dev&encryption=none#%E7%A7%BB%E5%8A%A8-HKG-443-WS-TLS
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@104.19.152.101:443?security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&path=/?ed%3D2048&host=morning-fire-1e0d.umc-mansur13.workers.dev&encryption=none#%E7%A7%BB%E5%8A%A8-HKG-443-WS-TLS
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@108.162.198.103:443?security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&path=/?ed%3D2048&host=morning-fire-1e0d.umc-mansur13.workers.dev&encryption=none#%E8%81%94%E9%80%9A-SJC-443-WS-TLS
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@104.18.172.92:443?security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&path=/?ed%3D2048&host=morning-fire-1e0d.umc-mansur13.workers.dev&encryption=none#%E8%81%94%E9%80%9A-SJC-443-WS-TLS
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@108.162.198.253:443?security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&path=/?ed%3D2048&host=morning-fire-1e0d.umc-mansur13.workers.dev&encryption=none#%E8%81%94%E9%80%9A-SJC-443-WS-TLS
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@108.162.198.46:443?security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&path=/?ed%3D2048&host=morning-fire-1e0d.umc-mansur13.workers.dev&encryption=none#%E8%81%94%E9%80%9A-SJC-443-WS-TLS
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@104.18.237.32:443?security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&path=/?ed%3D2048&host=morning-fire-1e0d.umc-mansur13.workers.dev&encryption=none#%E8%81%94%E9%80%9A-SJC-443-WS-TLS
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@104.18.26.90:2053?security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&path=/?ed%3D2048&host=morning-fire-1e0d.umc-mansur13.workers.dev&encryption=none#vles[90
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@172.64.35.162:443?security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&path=/?ed%3D2048&host=morning-fire-1e0d.umc-mansur13.workers.dev&encryption=none#%E7%94%B5%E4%BF%A1-SIN-443-WS-TLS
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@162.159.10.175:443?security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&path=/?ed%3D2048&host=morning-fire-1e0d.umc-mansur13.workers.dev&encryption=none#%E7%94%B5%E4%BF%A1-SIN-443-WS-TLS
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@162.159.15.76:443?security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&path=/?ed%3D2048&host=morning-fire-1e0d.umc-mansur13.workers.dev&encryption=none#%E7%94%B5%E4%BF%A1-SIN-443-WS-TLS
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@162.159.40.73:443?security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&path=/?ed%3D2048&host=morning-fire-1e0d.umc-mansur13.workers.dev&encryption=none#%E7%94%B5%E4%BF%A1-SIN-443-WS-TLS
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@saas.sin.fan:443?security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&path=/?ed%3D2048&host=morning-fire-1e0d.umc-mansur13.workers.dev&encryption=none#%E5%8A%A0%E5%85%A5%E9%A2%91%E9%81%93@kejiland00-443-WS-TLS
