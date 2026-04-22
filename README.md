@@ -1,78 +1,106 @@
-# ayhan-meli-shecan#
+# 🇮🇷 ayhan-meli-shecan
 
-💥 **ayhan-meli-shecan** – عبور از اینترنت ملی با یک کلیک!
+> **عبور از اینترنت ملی با یک کلیک!**  
+> راه‌حلی سریع و امن برای دسترسی به اینترنت جهانی در شرایط محدودیت و فیلترینگ گسترده.
 
-📡 این پروژه شامل یک فایل کانفیگ اختصاصی برای کلاینت  
-**NapsternetV (Npv Tunnel)**  
-می‌باشد که به کاربران داخل ایران کمک می‌کند در زمان **محدودیت، فیلترینگ گسترده یا ملی شدن اینترنت**، همچنان به اینترنت جهانی متصل بمانند.
-
-این ریپو مخصوص **کانفیگ NV (NapsternetV)** طراحی شده و برای شرایط اضطراری تست شده است.
-
----
-
-## ⬇️ دانلود فایل کانفیگ اتصال
-[⬇️ دانلود مستقیم فایلAyhan Configs🇮🇷🍔🏔.npvt](https://github.com/AyhanMansur/ayhan-meli-shecan/releases/download/Ayhan.Configs.npvt/Ayhan.Configs.npvt)
-## 📥 نصب برنامه (Npv Tunnel)
-
-### 📱 آیفون (iOS)
-👉 https://apps.apple.com/us/app/npv-tunnel/id1629465476
-
-### 🤖 اندروید (Google Play)
-👉 https://play.google.com/store/apps/details?id=com.napsternetlabs.napsternetv
-
-### 🤖 اندروید (نسخه جایگزین)
-👉 https://t.me/ayhandeveloper
+[![Status](https://img.shields.io/badge/Status-Active-brightgreen)](https://github.com/AyhanMansur/ayhan-meli-shecan)
+[![Platform](https://img.shields.io/badge/Platform-NapsternetV-blue)](https://github.com/AyhanMansur/ayhan-meli-shecan)
+[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
 ---
 
-## 🛠️ نحوه استفاده (آموزش کامل)
+## 📡 درباره پروژه
 
-1️⃣ **دانلود فایل کانفیگ**  
-روی لینک زیر بزنید تا فایل کانفیگ دانلود شود:  
+این ریپازیتوری شامل یک فایل کانفیگ اختصاصی و بهینه‌شده برای کلاینت **NapsternetV (Npv Tunnel)** است. هدف این پروژه، کمک به کاربران داخل ایران برای حفظ اتصال به اینترنت جهانی در زمان‌های **محدودیت شدید، ملی شدن اینترنت یا اختلالات گسترده** می‌باشد.
 
-[⬇️ دانلود مستقیم فایلAyhan Configs🇮🇷🍔🏔.npvt](https://github.com/AyhanMansur/ayhan-meli-shecan/releases/download/Ayhan.Configs.npvt/Ayhan.Configs.npvt)
-
-2️⃣ **رفتن به پوشه دانلودها**  
-بعد از دانلود، فایل با نام  
-**melishekan-nv_01.npv**  
-داخل پوشه **Downloads / دانلودها** ذخیره می‌شود.
-
-3️⃣ **باز کردن فایل با NV**  
-- روی فایل دانلودشده ضربه بزنید  
-- از لیست برنامه‌ها، **NapsternetV (Npv Tunnel)** را انتخاب کنید  
-- در صورت نمایش، گزینه **Always / همیشه** را بزنید  
-
-📌 کانفیگ به‌صورت خودکار داخل برنامه ایمپورت می‌شود.
-
-4️⃣ **اتصال**  
-- وارد برنامه NapsternetV شوید  
-- کانفیگ ایمپورت‌شده را انتخاب کنید  
-- روی **Connect / اتصال** بزنید  
-- چند ثانیه صبر کنید تا وضعیت **Connected** نمایش داده شود ✅
+✅ **ویژگی‌ها:**
+- 🚀 **سریع:** تست شده برای شرایط اضطراری.
+- 🛡️ **امن:** طراحی شده برای عبور از فیلترینگ.
+- 📱 **ساده:** فقط یک کلیک برای اتصال.
+- 🔄 **به‌روز:** پشتیبانی از پروتکل‌های جدید.
 
 ---
 
-## 🆘 اگر فایل به‌صورت خودکار باز نشد
-1. وارد برنامه **NapsternetV** شوید  
-2. از منو، گزینه **Import Config / Import File** را انتخاب کنید  
-3. مسیر **Downloads** را باز کنید  
-4. فایل **melishekan-nv_01.npv** را به‌صورت دستی ایمپورت کنید  
+## ⬇️ دانلود فایل کانفیگ اصلی
+
+برای دریافت فایل کانفیگ اختصاصی این پروژه، روی دکمه زیر کلیک کنید:
+
+[📥 دانلود فایل کانفیگ Ayhan Configs 🇮🇷🍔🏔.npvt](https://github.com/AyhanMansur/ayhan-meli-shecan/releases/download/Ayhan.Configs.npvt/Ayhan.Configs.npvt)
 
 ---
 
-## ⚠️ نکات مهم
+## 📥 نصب برنامه کلاینت (Npv Tunnel)
 
-- این کانفیگ برای **استفاده شخصی** طراحی شده است  
-- مناسب شرایط **نت ملی، اختلال شدید و قطعی مقطعی**  
-- استفاده تجاری، سروری یا اشتراکی توصیه نمی‌شود  
-- مسئولیت نحوه استفاده بر عهده کاربر است  
+برای استفاده از این کانفیگ، ابتدا باید برنامه **NapsternetV** را نصب کنید:
+
+| پلتفرم | لینک دانلود |
+| :--- | :--- |
+| 🍎 **iOS (آیفون)** | [دانلود از App Store](https://apps.apple.com/us/app/npv-tunnel/id1629465476) |
+| 🤖 **Android (Google Play)** | [دانلود از پلی استور](https://play.google.com/store/apps/details?id=com.napsternetlabs.napsternetv) |
+| 🤖 **Android (نسخه جایگزین)** | [دانلود از تلگرام](https://t.me/ayhandeveloper) |
+
+---
+
+## 🛠️ راهنمای استفاده (آموزش گام‌به‌گام)
+
+### ۱. دانلود فایل کانفیگ
+روی لینک بالا کلیک کنید. فایل با نام `melishekan-nv_01.npv` در پوشه **Downloads** ذخیره می‌شود.
+
+### ۲. ایمپورت خودکار
+- روی فایل دانلود شده ضربه بزنید.
+- از لیست برنامه‌ها، **NapsternetV** را انتخاب کنید.
+- اگر پیامی آمد، گزینه **Always** (همیشه) را بزنید.
+
+### ۳. اتصال
+- وارد برنامه شوید.
+- کانفیگ ایمپورت شده را انتخاب کنید.
+- دکمه **Connect** را بزنید و چند ثانیه صبر کنید تا وضعیت **Connected** سبز شود. ✅
+
+> **⚠️ اگر فایل به‌صورت خودکار باز نشد:**
+> 1. وارد برنامه NapsternetV شوید.
+> 2. از منو گزینه **Import Config** را انتخاب کنید.
+> 3. فایل `melishekan-nv_01.npv` را از پوشه دانلودها انتخاب کنید.
+
+---
+
+## ⚠️ نکات مهم و سلب مسئولیت
+
+- 🔒 **استفاده شخصی:** این کانفیگ صرفاً برای استفاده **شخصی** طراحی شده است.
+- 🚫 **تجاری ممنوع:** استفاده تجاری، سروری یا اشتراک‌گذاری عمومی توصیه نمی‌شود.
+- 🛡️ **مسئولیت کاربر:** مسئولیت نحوه استفاده از این ابزار بر عهده کاربر است.
+- 🌐 **شرایط اضطراری:** این ابزار برای شرایطی طراحی شده که دسترسی به اینترنت جهانی محدود شده است.
 
 ---
 
 ## 📢 ارتباط با ما
 
-📬 برای دریافت نسخه‌های به‌روزشده و اطلاعیه‌ها:  
-👉 https://t.me/ayhandeveloper
+برای دریافت نسخه‌های به‌روز، گزارش باگ یا پشتیبانی:
+- 📬 **کانال تلگرام:** [ayhandeveloper](https://t.me/ayhandeveloper)
+
+---
+
+## 🌍 منابع تکمیلی (V2Ray Configs)
+
+اگر به دنبال کانفیگ‌های V2Ray (Vless/Vmess) هستید، می‌توانید از منابع زیر استفاده کنید:
+
+### 📂 تمام کانفیگ‌های جمع‌آوری شده
+- [لیست اصلی (Sub)](https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_Sub.txt)
+- [لیست Base64](https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_base64_Sub.txt)
+
+### 📂 تفکیک شده بر اساس پروتکل
+- **Vless:** [دانلود فایل vless.txt](https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/vless.txt)
+- **Vmess:** [دانلود فایل vmess.txt](https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/vmess.txt)
+
+---
+
+<div align="center">
+
+**با عشق ❤️**  
+*برای روزهای سخت اینترنت ایران*  
+ساخته شده با ❤️ توسط **Ayhan Mansur**
+
+</div>
+
 
 ---
 
