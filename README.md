@@ -5,7 +5,6 @@
 
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen)](https://github.com/AyhanMansur/ayhan-meli-shecan)
 [![Platform](https://img.shields.io/badge/Platform-NapsternetV-blue)](https://github.com/AyhanMansur/ayhan-meli-shecan)
-[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
 ---
 
