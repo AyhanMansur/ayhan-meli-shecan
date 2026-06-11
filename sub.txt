@@ -1,0 +1,1 @@
+vless://71492ecb-dd71-4263-b7a9-a034f54e299f@104.17.148.22:443?encryption=none&security=tls&sni=morning-fire-1e0d.umc-mansur13.workers.dev&fp=randomized&type=ws&host=morning-fire-1e0d.umc-mansur13.workers.dev&path=%2F%3Fed%3D2048#Ayhan%20MeliShecan%20%7C%20%F0%9F%98%8E%F0%9F%8D%82%F0%9F%A7%91%E2%80%8D%F0%9F%92%BB%F0%9F%9A%80%F0%9F%8C%BF
