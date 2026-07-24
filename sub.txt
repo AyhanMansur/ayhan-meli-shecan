@@ -1,54 +1,23 @@
-{
-  "inbounds" : [
-    {
-      "sniffing" : {
-        "routeOnly" : true,
-        "enabled" : false,
-        "destOverride" : [
-          "http",
-          "tls",
-          "quic"
-        ]
-      },
-      "listen" : "127.0.0.1",
-      "settings" : {
-        "udp" : true,
-        "auth" : "noauth"
-      },
-      "protocol" : "socks",
-      "tag" : "socks-in",
-      "port" : 1080
-    }
-  ],
-  "outbounds" : [
-    {
-      "tag" : "𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | 🦁𓃭",
-      "protocol" : "wireguard",
-      "settings" : {
-        "mtu" : 756,
-        "peers" : [
-          {
-            "allowedIPs" : [
-              "0.0.0.0/0",
-              "::/0"
-            ],
-            "endpoint" : "8.6.112.4:8886",
-            "publicKey" : "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
-          }
-        ],
-        "secretKey" : "8EorQypLnXMtgPSbcuD1RXaI0wc89tSwKNvKf4SCgl8=",
-        "address" : [
-          "172.16.0.2/32",
-          "2606:4700:110:81d0:8064:b7c9:4f52:7718/128"
-        ]
-      }
-    },
-    {
-      "tag" : "direct",
-      "protocol" : "freedom"
-    },
-    {
-      "tag" : "block",
-      "protocol" : "blackhole"
-    }
-  ]
+vless://dedc8470-5395-4a14-8fd6-4e72fc42750a@129.159.84.71:443?encryption=none&security=tls&sni=ayhanmelized.umc-mansur91-0d7.workers.dev&fp=safari&type=ws&host=ayhanmelized.umc-mansur91-0d7.workers.dev&path=%2Fproxyip%3D185.219.132.27%3A443%3Fed%3D2560%26u%3D9ef70a9697#%3C.%20%F0%9D%94%B8%F0%9D%95%AA%F0%9D%95%99%F0%9D%95%92%F0%9D%95%9F%F0%9D%95%84%F0%9D%95%96%F0%9D%95%9D%F0%9D%95%9A%F0%9D%95%8A%F0%9D%95%99%F0%9D%95%96%F0%9D%95%94%F0%9D%95%92%F0%9D%95%9F%20%7C%20%F0%9F%87%B9%F0%9F%87%B7%F0%9F%A6%83.%3E
+vless://dedc8470-5395-4a14-8fd6-4e72fc42750a@129.159.84.71:443?encryption=none&security=tls&sni=ayhanmelized.umc-mansur91-0d7.workers.dev&fp=safari&type=ws&host=ayhanmelized.umc-mansur91-0d7.workers.dev&path=%2Fproxyip%3D91.238.105.102%3A443%3Fed%3D2560%26u%3D9ef70a9697#%F0%9F%8E%B6%F0%9D%94%B8%F0%9D%95%AA%F0%9D%95%99%F0%9D%95%92%F0%9D%95%9F%F0%9D%95%84%F0%9D%95%96%F0%9D%95%9D%F0%9D%95%9A%F0%9D%95%8A%F0%9D%95%99%F0%9D%95%96%F0%9D%95%94%F0%9D%95%92%F0%9D%95%9F%20%7C%20%3C%E2%80%A6%F0%9F%87%BA%F0%9F%87%A6.%3E
+vless://dedc8470-5395-4a14-8fd6-4e72fc42750a@129.159.84.71:443?encryption=none&security=tls&sni=ayhanmelized.umc-mansur91-0d7.workers.dev&fp=safari&type=ws&host=ayhanmelized.umc-mansur91-0d7.workers.dev&path=%2Fproxyip%3D141.227.139.220%3A443%3Fed%3D2560%26u%3D9ef70a9697#%F0%9D%94%B8%F0%9D%95%AA%F0%9D%95%99%F0%9D%95%92%F0%9D%95%9F%F0%9D%95%84%F0%9D%95%96%F0%9D%95%9D%F0%9D%95%9A%F0%9D%95%8A%F0%9D%95%99%F0%9D%95%96%F0%9D%95%94%F0%9D%95%92%F0%9D%95%9F%20%7C%E2%84%82%F0%9D%95%99%F0%9F%87%A8%F0%9F%87%AD%F0%9F%8F%B4
+vless://dedc8470-5395-4a14-8fd6-4e72fc42750a@129.159.84.71:443?encryption=none&security=tls&sni=ayhanmelized.umc-mansur91-0d7.workers.dev&fp=safari&type=ws&host=ayhanmelized.umc-mansur91-0d7.workers.dev&path=%2Fproxyip%3D144.31.18.41%3A443%3Fed%3D2560%26u%3D9ef70a9697#%F0%9D%94%B8%F0%9D%95%AA%F0%9D%95%99%F0%9D%95%92%F0%9D%95%9F%F0%9D%95%84%F0%9D%95%96%F0%9D%95%9D%F0%9D%95%9A%F0%9D%95%8A%F0%9D%95%99%F0%9D%95%96%F0%9D%95%94%F0%9D%95%92%F0%9D%95%9F%20%7C%20%3C.%F0%9F%87%AB%F0%9F%87%AE.%3E
+vless://dedc8470-5395-4a14-8fd6-4e72fc42750a@129.159.84.71:443?encryption=none&security=tls&sni=ayhanmelized.umc-mansur91-0d7.workers.dev&fp=safari&type=ws&host=ayhanmelized.umc-mansur91-0d7.workers.dev&path=%2Fproxyip%3D78.40.108.84%3A443%3Fed%3D2560%26u%3D9ef70a9697#%F0%9D%94%B8%F0%9D%95%AA%F0%9D%95%99%F0%9D%95%92%F0%9D%95%9F%F0%9D%95%84%F0%9D%95%96%F0%9D%95%9D%F0%9D%95%9A%F0%9D%95%8A%F0%9D%95%99%F0%9D%95%96%F0%9D%95%94%F0%9D%95%92%F0%9D%95%9F%20%7C%20%F0%9F%87%B0%F0%9F%87%BF%F0%9F%AA%BE%F0%9F%8F%B4%F0%9F%8C%9A
+vless://dedc8470-5395-4a14-8fd6-4e72fc42750a@129.159.84.71:443?encryption=none&security=tls&sni=ayhanmelized.umc-mansur91-0d7.workers.dev&fp=safari&type=ws&host=ayhanmelized.umc-mansur91-0d7.workers.dev&path=%2Fproxyip%3D4.232.64.201%3A443%3Fed%3D2560%26u%3D9ef70a9697#%F0%9D%94%B8%F0%9D%95%AA%F0%9D%95%99%F0%9D%95%92%F0%9D%95%9F%F0%9D%95%84%F0%9D%95%96%F0%9D%95%9D%F0%9D%95%9A%F0%9D%95%8A%F0%9D%95%99%F0%9D%95%96%F0%9D%95%94%F0%9D%95%92%F0%9D%95%9F%20%7C%20%3C%E2%80%A6%F0%9F%87%AE%F0%9F%87%B9%F0%9F%8C%89.%3E
+vless://dedc8470-5395-4a14-8fd6-4e72fc42750a@129.159.84.71:443?encryption=none&security=tls&sni=ayhanmelized.umc-mansur91-0d7.workers.dev&fp=safari&type=ws&host=ayhanmelized.umc-mansur91-0d7.workers.dev&path=%2Fproxyip%3D149.248.199.173%3A443%3Fed%3D2560%26u%3D9ef70a9697#%F0%9D%92%9C%F0%9D%92%B4%E2%84%8E%F0%9D%92%B6%F0%9D%93%83%E2%84%B3%E2%84%AF%E2%84%93%F0%9D%92%BE%F0%9D%92%AE%E2%84%8E%E2%84%AF%F0%9D%92%B8%F0%9D%92%B6%F0%9D%93%83%20%7C%E2%84%8A%E2%84%AF%F0%9D%93%87%F0%9D%93%82%F0%9D%92%B6%F0%9D%93%83%F0%9D%92%B4%F0%9F%AA%BE%F0%9F%93%A1%F0%9F%87%A9%F0%9F%87%AA
+vless://dedc8470-5395-4a14-8fd6-4e72fc42750a@129.159.84.71:443?encryption=none&security=tls&sni=ayhanmelized.umc-mansur91-0d7.workers.dev&fp=safari&type=ws&host=ayhanmelized.umc-mansur91-0d7.workers.dev&path=%2Fproxyip%3D45.95.212.117%3A443%3Fed%3D2560%26u%3D9ef70a9697#%F0%9F%92%BB%F0%9D%94%B8%F0%9D%95%AA%F0%9D%95%99%F0%9D%95%92%F0%9D%95%9F%F0%9D%95%84%F0%9D%95%96%F0%9D%95%9D%F0%9D%95%9A%F0%9D%95%8A%F0%9D%95%99%F0%9D%95%96%F0%9D%95%94%F0%9D%95%92%F0%9D%95%9F%20%7C%F0%9F%AA%BE%20%F0%9F%87%AF%F0%9F%87%B5%F0%9F%8F%AF%F0%9F%88%B2
+vless://dedc8470-5395-4a14-8fd6-4e72fc42750a@129.159.84.71:443?encryption=none&security=tls&sni=ayhanmelized.umc-mansur91-0d7.workers.dev&fp=safari&type=ws&host=ayhanmelized.umc-mansur91-0d7.workers.dev&path=%2Fproxyip%3D131.196.254.151%3A443%3Fed%3D2560%26u%3D9ef70a9697#%F0%9F%AB%94%F0%9D%94%B8%F0%9D%95%AA%F0%9D%95%99%F0%9D%95%92%F0%9D%95%9F%F0%9D%95%84%F0%9D%95%96%F0%9D%95%9D%F0%9D%95%9A%F0%9D%95%8A%F0%9D%95%99%F0%9D%95%96%F0%9D%95%94%F0%9D%95%92%F0%9D%95%9F%20%7C%20%3C.%F0%9F%8C%AE%F0%9F%87%B2%F0%9F%87%BD.%3E
+vless://dedc8470-5395-4a14-8fd6-4e72fc42750a@129.159.84.71:443?encryption=none&security=tls&sni=ayhanmelized.umc-mansur91-0d7.workers.dev&fp=safari&type=ws&host=ayhanmelized.umc-mansur91-0d7.workers.dev&path=%2Fproxyip%3D151.243.183.42%3A443%3Fed%3D2560%26u%3D9ef70a9697#%F0%9D%94%B8%F0%9D%95%AA%F0%9D%95%99%F0%9D%95%92%F0%9D%95%9F%F0%9D%95%84%F0%9D%95%96%F0%9D%95%9D%F0%9D%95%9A%F0%9D%95%8A%F0%9D%95%99%F0%9D%95%96%F0%9D%95%94%F0%9D%95%92%F0%9D%95%9F%20%7C%20%F0%9D%91%BA%F0%9D%91%AE%F0%9F%87%B8%F0%9F%87%AC%F0%9F%8E%B6
+vless://dedc8470-5395-4a14-8fd6-4e72fc42750a@129.159.84.71:443?encryption=none&security=tls&sni=ayhanmelized.umc-mansur91-0d7.workers.dev&fp=safari&type=ws&host=ayhanmelized.umc-mansur91-0d7.workers.dev&path=%2Fproxyip%3D51.241.130.139%3A443%3Fed%3D2560%26u%3D9ef70a9697#%F0%9F%91%BD%F0%9D%93%90%F0%9D%94%82%F0%9D%93%B1%F0%9D%93%AA%F0%9D%93%B7%F0%9D%93%9C%F0%9D%93%AE%F0%9D%93%B5%F0%9D%93%B2%F0%9D%93%A2%F0%9D%93%B1%F0%9D%93%AE%F0%9D%93%AC%F0%9D%93%AA%F0%9D%93%B7%20%7C%20%3C%E2%80%A6%F0%9F%8F%B4%F0%9F%87%AC%F0%9F%87%A7.%3E
+vless://dedc8470-5395-4a14-8fd6-4e72fc42750a@129.159.84.71:443?encryption=none&security=tls&sni=ayhanmelized.umc-mansur91-0d7.workers.dev&fp=safari&type=ws&host=ayhanmelized.umc-mansur91-0d7.workers.dev&path=%2Fproxyip%3D37.139.0.134%3A443%3Fed%3D2560%26u%3D9ef70a9697#%F0%9F%AA%BE%F0%9D%94%B8%F0%9D%95%AA%F0%9D%95%99%F0%9D%95%92%F0%9D%95%9F%F0%9D%95%84%F0%9D%95%96%F0%9D%95%9D%F0%9D%95%9A%F0%9D%95%8A%F0%9D%95%99%F0%9D%95%96%F0%9D%95%94%F0%9D%95%92%F0%9D%95%9F%20%7C%20%3C.%F0%9F%87%B3%F0%9F%87%B1.%3E
+vless://dedc8470-5395-4a14-8fd6-4e72fc42750a@129.159.84.71:443?encryption=none&security=tls&sni=ayhanmelized.umc-mansur91-0d7.workers.dev&fp=safari&type=ws&host=ayhanmelized.umc-mansur91-0d7.workers.dev&path=%2Fproxyip%3D107.175.209.186%3A443%3Fed%3D2560%26u%3D9ef70a9697#%F0%9D%91%A8%F0%9D%92%9A%F0%9D%92%89%F0%9D%92%82%F0%9D%92%8F%F0%9D%91%B4%F0%9D%92%86%F0%9D%92%8D%F0%9D%92%8A%F0%9D%91%BA%F0%9D%92%89%F0%9D%92%86%F0%9D%92%84%F0%9D%92%82%F0%9D%92%8F%20%7C%20%F0%9D%91%BC%F0%9D%91%BA%F0%9F%87%BA%F0%9F%87%B8%F0%9F%AA%A8%F0%9F%8F%B4%F0%9F%8C%BF
+vless://dedc8470-5395-4a14-8fd6-4e72fc42750a@129.159.84.71:443?encryption=none&security=tls&sni=ayhanmelized.umc-mansur91-0d7.workers.dev&fp=safari&type=ws&host=ayhanmelized.umc-mansur91-0d7.workers.dev&path=%2Fproxyip%3D212.6.44.68%3A443%3Fed%3D2560%26u%3D9ef70a9697#%F0%9F%AA%BE%F0%9D%94%B8%F0%9D%95%AA%F0%9D%95%99%F0%9D%95%92%F0%9D%95%9F%F0%9D%95%84%F0%9D%95%96%F0%9D%95%9D%F0%9D%95%9A%F0%9D%95%8A%F0%9D%95%99%F0%9D%95%96%F0%9D%95%94%F0%9D%95%92%F0%9D%95%9F%20%7C%20%3C%E2%80%A6%F0%9F%87%B1%F0%9F%87%BB.%3E
+vless://dedc8470-5395-4a14-8fd6-4e72fc42750a@129.159.84.71:443?encryption=none&security=tls&sni=ayhanmelized.umc-mansur91-0d7.workers.dev&fp=safari&type=ws&host=ayhanmelized.umc-mansur91-0d7.workers.dev&path=%2Fproxyip%3D38.180.78.255%3A443%3Fed%3D2560%26u%3D9ef70a9697#%F0%9F%AA%BE%F0%9D%94%B8%F0%9D%95%AA%F0%9D%95%99%F0%9D%95%92%F0%9D%95%9F%F0%9D%95%84%F0%9D%95%96%F0%9D%95%9D%F0%9D%95%9A%F0%9D%95%8A%F0%9D%95%99%F0%9D%95%96%F0%9D%95%94%F0%9D%95%92%F0%9D%95%9F%20%7C%3C%20%F0%9D%94%B9%F0%9D%95%A3%F0%9D%95%92%F0%9D%95%AB%F0%9D%95%9A%F0%9D%95%9D%F0%9F%87%A7%F0%9F%87%B7%3E
+vless://dedc8470-5395-4a14-8fd6-4e72fc42750a@129.159.84.71:443?encryption=none&security=tls&sni=ayhanmelized.umc-mansur91-0d7.workers.dev&fp=safari&type=ws&host=ayhanmelized.umc-mansur91-0d7.workers.dev&path=%2Fproxyip%3D185.234.100.241%3A443%3Fed%3D2560%26u%3D9ef70a9697#%F0%9F%8C%89%F0%9D%94%B8%F0%9D%95%AA%F0%9D%95%99%F0%9D%95%92%F0%9D%95%9F%F0%9D%95%84%F0%9D%95%96%F0%9D%95%9D%F0%9D%95%9A%F0%9D%95%8A%F0%9D%95%99%F0%9D%95%96%F0%9D%95%94%F0%9D%95%92%F0%9D%95%9F%20%7C%20%3C%E2%80%A6%F0%9F%87%AB%F0%9F%87%B7.%3E
+vless://dedc8470-5395-4a14-8fd6-4e72fc42750a@129.159.84.71:443?encryption=none&security=tls&sni=ayhanmelized.umc-mansur91-0d7.workers.dev&fp=safari&type=ws&host=ayhanmelized.umc-mansur91-0d7.workers.dev&path=%2Fproxyip%3D176.97.66.175%3A443%3Fed%3D2560%26u%3D9ef70a9697#%F0%9D%94%B8%F0%9D%95%AA%F0%9D%95%99%F0%9D%95%92%F0%9D%95%9F%F0%9D%95%84%F0%9D%95%96%F0%9D%95%9D%F0%9D%95%9A%F0%9D%95%8A%F0%9D%95%99%F0%9D%95%96%F0%9D%95%94%F0%9D%95%92%F0%9D%95%9F%20%7C%20%3C.%F0%9F%87%A6%F0%9F%87%AA.%3E
+vless://dedc8470-5395-4a14-8fd6-4e72fc42750a@129.159.84.71:443?encryption=none&security=tls&sni=ayhanmelized.umc-mansur91-0d7.workers.dev&fp=safari&type=ws&host=ayhanmelized.umc-mansur91-0d7.workers.dev&path=%2Fproxyip%3D192.99.169.176%3A443%3Fed%3D2560%26u%3D9ef70a9697#%F0%9F%8F%B4%F0%9D%94%B8%F0%9D%95%AA%F0%9D%95%99%F0%9D%95%92%F0%9D%95%9F%F0%9D%95%84%F0%9D%95%96%F0%9D%95%9D%F0%9D%95%9A%F0%9D%95%8A%F0%9D%95%99%F0%9D%95%96%F0%9D%95%94%F0%9D%95%92%F0%9D%95%9F%20%7C%20%3C%E2%80%A6%F0%9F%87%A8%F0%9F%87%A6%F0%9F%8D%81.%3E
+trojan://humanity@104.18.152.246:443?security=tls&sni=www.calmloud.com&alpn=http%2F1.1&fp=randomized&type=ws&host=www.calmloud.com&path=%2Fassignment#%F0%9D%94%B8%F0%9D%95%AA%F0%9D%95%99%F0%9D%95%92%F0%9D%95%9F%F0%9D%95%84%F0%9D%95%96%F0%9D%95%9D%F0%9D%95%9A%F0%9D%95%8A%F0%9D%95%99%F0%9D%95%96%F0%9D%95%94%F0%9D%95%92%F0%9D%95%9F%20%7C%20%F0%9F%A4%96%F0%9F%A5%AA%F0%9F%8C%B4%F0%9F%8E%B6
+socks://Og==@127.0.0.1:9150#Tor
+vless://048f3920-0baa-42b5-80c1-d3d2908b3214@104.17.148.1:443?encryption=none&security=tls&sni=ayhanmelishacan.umc-mansur13.workers.dev&fp=randomized&type=ws&host=ayhanmelishacan.umc-mansur13.workers.dev&path=%2Fproxyip%3D45.150.108.59%3A443%3Fu%3D9ef70a9697#uk
+vless://50414e45-4c5f-5a45-5553-e9655c245a9a@zeus-panel-awzrin.fastlymansur.workers.dev:80?encryption=none&security=none&fp=randomized&type=ws&host=zeus-panel-awzrin.fastlymansur.workers.dev&path=%2Fstream%2FPANEL_ZEUS%2F50414e45#%F0%9F%93%8A%20remaining%20%7C%20%E2%80%8EUnlimited%20%7C%20%E2%80%8EUnlimited%20%7C%20%E2%80%8EUnlimited
+vless://048f3920-0baa-42b5-80c1-d3d2908b3214@[2a10:1fc0:d::389a:930]:443?encryption=none&security=tls&sni=ayhanmelishacan.umc-mansur13.workers.dev&fp=ios&type=ws&host=ayhanmelishacan.umc-mansur13.workers.dev&path=%2Fproxyip%3D45.150.108.59%3A443%3Fu%3D9ef70a9697#uk
