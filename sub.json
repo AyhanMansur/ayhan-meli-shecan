@@ -7,7 +7,7 @@
     "servers": [
       {
         "tag": "proxy-dns",
-        "address": "tls://78.157.42.100",
+        "address": "tls://1.1.1.1",
         "detour": "Proxy"
       },
       {
