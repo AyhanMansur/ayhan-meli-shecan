@@ -1,0 +1,679 @@
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "proxy-dns",
+        "address": "tls://8.8.8.8",
+        "detour": "Proxy"
+      },
+      {
+        "tag": "direct-dns",
+        "address": "223.5.5.5",
+        "detour": "direct"
+      }
+    ],
+    "rules": [
+      {
+        "outbound": "any",
+        "server": "direct-dns"
+      }
+    ],
+    "final": "proxy-dns",
+    "strategy": "prefer_ipv4"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "mtu": 9000,
+      "auto_route": true,
+      "strict_route": true,
+      "stack": "system",
+      "sniff": true
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "Proxy",
+      "outbounds": [
+        "Auto",
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇷🇺.>",
+        "𝒜𝒴ℎ𝒶𝓃ℳℯℓ𝒾𝒮ℎℯ𝒸𝒶𝓃 |ℊℯ𝓇𝓂𝒶𝓃𝒴🪾📡🇩🇪",
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇳🇱.>",
+        "🏴𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <…🇨🇦.>",
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 |< 𝔹𝕣𝕒𝕫𝕚𝕝🇧🇷>",
+        "𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <…🇮🇹🌉.>",
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <…🇱🇻.>",
+        "🌉𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <…🇫🇷.>",
+        "𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇫🇮.>",
+        "🎶𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <…🇺🇦.>",
+        "𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇦🇪.>",
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕒𝕟𝕤𝕦𝕣 | 🇮🇱💻",
+        "𝑨𝒚𝒉𝒂𝒏𝑴𝒆𝒍𝒊𝑺𝒉𝒆𝒄𝒂𝒏 | 𝑼𝑺🇺🇸🪨🏴🌿",
+        "𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | 🇰🇿🪾🏴🌚",
+        "💻𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 |🪾 🇯🇵🏯🈲",
+        "🫔𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🌮🇲🇽.>",
+        "<. 𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | 🇹🇷🦃.>",
+        "👽𝓐𝔂𝓱𝓪𝓷𝓜𝓮𝓵𝓲𝓢𝓱𝓮𝓬𝓪𝓷 | <…🏴🇬🇧.>",
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇸🇬.>",
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇪🇸.>",
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇺🇿.>",
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇸🇪.>",
+        "direct"
+      ],
+      "default": "Auto"
+    },
+    {
+      "type": "urltest",
+      "tag": "Auto",
+      "outbounds": [
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇷🇺.>",
+        "𝒜𝒴ℎ𝒶𝓃ℳℯℓ𝒾𝒮ℎℯ𝒸𝒶𝓃 |ℊℯ𝓇𝓂𝒶𝓃𝒴🪾📡🇩🇪",
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇳🇱.>",
+        "🏴𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <…🇨🇦.>",
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 |< 𝔹𝕣𝕒𝕫𝕚𝕝🇧🇷>",
+        "𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <…🇮🇹🌉.>",
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <…🇱🇻.>",
+        "🌉𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <…🇫🇷.>",
+        "𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇫🇮.>",
+        "🎶𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <…🇺🇦.>",
+        "𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇦🇪.>",
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕒𝕟𝕤𝕦𝕣 | 🇮🇱💻",
+        "𝑨𝒚𝒉𝒂𝒏𝑴𝒆𝒍𝒊𝑺𝒉𝒆𝒄𝒂𝒏 | 𝑼𝑺🇺🇸🪨🏴🌿",
+        "𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | 🇰🇿🪾🏴🌚",
+        "💻𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 |🪾 🇯🇵🏯🈲",
+        "🫔𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🌮🇲🇽.>",
+        "<. 𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | 🇹🇷🦃.>",
+        "👽𝓐𝔂𝓱𝓪𝓷𝓜𝓮𝓵𝓲𝓢𝓱𝓮𝓬𝓪𝓷 | <…🏴🇬🇧.>",
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇸🇬.>",
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇪🇸.>",
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇺🇿.>",
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇸🇪.>"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "3m",
+      "tolerance": 50
+    },
+    {
+      "type": "vless",
+      "tag": "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇷🇺.>",
+      "server": "185.151.243.200",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=185.151.243.200:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝒜𝒴ℎ𝒶𝓃ℳℯℓ𝒾𝒮ℎℯ𝒸𝒶𝓃 |ℊℯ𝓇𝓂𝒶𝓃𝒴🪾📡🇩🇪",
+      "server": "149.248.199.173",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=149.248.199.173:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇳🇱.>",
+      "server": "37.139.0.134",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=37.139.0.134:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🏴𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <…🇨🇦.>",
+      "server": "192.99.169.176",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=192.99.169.176",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 |< 𝔹𝕣𝕒𝕫𝕚𝕝🇧🇷>",
+      "server": "38.180.78.255",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=38.180.78.255:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <…🇮🇹🌉.>",
+      "server": "4.232.64.201",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=4.232.64.201:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <…🇱🇻.>",
+      "server": "212.6.44.68",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=212.6.44.68:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🌉𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <…🇫🇷.>",
+      "server": "185.234.100.241",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=185.234.100.241:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇫🇮.>",
+      "server": "144.31.18.41",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=144.31.18.41:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🎶𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <…🇺🇦.>",
+      "server": "91.238.105.102",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=91.238.105.102:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇦🇪.>",
+      "server": "176.97.66.175",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=176.97.66.175:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕒𝕟𝕤𝕦𝕣 | 🇮🇱💻",
+      "server": "45.150.108.59",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        },
+        "alpn": [
+          "h3",
+          "h2",
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=45.150.108.59:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝑨𝒚𝒉𝒂𝒏𝑴𝒆𝒍𝒊𝑺𝒉𝒆𝒄𝒂𝒏 | 𝑼𝑺🇺🇸🪨🏴🌿",
+      "server": "159.89.182.67",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=159.89.182.67:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | 🇰🇿🪾🏴🌚",
+      "server": "91.200.148.120",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        },
+        "alpn": [
+          "h3",
+          "h2",
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=91.200.148.120:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "💻𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 |🪾 🇯🇵🏯🈲",
+      "server": "43.170.8.95",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        },
+        "alpn": [
+          "h3",
+          "h2",
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=45.95.212.117:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🫔𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🌮🇲🇽.>",
+      "server": "131.196.254.151",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=131.196.254.151:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "<. 𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | 🇹🇷🦃.>",
+      "server": "185.219.132.27",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        },
+        "alpn": [
+          "h3",
+          "h2",
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=185.219.132.27:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "👽𝓐𝔂𝓱𝓪𝓷𝓜𝓮𝓵𝓲𝓢𝓱𝓮𝓬𝓪𝓷 | <…🏴🇬🇧.>",
+      "server": "51.241.130.139",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=51.241.130.139:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇸🇬.>",
+      "server": "95.141.241.216",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=174.138.20.108:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇪🇸.>",
+      "server": "91.149.242.134",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=91.149.242.134:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇺🇿.>",
+      "server": "157.22.128.7",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=157.22.128.7:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇸🇪.>",
+      "server": "95.141.241.216",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=95.141.241.216:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      }
+    ],
+    "final": "Proxy",
+    "auto_detect_interface": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db"
+    }
+  }
+}
