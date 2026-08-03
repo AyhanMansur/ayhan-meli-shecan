@@ -46,6 +46,7 @@
       "tag": "Proxy",
       "outbounds": [
         "Auto",
+        "Special⚡",
         "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇷🇺.>",
         "𝒜𝒴ℎ𝒶𝓃ℳℯℓ𝒾𝒮ℎℯ𝒸𝒶𝓃 |ℊℯ𝓇𝓂𝒶𝓃𝒴🪾📡🇩🇪",
         "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇳🇱.>",
@@ -102,6 +103,39 @@
       "url": "https://www.gstatic.com/generate_204",
       "interval": "3m",
       "tolerance": 50
+    },
+    {
+      "type": "selector",
+      "tag": "Special⚡",
+      "outbounds": [
+        "🥷🎮⚡-umc.mansur13@gmail.com",
+        "direct"
+      ],
+      "default": "🥷🎮⚡-umc.mansur13@gmail.com"
+    },
+    {
+      "type": "vless",
+      "tag": "🥷🎮⚡-umc.mansur13@gmail.com",
+      "server": "ayhanmelinode2.up.railway.app",
+      "server_port": 443,
+      "uuid": "08c2c844-1a29-4c57-aff1-d32f2952c02c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhanmelinode2.up.railway.app",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/in2",
+        "headers": {
+          "Host": "ayhanmelinode2.up.railway.app"
+        }
+      }
     },
     {
       "type": "vless",
