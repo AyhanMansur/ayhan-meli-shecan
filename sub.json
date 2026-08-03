@@ -383,7 +383,7 @@
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
-        },
+        }
       },
       "transport": {
         "type": "ws",
