@@ -6,24 +6,86 @@
   "dns": {
     "servers": [
       {
-        "tag": "proxy-dns",
-        "address": "tls://8.8.8.8",
+        "tag": "dns_proxy",
+        "address": "https://9.9.9.10/dns-query",
+        "address_resolver": "dns_local",
+        "strategy": "ipv4_only",
         "detour": "Proxy"
       },
       {
-        "tag": "direct-dns",
-        "address": "223.5.5.5",
-        "detour": "direct"
+        "tag": "dns_game_electro",
+        "address": "78.157.42.100",
+        "detour": "𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 👾🎮🎶",
+        "strategy": "ipv4_only"
+      },
+      {
+        "tag": "dns_game_radar",
+        "address": "10.202.10.10",
+        "detour": "𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 👾🎮🎶",
+        "strategy": "ipv4_only"
+      },
+      {
+        "tag": "dns_local",
+        "address": "local",
+        "detour": "𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 👾🎮🎶",
+        "strategy": "prefer_ipv4"
+      },
+      {
+        "tag": "dns_success",
+        "address": "rcode://success"
+      },
+      {
+        "tag": "dns_refused",
+        "address": "rcode://refused"
+      },
+      {
+        "tag": "dns_fakeip",
+        "address": "fakeip"
       }
     ],
     "rules": [
       {
+        "domain_suffix": [
+          "demonware.net",
+          "activision.com",
+          "callofduty.com",
+          "atvi-cdn.net",
+          "cod-mw.com",
+          "codmobile.com",
+          "garena.com"
+        ],
+        "server": "dns_game_electro"
+      },
+      {
         "outbound": "any",
-        "server": "direct-dns"
+        "server": "dns_local"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA",
+          "CNAME"
+        ],
+        "server": "dns_fakeip"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA",
+          "CNAME"
+        ],
+        "invert": true,
+        "server": "dns_refused",
+        "disable_cache": true
       }
     ],
-    "final": "proxy-dns",
-    "strategy": "prefer_ipv4"
+    "final": "dns_proxy",
+    "independent_cache": true,
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    }
   },
   "inbounds": [
     {
@@ -33,17 +95,65 @@
         "172.19.0.1/30",
         "fdfe:dcba:9876::1/126"
       ],
-      "mtu": 1280,
+      "mtu": 9000,
       "auto_route": true,
       "strict_route": true,
-      "stack": "system",
-      "sniff": true
+      "stack": "gvisor",
+      "sniff": true,
+      "interface_name": "singbox-tun",
+      "exclude_package": [
+        "ir.mci.ecareapp",
+        "com.myirancell"
+      ],
+      "route_exclude_address": [
+        "127.0.0.0/8",
+        "10.0.0.0/8",
+        "172.16.0.0/12",
+        "192.168.0.0/16",
+        "169.254.0.0/16",
+        "224.0.0.0/4",
+        "255.255.255.255/32"
+      ]
     }
   ],
   "outbounds": [
     {
       "type": "selector",
       "tag": "Proxy",
+      "outbounds": [
+        "🔀 Update Daily",
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇷🇺.>",
+        "𝒜𝒴ℎ𝒶𝓃ℳℯℓ𝒾𝒮ℎℯ𝒸𝒶𝓃 |ℊℯ𝓇𝓂𝒶𝓃𝒴🪾📡🇩🇪",
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇳🇱.>",
+        "🏴𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <…🇨🇦.>",
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 |< 𝔹𝕣𝕒𝕫𝕚𝕝🇧🇷>",
+        "𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <…🇮🇹🌉.>",
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <…🇱🇻.>",
+        "🌉𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <…🇫🇷.>",
+        "𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇫🇮.>",
+        "🎶𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <…🇺🇦.>",
+        "𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇦🇪.>",
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕒𝕟𝕤𝕦𝕣 | 🇮🇱💻",
+        "𝑨𝒚𝒉𝒂𝒏𝑴𝒆𝒍𝒊𝑺𝒉𝒆𝒄𝒂𝒏 | 𝑼𝑺🇺🇸🪨🏴🌿",
+        "𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | 🇰🇿🪾🏴🌙",
+        "💻𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 |🪾 🇯🇵🏯🈲",
+        "🫔𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🌮🇲🇽.>",
+        "<. 𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | 🇹🇷🦃.>",
+        "👽𝓐𝔂𝓱𝓪𝓷𝓜𝓮𝓵𝓲𝓢𝓱𝓮𝓬𝓪𝓷 | <…🏴🇬🇧.>",
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇸🇬.>",
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇪🇸.>",
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇺🇿.>",
+        "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇸🇪.>",
+        "🥷𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 𝕋𝕠𝕣",
+        "🔄𝐌𝐮𝐥𝐭𝐢𝐥𝐚𝐲𝐞𝐫𝐞𝐝 | 𝕊𝕖𝕔𝕦𝕣𝕖 🎮🎢🥷",
+        "𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 👾🎮🎶"
+      ],
+      "default": "🔀 Update Daily",
+      "interrupt_exist_connections": true
+    },
+    {
+      "type": "urltest",
+      "tag": "🔀 Update Daily",
       "outbounds": [
         "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇷🇺.>",
         "𝒜𝒴ℎ𝒶𝓃ℳℯℓ𝒾𝒮ℎℯ𝒸𝒶𝓃 |ℊℯ𝓇𝓂𝒶𝓃𝒴🪾📡🇩🇪",
@@ -68,9 +178,12 @@
         "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇺🇿.>",
         "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇸🇪.>",
         "🥷𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 𝕋𝕠𝕣",
-        "direct"
+        "🔄𝐌𝐮𝐥𝐭𝐢𝐥𝐚𝐲𝐞𝐫𝐞𝐝 | 𝕊𝕖𝕔𝕦𝕣𝕖 🎮🎢🥷"
       ],
-      "default": "🪾𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 | <.🇷🇺.>"
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1440m0s",
+      "tolerance": 1,
+      "idle_timeout": "1440m0s"
     },
     {
       "type": "vless",
@@ -397,7 +510,7 @@
         "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "randomized"
         }
       },
       "transport": {
@@ -422,12 +535,7 @@
         "utls": {
           "enabled": true,
           "fingerprint": "randomized"
-        },
-        "alpn": [
-          "h3",
-          "h2",
-          "http/1.1"
-        ]
+        }
       },
       "transport": {
         "type": "ws",
@@ -630,19 +738,49 @@
       }
     },
     {
+      "type": "wireguard",
+      "tag": "🔄𝐌𝐮𝐥𝐭𝐢𝐥𝐚𝐲𝐞𝐫𝐞𝐝 | 𝕊𝕖𝕔𝕦𝕣𝕖 🎮🎢🥷",
+      "server": "8.6.112.4",
+      "server_port": 8886,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:883d:8027:ed5a:aae0:f7a2/128"
+      ],
+      "private_key": "wF4MIEolgwPyXrxK8Wr04lm2r2nsawfv+cwtP0I9SHY=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "mtu": 1280,
+      "reserved": "SkcG"
+    },
+    {
       "type": "direct",
-      "tag": "direct"
+      "tag": "𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 👾🎮🎶"
     }
   ],
   "route": {
     "rules": [
+      {
+        "inbound": "tun-in",
+        "action": "sniff"
+      },
       {
         "protocol": "dns",
         "action": "hijack-dns"
       },
       {
         "ip_is_private": true,
-        "outbound": "direct"
+        "outbound": "𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 👾🎮🎶"
+      },
+      {
+        "domain_suffix": [
+          "demonware.net",
+          "activision.com",
+          "callofduty.com",
+          "atvi-cdn.net",
+          "cod-mw.com",
+          "codmobile.com",
+          "garena.com"
+        ],
+        "outbound": "𝔸𝕪𝕙𝕒𝕟𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 👾🎮🎶"
       }
     ],
     "final": "Proxy",
@@ -651,7 +789,8 @@
   "experimental": {
     "cache_file": {
       "enabled": true,
-      "path": "cache.db"
+      "path": "cache.db",
+      "store_fakeip": true
     }
   }
 }
