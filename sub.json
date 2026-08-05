@@ -195,8 +195,8 @@
     {
       "type": "vless",
       "tag": "𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦 🇬🇧",
-      "server": "51.241.130.139",
-      "server_port": 443,
+      "server": "2079498.ir",
+      "server_port": 2087,
       "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
       "packet_encoding": "xudp",
       "tls": {
