@@ -16,7 +16,7 @@
       {
         "tag": "dns_local",
         "address": "local",
-        "detour": "Proxy",
+        "detour": "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝",
         "strategy": "prefer_ipv4"
       },
       {
@@ -836,6 +836,10 @@
       {
         "protocol": "dns",
         "action": "hijack-dns"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝"
       }
     ],
     "final": "Proxy",
