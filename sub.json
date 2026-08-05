@@ -16,7 +16,7 @@
       {
         "tag": "dns_local",
         "address": "local",
-        "detour": "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝",
+        "detour": "Proxy",
         "strategy": "prefer_ipv4"
       },
       {
@@ -739,26 +739,25 @@
       ]
     },
     {
-      "type": "vless",
+      "type": "trojan",
       "tag": "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝",
-      "server": "79.132.141.125",
-      "server_port": 443,
-      "uuid": "048f3920-0baa-42b5-80c1-d3d2908b3214",
-      "packet_encoding": "xudp",
+      "server": "arad.ir",
+      "server_port": 8443,
+      "password": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
       "tls": {
         "enabled": true,
-        "server_name": "ayhanmelishacan.umc-mansur13.workers.dev",
+        "server_name": "ayhantest.nova-158181.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "randomized"
         }
       },
       "transport": {
         "type": "ws",
-        "path": "/proxyip=79.132.141.125:443?ed=2560&u=9ef70a9697",
+        "path": "/url/playlist/proxyip=79.132.141.125:443?ed=2560",
         "headers": {
-          "Host": "ayhanmelishacan.umc-mansur13.workers.dev"
+          "Host": "ayhantest.nova-158181.workers.dev"
         }
       }
     },
@@ -837,10 +836,6 @@
       {
         "protocol": "dns",
         "action": "hijack-dns"
-      },
-      {
-        "ip_is_private": true,
-        "outbound": "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝"
       }
     ],
     "final": "Proxy",
