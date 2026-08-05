@@ -1,1 +1,782 @@
-
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns_proxy",
+        "address": "https://9.9.9.10/dns-query",
+        "address_resolver": "dns_local",
+        "strategy": "ipv4_only",
+        "detour": "Proxy"
+      },
+      {
+        "tag": "dns_local",
+        "address": "local",
+        "detour": "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝",
+        "strategy": "prefer_ipv4"
+      },
+      {
+        "tag": "dns_success",
+        "address": "rcode://success"
+      },
+      {
+        "tag": "dns_refused",
+        "address": "rcode://refused"
+      },
+      {
+        "tag": "dns_fakeip",
+        "address": "fakeip"
+      }
+    ],
+    "rules": [
+      {
+        "outbound": "any",
+        "server": "dns_local"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA",
+          "CNAME"
+        ],
+        "server": "dns_fakeip"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA",
+          "CNAME"
+        ],
+        "invert": true,
+        "server": "dns_refused",
+        "disable_cache": true
+      }
+    ],
+    "final": "dns_proxy",
+    "independent_cache": true,
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    }
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "interface_name": "singbox-tun",
+      "mtu": 9000,
+      "auto_route": true,
+      "strict_route": true,
+      "stack": "gvisor",
+      "address": [
+        "172.18.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "route_exclude_address": [
+        "127.0.0.0/8",
+        "10.0.0.0/8",
+        "172.16.0.0/12",
+        "192.168.0.0/16",
+        "169.254.0.0/16",
+        "224.0.0.0/4",
+        "255.255.255.255/32"
+      ],
+      "exclude_package": [
+        "ir.mci.ecareapp",
+        "com.myirancell"
+      ]
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "Proxy",
+      "outbounds": [
+        "🔄 Update Daily",
+        "𝐃𝐮𝐛𝐚𝐢 🇦🇪",
+        "𝐔𝐳𝐛𝐞𝐤𝐢𝐬𝐭𝐚𝐧 🇺🇿",
+        "𝐈𝐬𝐫𝐚𝐞𝐥 🇮🇱",
+        "𝐓𝐮𝐫𝐤𝐞𝐲 🇹🇷",
+        "𝐊𝐚𝐳𝐚𝐤𝐡𝐬𝐭𝐚𝐧 🇰🇿",
+        "𝐑𝐮𝐬𝐬𝐢𝐚 🇷🇺",
+        "𝐔𝐤𝐫𝐚𝐢𝐧𝐞 🇺🇦",
+        "𝐋𝐚𝐭𝐯𝐢𝐚 🇱🇻",
+        "𝐈𝐭𝐚𝐥𝐲 🇮🇹",
+        "𝐅𝐢𝐧𝐥𝐚𝐧𝐝 🇫🇮",
+        "𝐆𝐞𝐫𝐦𝐚𝐧𝐲 🇩🇪",
+        "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝",
+        "𝐒𝐰𝐞𝐝𝐞𝐧 🇸🇪",
+        "𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬 🇳🇱",
+        "𝐅𝐫𝐚𝐧𝐜𝐞 🇫🇷",
+        "𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦 🇬🇧",
+        "𝐒𝐩𝐚𝐢𝐧 🇪🇸",
+        "𝐒𝐢𝐧𝐠𝐚𝐩𝐨𝐫𝐞 🇸🇬",
+        "𝐉𝐚𝐩𝐚𝐧 🇯🇵",
+        "𝐂𝐚𝐧𝐚𝐝𝐚 🇨🇦",
+        "𝐔𝐧𝐢𝐭𝐞𝐝 𝐒𝐭𝐚𝐭𝐞𝐬 🇺🇸",
+        "𝐁𝐫𝐚𝐳𝐢𝐥 🇧🇷",
+        "𝐌𝐞𝐱𝐢𝐜𝐨 🇲🇽",
+        "🥷𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 𝕋𝕠𝕣",
+        "🔄𝐌𝐮𝐥𝐭𝐢𝐥𝐚𝐲𝐞𝐫𝐞𝐝.𝕊𝕖𝕔𝕦𝕣𝕖🎮🎢🥷"
+      ],
+      "interrupt_exist_connections": true
+    },
+    {
+      "type": "urltest",
+      "tag": "🔄 Update Daily",
+      "outbounds": [
+        "𝐃𝐮𝐛𝐚𝐢 🇦🇪",
+        "𝐔𝐳𝐛𝐞𝐤𝐢𝐬𝐭𝐚𝐧 🇺🇿",
+        "𝐈𝐬𝐫𝐚𝐞𝐥 🇮🇱",
+        "𝐓𝐮𝐫𝐤𝐞𝐲 🇹🇷",
+        "𝐊𝐚𝐳𝐚𝐤𝐡𝐬𝐭𝐚𝐧 🇰🇿",
+        "𝐑𝐮𝐬𝐬𝐢𝐚 🇷🇺",
+        "𝐔𝐤𝐫𝐚𝐢𝐧𝐞 🇺🇦",
+        "𝐋𝐚𝐭𝐯𝐢𝐚 🇱🇻",
+        "𝐈𝐭𝐚𝐥𝐲 🇮🇹",
+        "𝐅𝐢𝐧𝐥𝐚𝐧𝐝 🇫🇮",
+        "𝐆𝐞𝐫𝐦𝐚𝐧𝐲 🇩🇪",
+        "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝",
+        "𝐒𝐰𝐞𝐝𝐞𝐧 🇸🇪",
+        "𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬 🇳🇱",
+        "𝐅𝐫𝐚𝐧𝐜𝐞 🇫🇷",
+        "𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦 🇬🇧",
+        "𝐒𝐩𝐚𝐢𝐧 🇪🇸",
+        "𝐒𝐢𝐧𝐠𝐚𝐩𝐨𝐫𝐞 🇸🇬",
+        "𝐉𝐚𝐩𝐚𝐧 🇯🇵",
+        "𝐂𝐚𝐧𝐚𝐝𝐚 🇨🇦",
+        "𝐔𝐧𝐢𝐭𝐞𝐝 𝐒𝐭𝐚𝐭𝐞𝐬 🇺🇸",
+        "𝐁𝐫𝐚𝐳𝐢𝐥 🇧🇷",
+        "𝐌𝐞𝐱𝐢𝐜𝐨 🇲🇽",
+        "🥷𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 𝕋𝕠𝕣",
+        "🔄𝐌𝐮𝐥𝐭𝐢𝐥𝐚𝐲𝐞𝐫𝐞𝐝.𝕊𝕖𝕔𝕦𝕣𝕖🎮🎢🥷"
+      ],
+      "interval": "1440m0s",
+      "tolerance": 1,
+      "idle_timeout": "1440m0s"
+    },
+    {
+      "type": "vless",
+      "tag": "𝐒𝐰𝐞𝐝𝐞𝐧 🇸🇪",
+      "server": "95.141.241.216",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=95.141.241.216:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦 🇬🇧",
+      "server": "1hashtag.ir",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=51.241.130.139:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝐑𝐮𝐬𝐬𝐢𝐚 🇷🇺",
+      "server": "185.151.243.200",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=185.151.243.200:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝐋𝐚𝐭𝐯𝐢𝐚 🇱🇻",
+      "server": "212.6.44.68",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=212.6.44.68:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬 🇳🇱",
+      "server": "37.139.0.134",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=37.139.0.134:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝐅𝐢𝐧𝐥𝐚𝐧𝐝 🇫🇮",
+      "server": "144.31.18.41",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=144.31.18.41:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝐔𝐧𝐢𝐭𝐞𝐝 𝐒𝐭𝐚𝐭𝐞𝐬 🇺🇸",
+      "server": "159.89.182.67",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=159.89.182.67:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝐃𝐮𝐛𝐚𝐢 🇦🇪",
+      "server": "1hashtag.ir",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=176.97.66.175:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝐈𝐭𝐚𝐥𝐲 🇮🇹",
+      "server": "4.232.64.201",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=4.232.64.201:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝐊𝐚𝐳𝐚𝐤𝐡𝐬𝐭𝐚𝐧 🇰🇿",
+      "server": "91.200.148.120",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=91.200.148.120:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝐓𝐮𝐫𝐤𝐞𝐲 🇹🇷",
+      "server": "185.219.132.27",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=185.219.132.27:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝐔𝐤𝐫𝐚𝐢𝐧𝐞 🇺🇦",
+      "server": "91.238.105.102",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=91.238.105.102:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝐅𝐫𝐚𝐧𝐜𝐞 🇫🇷",
+      "server": "185.234.100.241",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=185.234.100.241:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝐆𝐞𝐫𝐦𝐚𝐧𝐲 🇩🇪",
+      "server": "149.248.199.173",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=149.248.199.173:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝐒𝐢𝐧𝐠𝐚𝐩𝐨𝐫𝐞 🇸🇬",
+      "server": "95.141.241.216",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=174.138.20.108:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝐂𝐚𝐧𝐚𝐝𝐚 🇨🇦",
+      "server": "192.99.169.176",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=192.99.169.176",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝐁𝐫𝐚𝐳𝐢𝐥 🇧🇷",
+      "server": "38.180.78.255",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=38.180.78.255:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝐈𝐬𝐫𝐚𝐞𝐥 🇮🇱",
+      "server": "45.150.108.59",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=45.150.108.59:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝐉𝐚𝐩𝐚𝐧 🇯🇵",
+      "server": "43.170.8.95",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=45.95.212.117:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝐌𝐞𝐱𝐢𝐜𝐨 🇲🇽",
+      "server": "131.196.254.151",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=131.196.254.151:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝐒𝐩𝐚𝐢𝐧 🇪🇸",
+      "server": "91.149.242.134",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=91.149.242.134:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "𝐔𝐳𝐛𝐞𝐤𝐢𝐬𝐭𝐚𝐧 🇺🇿",
+      "server": "157.22.128.7",
+      "server_port": 443,
+      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhantest.nova-158181.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=157.22.128.7:443",
+        "headers": {
+          "Host": "ayhantest.nova-158181.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🥷𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 𝕋𝕠𝕣",
+      "server": "ayhanmelinode2.up.railway.app",
+      "server_port": 443,
+      "uuid": "08c2c844-1a29-4c57-aff1-d32f2952c02c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhanmelinode2.up.railway.app",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/in2",
+        "headers": {
+          "Host": "ayhanmelinode2.up.railway.app"
+        }
+      }
+    },
+    {
+      "type": "wireguard",
+      "tag": "🔄𝐌𝐮𝐥𝐭𝐢𝐥𝐚𝐲𝐞𝐫𝐞𝐝.𝕊𝕖𝕔𝕦𝕣𝕖🎮🎢🥷",
+      "server": "8.6.112.4",
+      "server_port": 8886,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:883d:8027:ed5a:aae0:f7a2/128"
+      ],
+      "private_key": "wF4MIEolgwPyXrxK8Wr04lm2r2nsawfv+cwtP0I9SHY=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "mtu": 1280,
+      "reserved": [
+        75,
+        203,
+        6
+      ]
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝",
+      "server": "79.132.141.125",
+      "server_port": 443,
+      "uuid": "048f3920-0baa-42b5-80c1-d3d2908b3214",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhanmelishacan.umc-mansur13.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=79.132.141.125:443?ed=2560&u=9ef70a9697",
+        "headers": {
+          "Host": "ayhanmelishacan.umc-mansur13.workers.dev"
+        }
+      }
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "inbound": "tun-in",
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝"
+      }
+    ],
+    "final": "Proxy",
+    "auto_detect_interface": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": false
+    }
+  }
+}
