@@ -339,8 +339,8 @@
     {
       "type": "vless",
       "tag": "𝐃𝐮𝐛𝐚𝐢 🇦🇪",
-      "server": "176.97.66.175",
-      "server_port": 443,
+      "server": "kali.org",
+      "server_port": 2096,
       "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
       "packet_encoding": "xudp",
       "tls": {
