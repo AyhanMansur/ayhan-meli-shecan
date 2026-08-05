@@ -579,8 +579,8 @@
     {
       "type": "vless",
       "tag": "𝐈𝐬𝐫𝐚𝐞𝐥 🇮🇱",
-      "server": "45.150.108.59",
-      "server_port": 443,
+      "server": "autocdn.aiki-apps.ir",
+      "server_port": 2083,
       "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
       "packet_encoding": "xudp",
       "tls": {
