@@ -219,8 +219,8 @@
     {
       "type": "vless",
       "tag": "𝐑𝐮𝐬𝐬𝐢𝐚 🇷🇺",
-      "server": "185.151.243.200",
-      "server_port": 443,
+      "server": "linux.cloudflare.com",
+      "server_port": 2096,
       "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
       "packet_encoding": "xudp",
       "tls": {
