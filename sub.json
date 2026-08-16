@@ -111,7 +111,7 @@
         "𝐆𝐞𝐫𝐦𝐚𝐧𝐲 🇩🇪",
         "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝",
         "𝐒𝐰𝐞𝐝𝐞𝐧 🇸🇪",
-        "𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬 🇳🇱",
+        "𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬𝐆𝐚𝐦𝐞 🇳🇱🎮👾 ⅓",
         "𝐅𝐫𝐚𝐧𝐜𝐞 🇫🇷",
         "𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦 🇬🇧",
         "𝐒𝐩𝐚𝐢𝐧 🇪🇸",
@@ -147,7 +147,7 @@
         "𝐆𝐞𝐫𝐦𝐚𝐧𝐲 🇩🇪",
         "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝",
         "𝐒𝐰𝐞𝐝𝐞𝐧 🇸🇪",
-        "𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬 🇳🇱",
+        "𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬𝐆𝐚𝐦𝐞 🇳🇱🎮👾 ⅓",
         "𝐅𝐫𝐚𝐧𝐜𝐞 🇫🇷",
         "𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦 🇬🇧",
         "𝐒𝐩𝐚𝐢𝐧 🇪🇸",
@@ -195,8 +195,8 @@
     {
       "type": "vless",
       "tag": "𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦 🇬🇧",
-      "server": "2079498.ir",
-      "server_port": 2087,
+      "server": "51.241.130.139",
+      "server_port": 443,
       "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
       "packet_encoding": "xudp",
       "tls": {
@@ -219,8 +219,8 @@
     {
       "type": "vless",
       "tag": "𝐑𝐮𝐬𝐬𝐢𝐚 🇷🇺",
-      "server": "linux.cloudflare.com",
-      "server_port": 2096,
+      "server": "185.151.243.200",
+      "server_port": 443,
       "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
       "packet_encoding": "xudp",
       "tls": {
@@ -265,27 +265,29 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬 🇳🇱",
-      "server": "37.139.0.134",
+      "type": "trojan",
+      "tag": "𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬𝐆𝐚𝐦𝐞 🇳🇱🎮👾 ⅓",
+      "server": "ayhan.ayhan.kdns.fr",
       "server_port": 443,
-      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
-      "packet_encoding": "xudp",
+      "password": "h5t857se1cih19hf",
       "tls": {
         "enabled": true,
-        "server_name": "ayhantest.nova-158181.workers.dev",
+        "server_name": "ayhan.kdns.fr",
         "insecure": false,
+        "alpn": [
+          "h3",
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "randomized"
         }
       },
       "transport": {
-        "type": "ws",
-        "path": "/proxyip=37.139.0.134:443",
-        "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
-        }
+        "type": "httpupgrade",
+        "host": "ayhan.kdns.fr",
+        "path": "/in2"
       }
     },
     {
@@ -339,8 +341,8 @@
     {
       "type": "vless",
       "tag": "𝐃𝐮𝐛𝐚𝐢 🇦🇪",
-      "server": "kali.org",
-      "server_port": 2096,
+      "server": "176.97.66.175",
+      "server_port": 443,
       "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
       "packet_encoding": "xudp",
       "tls": {
@@ -483,8 +485,8 @@
     {
       "type": "vless",
       "tag": "𝐆𝐞𝐫𝐦𝐚𝐧𝐲 🇩🇪",
-      "server": "cloudflare-quic.com",
-      "server_port": 2053,
+      "server": "149.248.199.173",
+      "server_port": 443,
       "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
       "packet_encoding": "xudp",
       "tls": {
@@ -579,8 +581,8 @@
     {
       "type": "vless",
       "tag": "𝐈𝐬𝐫𝐚𝐞𝐥 🇮🇱",
-      "server": "autocdn.aiki-apps.ir",
-      "server_port": 2083,
+      "server": "45.150.108.59",
+      "server_port": 443,
       "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
       "packet_encoding": "xudp",
       "tls": {
@@ -721,24 +723,6 @@
       }
     },
     {
-      "type": "wireguard",
-      "tag": "🔄𝐌𝐮𝐥𝐭𝐢𝐥𝐚𝐲𝐞𝐫𝐞𝐝.𝕊𝕖𝕔𝕦𝕣𝕖🎮🎢🥷",
-      "server": "8.6.112.4",
-      "server_port": 8886,
-      "local_address": [
-        "172.16.0.2/32",
-        "2606:4700:110:883d:8027:ed5a:aae0:f7a2/128"
-      ],
-      "private_key": "wF4MIEolgwPyXrxK8Wr04lm2r2nsawfv+cwtP0I9SHY=",
-      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "mtu": 1280,
-      "reserved": [
-        75,
-        203,
-        6
-      ]
-    },
-    {
       "type": "trojan",
       "tag": "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝",
       "server": "arad.ir",
@@ -850,5 +834,34 @@
       "enabled": true,
       "store_fakeip": false
     }
-  }
+  },
+  "endpoints": [
+    {
+      "type": "wireguard",
+      "tag": "🔄𝐌𝐮𝐥𝐭𝐢𝐥𝐚𝐲𝐞𝐫𝐞𝐝.𝕊𝕖𝕔𝕦𝕣𝕖🎮🎢🥷",
+      "system": false,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:883d:8027:ed5a:aae0:f7a2/128"
+      ],
+      "private_key": "wF4MIEolgwPyXrxK8Wr04lm2r2nsawfv+cwtP0I9SHY=",
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.4",
+          "port": 8886,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "reserved": [
+            75,
+            203,
+            6
+          ]
+        }
+      ]
+    }
+  ]
 }
