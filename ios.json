@@ -739,14 +739,14 @@
       ]
     },
     {
-      "type": "trojan",
+      "type": "vless",
       "tag": "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝",
       "server": "arad.ir",
       "server_port": 8443,
-      "password": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
         "enabled": true,
-        "server_name": "ayhantest.nova-158181.workers.dev",
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -755,9 +755,9 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/url/playlist/proxyip=79.132.141.125:443?ed=2560",
+        "path": "/gmaetunnel/proxyip=79.132.141.125:443?ed=2560",
         "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     },
