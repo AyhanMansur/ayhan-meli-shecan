@@ -173,11 +173,11 @@
       "tag": "𝐒𝐰𝐞𝐝𝐞𝐧 🇸🇪",
       "server": "95.141.241.216",
       "server_port": 443,
-      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "ayhantest.nova-158181.workers.dev",
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -186,9 +186,9 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/proxyip=95.141.241.216:443",
+        "path": "/gametunnel/proxyip=95.141.241.216:443",
         "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     },
@@ -197,11 +197,11 @@
       "tag": "𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦 🇬🇧",
       "server": "2079498.ir",
       "server_port": 2087,
-      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "ayhantest.nova-158181.workers.dev",
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -210,9 +210,9 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/proxyip=51.241.130.139:443",
+        "path": "/gametunnel/proxyip=51.241.130.139:443",
         "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     },
@@ -221,11 +221,11 @@
       "tag": "𝐑𝐮𝐬𝐬𝐢𝐚 🇷🇺",
       "server": "linux.cloudflare.com",
       "server_port": 2096,
-      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "ayhantest.nova-158181.workers.dev",
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -234,9 +234,9 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/proxyip=185.151.243.200:443",
+        "path": "/gametunnel/proxyip=185.151.243.200:443",
         "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     },
@@ -245,11 +245,11 @@
       "tag": "𝐋𝐚𝐭𝐯𝐢𝐚 🇱🇻",
       "server": "212.6.44.68",
       "server_port": 443,
-      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "ayhantest.nova-158181.workers.dev",
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -258,9 +258,9 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/proxyip=212.6.44.68:443",
+        "path": "/gametunnel/proxyip=212.6.44.68:443",
         "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     },
@@ -269,11 +269,11 @@
       "tag": "𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬 🇳🇱",
       "server": "37.139.0.134",
       "server_port": 443,
-      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "ayhantest.nova-158181.workers.dev",
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -284,7 +284,7 @@
         "type": "ws",
         "path": "/proxyip=37.139.0.134:443",
         "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     },
@@ -293,11 +293,11 @@
       "tag": "𝐅𝐢𝐧𝐥𝐚𝐧𝐝 🇫🇮",
       "server": "144.31.18.41",
       "server_port": 443,
-      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "ayhantest.nova-158181.workers.dev",
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -306,9 +306,9 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/proxyip=144.31.18.41:443",
+        "path": "/gametunnel/proxyip=144.31.18.41:443",
         "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     },
@@ -317,11 +317,11 @@
       "tag": "𝐔𝐧𝐢𝐭𝐞𝐝 𝐒𝐭𝐚𝐭𝐞𝐬 🇺🇸",
       "server": "159.89.182.67",
       "server_port": 443,
-      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "ayhantest.nova-158181.workers.dev",
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -330,9 +330,9 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/proxyip=159.89.182.67:443",
+        "path": "/gametunnel/proxyip=159.89.182.67:443",
         "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     },
@@ -345,7 +345,7 @@
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "ayhantest.nova-158181.workers.dev",
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -354,9 +354,9 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/proxyip=176.97.66.175:443",
+        "path": "/gametunnel/proxyip=176.97.66.175:443",
         "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     },
@@ -365,11 +365,11 @@
       "tag": "𝐈𝐭𝐚𝐥𝐲 🇮🇹",
       "server": "4.232.64.201",
       "server_port": 443,
-      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "ayhantest.nova-158181.workers.dev",
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -378,9 +378,9 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/proxyip=4.232.64.201:443",
+        "path": "/gametunnel/proxyip=4.232.64.201:443",
         "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     },
@@ -402,9 +402,9 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/proxyip=91.200.148.120:443",
+        "path": "/gametunnel/proxyip=91.200.148.120:443",
         "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     },
@@ -413,11 +413,11 @@
       "tag": "𝐓𝐮𝐫𝐤𝐞𝐲 🇹🇷",
       "server": "185.219.132.27",
       "server_port": 443,
-      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "ayhantest.nova-158181.workers.dev",
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -426,9 +426,9 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/proxyip=185.219.132.27:443",
+        "path": "/gametunnel/proxyip=185.219.132.27:443",
         "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     },
@@ -437,11 +437,11 @@
       "tag": "𝐔𝐤𝐫𝐚𝐢𝐧𝐞 🇺🇦",
       "server": "91.238.105.102",
       "server_port": 443,
-      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "ayhantest.nova-158181.workers.dev",
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -450,9 +450,9 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/proxyip=91.238.105.102:443",
+        "path": "/gametunnel/proxyip=91.238.105.102:443",
         "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     },
@@ -461,11 +461,11 @@
       "tag": "𝐅𝐫𝐚𝐧𝐜𝐞 🇫🇷",
       "server": "185.234.100.241",
       "server_port": 443,
-      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "ayhantest.nova-158181.workers.dev",
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -474,9 +474,9 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/proxyip=185.234.100.241:443",
+        "path": "/gametunnel/proxyip=185.234.100.241:443",
         "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     },
@@ -509,11 +509,11 @@
       "tag": "𝐒𝐢𝐧𝐠𝐚𝐩𝐨𝐫𝐞 🇸🇬",
       "server": "95.141.241.216",
       "server_port": 443,
-      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "ayhantest.nova-158181.workers.dev",
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -522,9 +522,9 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/proxyip=174.138.20.108:443",
+        "path": "/gametunnel/proxyip=174.138.20.108:443",
         "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     },
@@ -533,11 +533,11 @@
       "tag": "𝐂𝐚𝐧𝐚𝐝𝐚 🇨🇦",
       "server": "192.99.169.176",
       "server_port": 443,
-      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "ayhantest.nova-158181.workers.dev",
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -546,9 +546,9 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/proxyip=192.99.169.176",
+        "path": "/gametunnel/proxyip=192.99.169.176",
         "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     },
@@ -557,11 +557,11 @@
       "tag": "𝐁𝐫𝐚𝐳𝐢𝐥 🇧🇷",
       "server": "38.180.78.255",
       "server_port": 443,
-      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "ayhantest.nova-158181.workers.dev",
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -570,9 +570,9 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/proxyip=38.180.78.255:443",
+        "path": "/gametunnel/proxyip=38.180.78.255:443",
         "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     },
@@ -605,11 +605,11 @@
       "tag": "𝐉𝐚𝐩𝐚𝐧 🇯🇵",
       "server": "43.170.8.95",
       "server_port": 443,
-      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "ayhantest.nova-158181.workers.dev",
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -618,9 +618,9 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/proxyip=45.95.212.117:443",
+        "path": "/gametunnel/proxyip=45.95.212.117:443",
         "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     },
@@ -629,22 +629,22 @@
       "tag": "𝐌𝐞𝐱𝐢𝐜𝐨 🇲🇽",
       "server": "131.196.254.151",
       "server_port": 443,
-      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "ayhantest.nova-158181.workers.dev",
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "randomized"
         }
       },
       "transport": {
         "type": "ws",
-        "path": "/proxyip=131.196.254.151:443",
+        "path": "/gametunnel/proxyip=131.196.254.151:443",
         "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     },
@@ -653,22 +653,22 @@
       "tag": "𝐒𝐩𝐚𝐢𝐧 🇪🇸",
       "server": "91.149.242.134",
       "server_port": 443,
-      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "ayhantest.nova-158181.workers.dev",
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "randomized"
         }
       },
       "transport": {
         "type": "ws",
-        "path": "/proxyip=91.149.242.134:443",
+        "path": "/gametunnel/proxyip=91.149.242.134:443",
         "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     },
@@ -677,22 +677,22 @@
       "tag": "𝐔𝐳𝐛𝐞𝐤𝐢𝐬𝐭𝐚𝐧 🇺🇿",
       "server": "157.22.128.7",
       "server_port": 443,
-      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "ayhantest.nova-158181.workers.dev",
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "randomized"
         }
       },
       "transport": {
         "type": "ws",
-        "path": "/proxyip=157.22.128.7:443",
+        "path": "/gametunnel/proxyip=157.22.128.7:443",
         "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     },
