@@ -483,8 +483,8 @@
     {
       "type": "vless",
       "tag": "𝐆𝐞𝐫𝐦𝐚𝐧𝐲 🇩🇪",
-      "server": "cloudflare-quic.com",
-      "server_port": 2053,
+      "server": "149.248.199.173",
+      "server_port": 443,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "packet_encoding": "xudp",
       "tls": {
@@ -493,7 +493,7 @@
         "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "unsafe"
         }
       },
       "transport": {
