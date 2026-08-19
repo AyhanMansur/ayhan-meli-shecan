@@ -581,11 +581,11 @@
       "tag": "𝐈𝐬𝐫𝐚𝐞𝐥 🇮🇱",
       "server": "autocdn.aiki-apps.ir",
       "server_port": 2083,
-      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "ayhantest.nova-158181.workers.dev",
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -594,9 +594,9 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/proxyip=45.150.108.59:443",
+        "path": "/gametunnel/proxyip=45.150.108.59:443",
         "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     },
