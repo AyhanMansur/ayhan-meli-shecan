@@ -493,7 +493,7 @@
         "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "unsafe"
+          "fingerprint": "randomized"
         }
       },
       "transport": {
