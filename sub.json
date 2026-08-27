@@ -125,7 +125,7 @@
         "𝐁𝐚𝐧𝐠𝐥𝐚𝐝𝐞𝐬𝐡 🇧🇩",
         "𝐄𝐬𝐭𝐨𝐧𝐢𝐚 🇪🇪",
         "𝐂𝐳𝐞𝐜𝐡 🇨🇿",
-        "🥷𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 𝕋𝕠𝕣",
+        "𝐂𝐚𝐦𝐛𝐨𝐝𝐢𝐚🇰🇭",
         "🔄𝐌𝐮𝐥𝐭𝐢𝐥𝐚𝐲𝐞𝐫𝐞𝐝.𝕊𝕖𝕔𝕦𝕣𝕖🎮🎢🥷"
       ],
       "interrupt_exist_connections": true
@@ -161,7 +161,7 @@
         "𝐁𝐚𝐧𝐠𝐥𝐚𝐝𝐞𝐬𝐡 🇧🇩",
         "𝐄𝐬𝐭𝐨𝐧𝐢𝐚 🇪🇪",
         "𝐂𝐳𝐞𝐜𝐡 🇨🇿",
-        "🥷𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 𝕋𝕠𝕣",
+        "𝐂𝐚𝐦𝐛𝐨𝐝𝐢𝐚🇰🇭",
         "🔄𝐌𝐮𝐥𝐭𝐢𝐥𝐚𝐲𝐞𝐫𝐞𝐝.𝕊𝕖𝕔𝕦𝕣𝕖🎮🎢🥷"
       ],
       "interval": "1440m0s",
@@ -186,7 +186,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/gametunnel/proxyip=95.141.241.216:443",
+        "path": "/gametunnel/proxyip=95.141.241.216:443?ed=2560",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
@@ -210,7 +210,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/gametunnel/proxyip=51.241.130.139:443",
+        "path": "/gametunnel/proxyip=51.241.130.139:443?ed=2560",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
@@ -234,7 +234,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/gametunnel/proxyip=185.151.243.200:443",
+        "path": "/gametunnel/proxyip=185.151.243.200:443?ed=2560",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
@@ -258,7 +258,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/gametunnel/proxyip=212.6.44.68:443",
+        "path": "/gametunnel/proxyip=212.6.44.68:443?ed=2560",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
@@ -282,7 +282,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/proxyip=37.139.0.134:443",
+        "path": "/gametunnel/proxyip=37.139.0.134:443?ed=2560",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
@@ -306,7 +306,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/gametunnel/proxyip=144.31.18.41:443",
+        "path": "/gametunnel/proxyip=144.31.18.41:443?ed=2560",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
@@ -330,7 +330,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/gametunnel/proxyip=159.89.182.67:443",
+        "path": "/gametunnel/proxyip=159.89.182.67:443?ed=2560",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
@@ -354,7 +354,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/gametunnel/proxyip=176.97.66.175:443",
+        "path": "/gametunnel/proxyip=176.97.66.175:443?ed=2560",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
@@ -378,7 +378,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/gametunnel/proxyip=4.232.64.201:443",
+        "path": "/gametunnel/proxyip=4.232.64.201:443?ed=2560",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
@@ -389,11 +389,11 @@
       "tag": "𝐊𝐚𝐳𝐚𝐤𝐡𝐬𝐭𝐚𝐧 🇰🇿",
       "server": "91.200.148.120",
       "server_port": 443,
-      "uuid": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "ayhantest.nova-158181.workers.dev",
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -426,7 +426,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/gametunnel/proxyip=185.219.132.27:443",
+        "path": "/gametunnel/proxyip=185.219.132.27:443?ed=2560",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
@@ -450,7 +450,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/gametunnel/proxyip=91.238.105.102:443",
+        "path": "/gametunnel/proxyip=91.238.105.102:443?ed=2560",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
@@ -474,7 +474,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/gametunnel/proxyip=185.234.100.241:443",
+        "path": "/gametunnel/proxyip=185.234.100.241:443?ed=2560",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
@@ -483,13 +483,13 @@
     {
       "type": "vless",
       "tag": "𝐆𝐞𝐫𝐦𝐚𝐧𝐲 🇩🇪",
-      "server": "149.248.199.173",
-      "server_port": 443,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "server": "admin.arexhub.ir",
+      "server_port": 2087,
+      "uuid": "598e6569-1bd8-449e-87f8-b2587e6e83cd",
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "server_name": "blacklegends.kdns.fr",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -497,10 +497,10 @@
         }
       },
       "transport": {
-        "type": "ws",
-        "path": "/gmaetunnel/proxyip=149.248.199.173:443?ed=2560",
+        "type": "httpupgrade",
+        "path": "/",
         "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
+          "Host": "blacklegends.kdns.fr"
         }
       }
     },
@@ -522,7 +522,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/gametunnel/proxyip=174.138.20.108:443",
+        "path": "/gametunnel/proxyip=174.138.20.108:443?ed=2560",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
@@ -546,7 +546,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/gametunnel/proxyip=192.99.169.176",
+        "path": "/gametunnel/proxyip=192.99.169.176?ed=2560",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
@@ -570,7 +570,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/gametunnel/proxyip=38.180.78.255:443",
+        "path": "/gametunnel/proxyip=38.180.78.255:443?ed=2560",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
@@ -594,7 +594,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/gametunnel/proxyip=45.150.108.59:443",
+        "path": "/gametunnel/proxyip=45.150.108.59:443?ed=2560",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
@@ -609,7 +609,7 @@
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "server_name": "blacklegends.umc-mansur13.workers.dev?ed=2560",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -618,7 +618,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/gametunnel/proxyip=45.95.212.117:443",
+        "path": "/gametunnel/proxyip=45.95.212.117:443?ed=2560",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
@@ -633,7 +633,7 @@
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "server_name": "blacklegends.umc-mansur13.workers.dev?ed=2560",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -642,7 +642,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/gametunnel/proxyip=131.196.254.151:443",
+        "path": "/gametunnel/proxyip=131.196.254.151:443?ed=2560",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
@@ -666,7 +666,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/gametunnel/proxyip=91.149.242.134:443",
+        "path": "/gametunnel/proxyip=91.149.242.134:443?ed=2560",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
@@ -690,7 +690,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/gametunnel/proxyip=157.22.128.7:443",
+        "path": "/gametunnel/proxyip=157.22.128.7:443?ed=2560",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
@@ -698,14 +698,14 @@
     },
     {
       "type": "vless",
-      "tag": "🥷𝕄𝕖𝕝𝕚𝕊𝕙𝕖𝕔𝕒𝕟 𝕋𝕠𝕣",
-      "server": "ayhanmelinode2.up.railway.app",
+      "tag": "𝐂𝐚𝐦𝐛𝐨𝐝𝐢𝐚🇰🇭",
+      "server": "",
       "server_port": 443,
-      "uuid": "08c2c844-1a29-4c57-aff1-d32f2952c02c",
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "ayhanmelinode2.up.railway.app",
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -714,9 +714,9 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/in2",
+        "path": "/gametunnel/proxyip=38.54.4.209:443?ed=2560",
         "headers": {
-          "Host": "ayhanmelinode2.up.railway.app"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     },
@@ -755,7 +755,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=79.132.141.125:443?ed=2560",
+        "path": "/gametunnel/proxyip=79.132.141.125:443?ed=2560",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
@@ -766,12 +766,12 @@
       "tag": "𝐑𝐨𝐦𝐚𝐧𝐢𝐚 🇷🇴",
       "server": "admin.arexhub.ir",
       "server_port": 80,
-      "password": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "password": "964e6322-afad-4594-8508-86d634d732e6",
       "transport": {
         "type": "ws",
-        "path": "/url/playlist/proxyip=45.13.38.120:443?ed=2560",
+        "path": "/gametunnel/proxyip=131.196.254.151:443?ed=2560",
         "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     },
@@ -780,12 +780,12 @@
       "tag": "𝐁𝐚𝐧𝐠𝐥𝐚𝐝𝐞𝐬𝐡 🇧🇩",
       "server": "kali.org",
       "server_port": 2095,
-      "password": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "password": "964e6322-afad-4594-8508-86d634d732e6",
       "transport": {
         "type": "ws",
-        "path": "/url/playlist/proxyip=38.54.42.124:443?ed=2560",
+        "path": "/gametunnel/proxyip=38.54.42.124:443?ed=2560",
         "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     },
@@ -794,12 +794,12 @@
       "tag": "𝐄𝐬𝐭𝐨𝐧𝐢𝐚 🇪🇪",
       "server": "2apples.ir",
       "server_port": 2082,
-      "password": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "password": "964e6322-afad-4594-8508-86d634d732e6",
       "transport": {
         "type": "ws",
-        "path": "/url/playlist/proxyip=38.180.10.97:443?ed=2560",
+        "path": "/gametunnel/proxyip=38.180.10.97:443?ed=2560",
         "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     },
@@ -808,10 +808,10 @@
       "tag": "𝐂𝐳𝐞𝐜𝐡 🇨🇿",
       "server": "linux.cloudflare.com",
       "server_port": 2096,
-      "password": "3dff8bf4-497a-4e9b-842e-5919b02c4b0c",
+      "password": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
         "enabled": true,
-        "server_name": "ayhantest.nova-158181.workers.dev",
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -820,9 +820,9 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/url/playlist/proxyip=185.253.46.98:443?ed=2560",
+        "path": "/gametunnel/proxyip=185.253.46.98:443?ed=2560",
         "headers": {
-          "Host": "ayhantest.nova-158181.workers.dev"
+          "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
     }
