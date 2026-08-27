@@ -402,7 +402,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/gametunnel/proxyip=91.200.148.120:443",
+        "path": "/gametunnel/proxyip=91.200.148.120:443?ed=2560",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
