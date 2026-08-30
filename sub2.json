@@ -274,7 +274,7 @@
     {
       "type": "vless",
       "tag": "🇷🇺 𝐑𝐮𝐬𝐬𝐢𝐚",
-      "server": "atomicmail.io",
+      "server": "blacklegends.umc-mansur13.workers.dev",
       "server_port": 80,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -292,7 +292,7 @@
     {
       "type": "vless",
       "tag": "🇺🇦 𝐔𝐤𝐫𝐚𝐢𝐧𝐞",
-      "server": "4kia.gioogle.ir",
+      "server": "blacklegends.umc-mansur13.workers.dev",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -310,7 +310,7 @@
     {
       "type": "vless",
       "tag": "🇱🇻 𝐋𝐚𝐭𝐯𝐢𝐚",
-      "server": "4kia.gioogle.ir",
+      "server": "blacklegends.umc-mansur13.workers.dev",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -346,7 +346,7 @@
     {
       "type": "vless",
       "tag": "🇫🇮 𝐅𝐢𝐧𝐥𝐚𝐧𝐝",
-      "server": "4kia.gioogle.ir",
+      "server": "blacklegends.umc-mansur13.workers.dev",
       "server_port": 80,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
