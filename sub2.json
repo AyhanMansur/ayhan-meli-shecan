@@ -183,7 +183,7 @@
     {
       "type": "vless",
       "tag": "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
-      "server": "linux.cloudflare.com",
+      "server": "am-ahmadi.ir",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "transport": {
