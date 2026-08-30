@@ -238,7 +238,7 @@
     {
       "type": "vless",
       "tag": "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲",
-      "server": "alibakhshi.id.ir",
+      "server": "15.my7mhg.ir",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -256,7 +256,7 @@
     {
       "type": "vless",
       "tag": " 🇰🇿 𝐊𝐚𝐳𝐚𝐤𝐡𝐬𝐭𝐚𝐧",
-      "server": "alibakhshi.id.ir",
+      "server": "15.my7mhg.ir",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -274,8 +274,8 @@
     {
       "type": "vless",
       "tag": "🇷🇺 𝐑𝐮𝐬𝐬𝐢𝐚",
-      "server": "blacklegends.umc-mansur13.workers.dev",
-      "server_port": 80,
+      "server": "15.my7mhg.ir",
+      "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
         "enabled": false,
@@ -292,7 +292,7 @@
     {
       "type": "vless",
       "tag": "🇺🇦 𝐔𝐤𝐫𝐚𝐢𝐧𝐞",
-      "server": "blacklegends.umc-mansur13.workers.dev",
+      "server": "15.my7mhg.ir",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -310,7 +310,7 @@
     {
       "type": "vless",
       "tag": "🇱🇻 𝐋𝐚𝐭𝐯𝐢𝐚",
-      "server": "blacklegends.umc-mansur13.workers.dev",
+      "server": "15.my7mhg.ir",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -328,8 +328,8 @@
     {
       "type": "vless",
       "tag": "🇮🇹 𝐈𝐭𝐚𝐥𝐲",
-      "server": "amajgroup.ir",
-      "server_port": 80,
+      "server": "15.my7mhg.ir",
+      "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
         "enabled": false,
@@ -346,7 +346,7 @@
     {
       "type": "vless",
       "tag": "🇫🇮 𝐅𝐢𝐧𝐥𝐚𝐧𝐝",
-      "server": "amajgroup.ir",
+      "server": "15.my7mhg.ir",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -364,7 +364,7 @@
     {
       "type": "vless",
       "tag": "🇩🇪 𝐆𝐞𝐫𝐦𝐚𝐧𝐲",
-      "server": "kali.org",
+      "server": "15.my7mhg.ir",
       "server_port": 2087,
       "uuid": "dd8a3557-5a9d-4f1d-b6b0-f31f35dd0093",
       "tls": {
@@ -387,8 +387,8 @@
     {
       "type": "vless",
       "tag": "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝",
-      "server": "4kia.gioogle.ir",
-      "server_port": 80,
+      "server": "15.my7mhg.ir",
+      "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
         "enabled": false,
@@ -405,8 +405,8 @@
     {
       "type": "vless",
       "tag": "🇸🇪 𝐒𝐰𝐞𝐝𝐞𝐧",
-      "server": "4kia.gioogle.ir",
-      "server_port": 80,
+      "server": "15.my7mhg.ir",
+      "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
         "enabled": false,
@@ -442,7 +442,7 @@
     {
       "type": "vless",
       "tag": "🇫🇷 𝐅𝐫𝐚𝐧𝐜𝐞",
-      "server": "11.my7mhg.ir",
+      "server": "15.my7mhg.ir",
       "server_port": 2096,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -461,7 +461,7 @@
     {
       "type": "vless",
       "tag": "🇬🇧 𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦",
-      "server": "110book.ir",
+      "server": "15.my7mhg.ir",
       "server_port": 2096,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
