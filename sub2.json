@@ -247,7 +247,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/new/episodes/vod/proxyip=185.219.132.27:443?ed=2560&u=user1",
+        "path": "/gmaetunnel/proxyip=185.219.132.27?ed=2560",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
