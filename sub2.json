@@ -69,7 +69,7 @@
       "type": "tun",
       "tag": "tun-in",
       "interface_name": "singbox-tun",
-      "mtu": 9000,
+      "mtu": 1280,
       "auto_route": true,
       "strict_route": true,
       "stack": "gvisor",
