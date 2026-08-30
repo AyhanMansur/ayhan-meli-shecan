@@ -183,7 +183,7 @@
     {
       "type": "vless",
       "tag": "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
-      "server": "4kia.gioogle.ir",
+      "server": "linux.cloudflare.com",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "transport": {
@@ -197,7 +197,7 @@
     {
       "type": "vless",
       "tag": "🇺🇿 𝐔𝐳𝐛𝐞𝐤𝐢𝐬𝐭𝐚𝐧",
-      "server": "4kia.gioogle.ir",
+      "server": "www.speedtest.net",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -238,7 +238,7 @@
     {
       "type": "vless",
       "tag": "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲",
-      "server": "4kia.gioogle.ir",
+      "server": "www.speedtest.net",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -328,7 +328,7 @@
     {
       "type": "vless",
       "tag": "🇮🇹 𝐈𝐭𝐚𝐥𝐲",
-      "server": "4kia.gioogle.ir",
+      "server": "amajgroup.ir",
       "server_port": 80,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -346,8 +346,8 @@
     {
       "type": "vless",
       "tag": "🇫🇮 𝐅𝐢𝐧𝐥𝐚𝐧𝐝",
-      "server": "blacklegends.umc-mansur13.workers.dev",
-      "server_port": 80,
+      "server": "amajgroup.ir",
+      "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
         "enabled": false,
