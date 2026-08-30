@@ -8,7 +8,7 @@
     "servers": [
       {
         "tag": "dns_proxy",
-        "address": "https://9.9.9.10/dns-query",
+        "address": "https://free.shecan.ir/dns-query",
         "address_resolver": "dns_local",
         "strategy": "ipv4_only",
         "detour": "Proxy"
@@ -176,9 +176,10 @@
         "🇭🇰 𝐇𝐨𝐧𝐠 𝐊𝐨𝐧𝐠",
         "🇦🇷 𝐀𝐫𝐠𝐞𝐧𝐭𝐢𝐧𝐚"
       ],
-      "interval": "1440m0s",
-      "tolerance": 1,
-      "idle_timeout": "1440m0s"
+      "url": "http://www.msftconnecttest.com/connecttest.txt",
+      "interval": "10m0s",
+      "tolerance": 50,
+      "idle_timeout": "30m0s"
     },
     {
       "type": "vless",
