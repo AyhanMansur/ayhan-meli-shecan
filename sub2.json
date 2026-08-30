@@ -8,7 +8,7 @@
     "servers": [
       {
         "tag": "dns_proxy",
-        "address": "https://free.shecan.ir/dns-query",
+        "address": "https://9.9.9.9/dns-query",
         "address_resolver": "dns_local",
         "strategy": "ipv4_only",
         "detour": "Proxy"
