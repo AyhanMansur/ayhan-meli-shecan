@@ -247,7 +247,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=185.219.132.27?ed=2560",
+        "path": "/new/episodes/vod/proxyip=185.219.132.27:443?ed=2560&u=user1",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
@@ -265,7 +265,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=91.200.148.120:443?ed=2560",
+        "path": "/gametunnel/proxyip=91.200.148.120:443?ed=2560",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
@@ -283,7 +283,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=95.188.72.67?ed=2560",
+        "path": "/proxyip=95.188.72.67?ed=2560",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
@@ -301,7 +301,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=91.238.105.102:443?ed=2560",
+        "path": "/proxyip=91.238.105.102:443?ed=2560",
         "headers": {
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
