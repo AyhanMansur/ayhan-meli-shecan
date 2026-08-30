@@ -183,7 +183,7 @@
     {
       "type": "vless",
       "tag": "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
-      "server": "autoir.sefsoor.ir",
+      "server": "4kia.gioogle.ir",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "transport": {
@@ -197,7 +197,7 @@
     {
       "type": "vless",
       "tag": "🇺🇿 𝐔𝐳𝐛𝐞𝐤𝐢𝐬𝐭𝐚𝐧",
-      "server": "09122108011.ir",
+      "server": "4kia.gioogle.ir",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -219,8 +219,8 @@
     {
       "type": "vless",
       "tag": "🇮🇱 𝐈𝐬𝐫𝐚𝐞𝐥",
-      "server": "bakieh.ir",
-      "server_port": 443,
+      "server": "4kia.gioogle.ir",
+      "server_port": 2053,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
         "enabled": true,
@@ -238,7 +238,7 @@
     {
       "type": "vless",
       "tag": "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲",
-      "server": "applypedia.ir",
+      "server": "4kia.gioogle.ir",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
