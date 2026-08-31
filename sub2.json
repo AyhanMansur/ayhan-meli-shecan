@@ -238,8 +238,8 @@
     {
       "type": "vless",
       "tag": "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲",
-      "server": "185.219.132.27",
-      "server_port": 443,
+      "server": "check-host.net",
+      "server_port": 2083,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
         "enabled": true,
@@ -310,8 +310,8 @@
     {
       "type": "vless",
       "tag": "🇱🇻 𝐋𝐚𝐭𝐯𝐢𝐚",
-      "server": "212.6.44.68",
-      "server_port": 443,
+      "server": "check-host.net",
+      "server_port": 2096,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
         "enabled": true,
@@ -634,8 +634,8 @@
     {
       "type": "vless",
       "tag": "🇨🇿 𝐂𝐳𝐞𝐜𝐡",
-      "server": "37.205.15.169",
-      "server_port": 443,
+      "server": "check-host.net",
+      "server_port": 2053,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
         "enabled": true,
@@ -652,7 +652,7 @@
     {
       "type": "vless",
       "tag": "🇳🇴 𝐍𝐨𝐫𝐰𝐚𝐲",
-      "server": "194.5.98.17",
+      "server": "check-host.net",
       "server_port": 443,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -670,7 +670,7 @@
     {
       "type": "vless",
       "tag": "🇹🇼 𝐓𝐚𝐢𝐰𝐚𝐧",
-      "server": "blacklegends.umc-mansur13.workers.dev",
+      "server": "check-host.net",
       "server_port": 2096,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
