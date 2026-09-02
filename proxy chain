@@ -1,0 +1,233 @@
+{
+  "log": {
+    "loglevel": "info"
+  },
+  "dns": {
+    "hosts": {
+      "fastest-config-by-ayhan.umc-mansur13.workers.dev": [
+        "104.17.148.8"
+      ],
+      "geosite:category-ads-all": [
+        "127.0.0.1"
+      ],
+      "ayhanspc.tail8d7b34.ts.net.": [
+        "100.117.153.68"
+      ],
+      "github-rdp-server.tail8d7b34.ts.net.": [
+        "100.122.25.83"
+      ],
+      "iphone-15-pro-max.tail8d7b34.ts.net.": [
+        "100.112.129.64"
+      ],
+      "AyhansPCPCC": [
+        "172.23.128.1"
+      ],
+      "Galaxy-A25-5G.mshome.net": [
+        "168.137.0.221"
+      ]
+    },
+    "servers": [
+      {
+        "address": "https://fastest-config-by-ayhan.umc-mansur13.workers.dev/dns-query",
+        "domains": [],
+        "skipFallback": false
+      },
+      "9.9.9.9",
+      "9.9.9.9",
+      {
+        "address": "9.9.9.9",
+        "port": null,
+        "domains": [
+          "panel.blacklegends.kdns.fr"
+        ],
+        "skipFallback": true,
+        "expectedIPs": null,
+        "tag": null
+      }
+    ]
+  },
+  "inbounds": [
+    {
+      "tag": "socks",
+      "port": 1070,
+      "listen": "0.0.0.0",
+      "protocol": "mixed",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "tls",
+          "quic",
+          "fakedns",
+          "http"
+        ],
+        "routeOnly": false
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "allowTransparent": false
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "proxy",
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "panel.blacklegends.kdns.fr",
+            "port": 2053,
+            "users": [
+              {
+                "id": "49b3030f-afd1-45bd-a62d-00a56765e037",
+                "alterId": 0,
+                "email": "t@t.tt",
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "httpupgrade",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "main.blacklegends.kdns.fr",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome"
+        },
+        "httpupgradeSettings": {
+          "path": "/",
+          "host": "main.blacklegends.kdns.fr",
+          "headers": {
+            "User-Agent": "curl"
+          }
+        },
+        "sockopt": {
+          "dialerProxy": "chain-proxy-1-\uD83C\uDDF2\uD83C\uDDFD \uD835\uDC0C\uD835\uDC1E\uD835\uDC31\uD835\uDC22\uD835\uDC1C\uD835\uDC28"
+        }
+      },
+      "mux": {
+        "enabled": false,
+        "concurrency": -1
+      }
+    },
+    {
+      "tag": "chain-proxy-1-\uD83C\uDDF2\uD83C\uDDFD \uD835\uDC0C\uD835\uDC1E\uD835\uDC31\uD835\uDC22\uD835\uDC1C\uD835\uDC28",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.20.41.24",
+            "port": 2095,
+            "users": [
+              {
+                "id": "964e6322-afad-4594-8508-86d634d732e6",
+                "email": "t@t.tt",
+                "security": "auto",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/gmaetunnel/proxyip=131.196.254.151?ed=2560",
+          "host": "blacklegends.umc-mansur13.workers.dev",
+          "headers": {
+            "User-Agent": "curl"
+          }
+        }
+      },
+      "mux": {
+        "enabled": false,
+        "concurrency": -1
+      }
+    },
+    {
+      "tag": "direct",
+      "protocol": "freedom",
+      "streamSettings": {
+        "sockopt": {
+          "domainStrategy": "AsIs"
+        }
+      }
+    },
+    {
+      "tag": "block",
+      "protocol": "blackhole"
+    }
+  ],
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "type": "field",
+        "inboundTag": [
+          "tun",
+          "socks",
+          "socks2",
+          "socks3"
+        ],
+        "outboundTag": "direct",
+        "domain": [
+          "aparat.com",
+          "digikala.com",
+          "www.aparatkids.com",
+          "up.railway.app",
+          "underdevelops.com",
+          "ipnumberia.com",
+          "soft98.ir",
+          "portal.fakherla.com"
+        ],
+        "protocol": [
+          "http",
+          "tls",
+          "quic",
+          "bittorrent"
+        ]
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "tun",
+          "socks",
+          "socks2",
+          "socks3"
+        ],
+        "outboundTag": "direct",
+        "ip": [
+          "185.147.178.23",
+          "185.147.179.11",
+          "185.188.104.10",
+          "69.46.46.126",
+          "193.141.65.146",
+          "87.248.147.172",
+          "195.211.46.91"
+        ],
+        "protocol": [
+          "http",
+          "tls",
+          "quic",
+          "bittorrent"
+        ]
+      }
+    ]
+  },
+  "metrics": {
+    "listen": "127.0.0.1:64797"
+  },
+  "policy": {
+    "system": {
+      "statsOutboundUplink": true,
+      "statsOutboundDownlink": true
+    }
+  },
+  "stats": {}
+}
