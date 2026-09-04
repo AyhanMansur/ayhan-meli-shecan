@@ -8,7 +8,7 @@
     "servers": [
       {
         "tag": "dns_proxy",
-        "address": "https://9.9.9.10/dns-query",
+        "address": "https://fastest-config-by-ayhan.umc-mansur13.workers.dev/dns-query",
         "address_resolver": "dns_local",
         "strategy": "ipv4_only",
         "detour": "Proxy"
@@ -69,7 +69,7 @@
       "type": "tun",
       "tag": "tun-in",
       "interface_name": "singbox-tun",
-      "mtu": 9000,
+      "mtu": 576,
       "auto_route": true,
       "strict_route": true,
       "stack": "gvisor",
