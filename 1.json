@@ -155,7 +155,6 @@
       "tolerance": 50,
       "idle_timeout": "30m0s"
     },
-    {
       "type": "urltest",
       "tag": "🔄 Update Daily",
       "outbounds": [
