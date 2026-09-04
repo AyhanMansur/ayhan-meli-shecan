@@ -150,7 +150,10 @@
         "🇱🇹 𝐋𝐢𝐭𝐡𝐮𝐚𝐧𝐢𝐚",
         "🇪🇨 𝐄𝐜𝐮𝐚𝐝𝐨𝐫"
       ],
-      "interrupt_exist_connections": true
+      "url": "http://www.msftconnecttest.com/connecttest.txt",
+      "interval": "10m0s",
+      "tolerance": 50,
+      "idle_timeout": "30m0s"
     },
     {
       "type": "urltest",
