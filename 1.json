@@ -8,7 +8,7 @@
     "servers": [
       {
         "tag": "dns_proxy",
-        "address": "https://fastest-config-by-ayhan.umc-mansur13.workers.dev/dns-query",
+        "address": "https://9.9.9.10/dns-query",
         "address_resolver": "dns_local",
         "strategy": "ipv4_only",
         "detour": "Proxy"
@@ -69,7 +69,7 @@
       "type": "tun",
       "tag": "tun-in",
       "interface_name": "singbox-tun",
-      "mtu": 576,
+      "mtu": 9000,
       "auto_route": true,
       "strict_route": true,
       "stack": "gvisor",
@@ -108,6 +108,7 @@
         "🇱🇻 𝐋𝐚𝐭𝐯𝐢𝐚",
         "🇮🇹 𝐈𝐭𝐚𝐥𝐲",
         "🇫🇮 𝐅𝐢𝐧𝐥𝐚𝐧𝐝",
+        "🇩🇪 𝐆𝐞𝐫𝐦𝐚𝐧𝐲",
         "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝",
         "🇸🇪 𝐒𝐰𝐞𝐝𝐞𝐧",
         "🇳🇱 𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬",
@@ -164,6 +165,7 @@
         "🇱🇻 𝐋𝐚𝐭𝐯𝐢𝐚",
         "🇮🇹 𝐈𝐭𝐚𝐥𝐲",
         "🇫🇮 𝐅𝐢𝐧𝐥𝐚𝐧𝐝",
+        "🇩🇪 𝐆𝐞𝐫𝐦𝐚𝐧𝐲",
         "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝",
         "🇸🇪 𝐒𝐰𝐞𝐝𝐞𝐧",
         "🇳🇱 𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬",
@@ -598,7 +600,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇧🇷 𝐁𝐫𝐚𝐳𝐢𝐥",
+      "tag": "🇧🇷 𝐁𝐫𝐚𝐳𝐢𝐥𝐥",
       "server": "104.20.41.24",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
