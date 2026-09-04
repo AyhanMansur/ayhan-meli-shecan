@@ -1,626 +1,109 @@
 {
-  "mixed-port": 7890,
-  "allow-lan": true,
-  "mode": "rule",
-  "log-level": "info",
-  "external-controller": "127.0.0.1:9090",
-  "dns": {
-    "enable": true,
-    "ipv6": true,
-    "enhanced-mode": "fake-ip",
-    "fake-ip-range": "198.18.0.1/16",
-    "nameserver": [
-      "https://free.shecan.ir/dns-query",
-      "8.8.8.8",
-      "1.1.1.1"
-    ],
-    "fallback": [
-      "8.8.4.4",
-      "1.0.0.1"
-    ]
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
   },
-  "proxies": [
-    {
-      "name": "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
-      "type": "vless",
-      "server": "104.20.41.24",
-      "port": 2096,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=31.130.149.210?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
+  "dns": {
+    "servers": [
+      {
+        "type": "https",
+        "tag": "dns_proxy",
+        "server": "8.8.8.8",
+        "path": "/dns-query",
+        "domain_resolver": "dns_direct",
+        "detour": "🛰️ Service"
+      },
+      {
+        "tag": "dns_direct",
+        "type": "udp",
+        "server": "8.8.8.8"
+      },
+      {
+        "type": "hosts",
+        "tag": "dns_hosts",
+        "predefined": {
+          "raw.githubusercontent.com": [
+            "185.199.108.133",
+            "185.199.109.133",
+            "185.199.110.133",
+            "185.199.111.133"
+          ]
         }
       },
-      "udp": true
-    },
-    {
-      "name": "🇺🇿 𝐔𝐳𝐛𝐞𝐤𝐢𝐬𝐭𝐚𝐧",
-      "type": "vless",
-      "server": "104.20.41.24",
-      "port": 2096,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=157.22.128.7?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
+      {
+        "type": "fakeip",
+        "tag": "dns_fakeip",
+        "inet4_range": "198.18.0.0/15",
+        "inet6_range": "fc00::/18"
+      }
+    ],
+    "rules": [
+      {
+        "rule_set": "geosite-ir",
+        "server": "dns_proxy"
       },
-      "udp": true
-    },
-    {
-      "name": "🇮🇱 𝐈𝐬𝐫𝐚𝐞𝐥",
-      "type": "vless",
-      "server": "bakieh.ir",
-      "port": 8443,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "proxyip=2a10:1fc0:d::389a:930?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "dns_fakeip"
       },
-      "udp": true
-    },
+      {
+        "query_type": [
+          "A",
+          "AAAA",
+          "CNAME",
+          "SRV",
+          "TXT"
+        ],
+        "invert": true,
+        "action": "reject"
+      }
+    ],
+    "final": "dns_proxy",
+    "strategy": "ipv4_only"
+  },
+  "ntp": {
+    "enabled": true,
+    "server": "17.253.18.131",
+    "server_port": 123,
+    "interval": "30m",
+    "detour": "🛰️ Service"
+  },
+  "http_clients": [
     {
-      "name": "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲",
-      "type": "vless",
-      "server": "185.219.132.27",
-      "port": 443,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=185.219.132.27?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
+      "tag": "default_http_client",
+      "engine": "go",
+      "version": 2,
+      "disable_version_fallback": false,
+      "tls": {
+        "insecure": true
       },
-      "udp": true
-    },
-    {
-      "name": " 🇰🇿 𝐊𝐚𝐳𝐚𝐤𝐡𝐬𝐭𝐚𝐧",
-      "type": "vless",
-      "server": "104.20.41.24",
-      "port": 8443,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=91.200.148.120:443?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇷🇺 𝐑𝐮𝐬𝐬𝐢𝐚",
-      "type": "vless",
-      "server": "104.20.41.24",
-      "port": 2096,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=95.188.72.67?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇺🇦 𝐔𝐤𝐫𝐚𝐢𝐧𝐞",
-      "type": "vless",
-      "server": "atomicmail.io",
-      "port": 2087,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=91.238.105.102:443?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇱🇻 𝐋𝐚𝐭𝐯𝐢𝐚",
-      "type": "vless",
-      "server": "212.6.44.68",
-      "port": 443,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=212.6.44.68:443?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇮🇹 𝐈𝐭𝐚𝐥𝐲",
-      "type": "vless",
-      "server": "linux.cloudflare.com",
-      "port": 2087,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=83.229.6.134:443?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇫🇮 𝐅𝐢𝐧𝐥𝐚𝐧𝐝",
-      "type": "vless",
-      "server": "www.kali.org",
-      "port": 2053,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=45.14.165.234?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝",
-      "type": "vless",
-      "server": "www.chatgpt.com",
-      "port": 2053,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=79.132.141.125?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇸🇪 𝐒𝐰𝐞𝐝𝐞𝐧",
-      "type": "vless",
-      "server": "blacklegends.umc-mansur13.workers.dev",
-      "port": 2096,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=95.141.241.216?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇳🇱 𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬",
-      "type": "vless",
-      "server": "10az10.ir",
-      "port": 2096,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=209.38.99.215?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇫🇷 𝐅𝐫𝐚𝐧𝐜𝐞",
-      "type": "vless",
-      "server": "11.my7mhg.ir",
-      "port": 2096,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=134.209.19.200?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇬🇧 𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦",
-      "type": "vless",
-      "server": "110book.ir",
-      "port": 2096,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=67.207.80.155?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇪🇸 𝐒𝐩𝐚𝐢𝐧",
-      "type": "vless",
-      "server": "4kia.gioogle.ir",
-      "port": 2083,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=194.154.28.227?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇸🇬 𝐒𝐢𝐧𝐠𝐚𝐩𝐨𝐫𝐞",
-      "type": "vless",
-      "server": "15.my7mhg.ir",
-      "port": 2096,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=209.97.160.109?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇨🇦 𝐂𝐚𝐧𝐚𝐝𝐚",
-      "type": "vless",
-      "server": "aslanbilit.ir",
-      "port": 443,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=192.99.169.176?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇯🇵 𝐉𝐚𝐩𝐚𝐧",
-      "type": "vless",
-      "server": "0seo.ir",
-      "port": 2096,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=43.170.8.95?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇺🇸 𝐔𝐧𝐢𝐭𝐞𝐝 𝐒𝐭𝐚𝐭𝐞𝐬",
-      "type": "vless",
-      "server": "linux.cloudflare.com",
-      "port": 8443,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=147.182.229.237?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇧🇷 𝐁𝐫𝐚𝐳𝐢𝐥",
-      "type": "vless",
-      "server": "104.20.41.24",
-      "port": 2096,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=38.180.78.255?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇲🇽 🇲𝐞𝐱𝐢𝐜𝐨",
-      "type": "vless",
-      "server": "104.20.41.24",
-      "port": 2083,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=131.196.254.151?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇷🇴 𝐑𝐨𝐦𝐚𝐧𝐢𝐚",
-      "type": "vless",
-      "server": "104.20.41.24",
-      "port": 2083,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=45.13.38.120?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇧🇩 𝐁𝐚𝐧𝐠𝐥𝐚𝐝𝐞𝐬𝐡",
-      "type": "vless",
-      "server": "4kia.gioogle.ir",
-      "port": 2053,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=38.54.42.124?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇪🇪 𝐄𝐬𝐭𝐨𝐧𝐢𝐚",
-      "type": "vless",
-      "server": "www.kali.org",
-      "port": 2096,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=38.180.10.97?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇨🇿 𝐂𝐳𝐞𝐜𝐡",
-      "type": "vless",
-      "server": "37.205.15.169",
-      "port": 443,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=37.205.15.169?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇳🇴 𝐍𝐨𝐫𝐰𝐚𝐲",
-      "type": "vless",
-      "server": "194.5.98.17",
-      "port": 443,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=194.5.98.17?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇹🇼 𝐓𝐚𝐢𝐰𝐚𝐧",
-      "type": "vless",
-      "server": "blacklegends.umc-mansur13.workers.dev",
-      "port": 2096,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=188.253.6.249?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇰🇭 𝐂𝐚𝐦𝐛𝐨𝐝𝐢𝐚",
-      "type": "vless",
-      "server": "104.20.41.24",
-      "port": 2096,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=38.54.4.209?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇳🇿 𝑵𝒆𝒘 𝒁𝒆𝒂𝒍𝒂𝒏𝒅",
-      "type": "vless",
-      "server": "4kia.gioogle.ir",
-      "port": 2096,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=185.71.230.237?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇰🇷 𝐒𝐨𝐮𝐭𝐡 𝐊𝐨𝐫𝐞𝐚",
-      "type": "vless",
-      "server": "blacklegends.umc-mansur13.workers.dev",
-      "port": 2096,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=130.162.130.105?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇬🇪 𝙂𝙚𝙤𝙧𝙜𝙞𝙖",
-      "type": "vless",
-      "server": "104.20.41.24",
-      "port": 2083,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=206.53.48.65?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇮🇳 𝐈𝐧𝐝𝐢𝐚",
-      "type": "vless",
-      "server": "check-host.net",
-      "port": 2096,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=172.236.187.52?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇭🇰 𝐇𝐨𝐧𝐠 𝐊𝐨𝐧𝐠",
-      "type": "vless",
-      "server": "154.16.183.190",
-      "port": 443,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=154.16.183.190?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
-    },
-    {
-      "name": "🇦🇷 𝐀𝐫𝐠𝐞𝐧𝐭𝐢𝐧𝐚",
-      "type": "vless",
-      "server": "104.20.41.24",
-      "port": 2083,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": true,
-      "servername": "blacklegends.umc-mansur13.workers.dev",
-      "network": "ws",
-      "ws-opts": {
-        "path": "/gmaetunnel/proxyip=38.54.45.184?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      },
-      "udp": true
+      "detour": "🛰️ Service"
     }
   ],
-  "proxy-groups": [
+  "inbounds": [
     {
-      "name": "Proxy",
-      "type": "select",
-      "proxies": [
+      "type": "tun",
+      "tag": "tun-in",
+      "mtu": 1430,
+      "auto_route": true,
+      "strict_route": true,
+      "stack": "gvisor",
+      "address": [
+        "172.16.0.1/30",
+        "fd00::1/126"
+      ]
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "🛰️ Service",
+      "default": "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
+      "outbounds": [
         "🔄 Update Daily",
         "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
         "🇺🇿 𝐔𝐳𝐛𝐞𝐤𝐢𝐬𝐭𝐚𝐧",
@@ -639,33 +122,90 @@
         "🇬🇧 𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦",
         "🇪🇸 𝐒𝐩𝐚𝐢𝐧",
         "🇸🇬 𝐒𝐢𝐧𝐠𝐚𝐩𝐨𝐫𝐞",
-        "🇨🇦 𝐂𝐚𝐧𝐚𝐝𝐚",
         "🇯🇵 𝐉𝐚𝐩𝐚𝐧",
+        "🇨🇦 𝐂𝐚𝐧𝐚𝐝𝐚",
         "🇺🇸 𝐔𝐧𝐢𝐭𝐞𝐝 𝐒𝐭𝐚𝐭𝐞𝐬",
         "🇧🇷 𝐁𝐫𝐚𝐳𝐢𝐥",
-        "🇲🇽 🇲𝐞𝐱𝐢𝐜𝐨",
+        "🇲🇽 𝐌𝐞𝐱𝐢𝐜𝐨",
         "🇷🇴 𝐑𝐨𝐦𝐚𝐧𝐢𝐚",
         "🇧🇩 𝐁𝐚𝐧𝐠𝐥𝐚𝐝𝐞𝐬𝐡",
         "🇪🇪 𝐄𝐬𝐭𝐨𝐧𝐢𝐚",
         "🇨🇿 𝐂𝐳𝐞𝐜𝐡",
-        "🇳🇴 🇳𝐨𝐫𝐰𝐚𝐲",
+        "🇳🇴 𝐍𝐨𝐫𝐰𝐚𝐲",
         "🇹🇼 𝐓𝐚𝐢𝐰𝐚𝐧",
         "🇰🇭 𝐂𝐚𝐦𝐛𝐨𝐝𝐢𝐚",
-        "🇳🇿 𝑵𝒆𝒘 𝒁𝒆𝒂𝒍𝒂𝒏𝒅",
+        "🇳🇿 𝐍𝐞𝐰 𝐙𝐞𝐚𝐥𝐚𝐧𝐝",
         "🇰🇷 𝐒𝐨𝐮𝐭𝐡 𝐊𝐨𝐫𝐞𝐚",
-        "🇬🇪 𝙂𝙚𝙤𝙧𝙜𝙞𝙖",
+        "🇬🇪 𝐆𝐞𝐨𝐫𝐠𝐢𝐚",
         "🇮🇳 𝐈𝐧𝐝𝐢𝐚",
         "🇭🇰 𝐇𝐨𝐧𝐠 𝐊𝐨𝐧𝐠",
-        "🇦🇷 𝐀𝐫𝐠𝐞𝐧𝐭𝐢𝐧𝐚"
-      ]
+        "🇦🇷 𝐀𝐫𝐠𝐞𝐧𝐭𝐢𝐧𝐚",
+        "🇧🇬 𝐁𝐮𝐥𝐠𝐚𝐫𝐢𝐚",
+        "🇦🇺 𝐀𝐮𝐬𝐭𝐫𝐚𝐥𝐢𝐚",
+        "🇧🇪 𝐁𝐞𝐥𝐠𝐢𝐮𝐦",
+        "🇿🇦 𝐒𝐨𝐮𝐭𝐡 𝐀𝐟𝐫𝐢𝐜𝐚",
+        "🇮🇸 𝐈𝐜𝐞𝐥𝐚𝐧𝐝",
+        "🇲🇩 𝐌𝐨𝐥𝐝𝐨𝐯𝐚",
+        "🇹🇭 𝐓𝐡𝐚𝐢𝐥𝐚𝐧𝐝",
+        "🇩🇰 𝐃𝐞𝐧𝐦𝐚𝐫𝐤",
+        "🇦🇱 𝐀𝐥𝐛𝐚𝐧𝐢𝐚",
+        "🇦🇲 𝐀𝐫𝐦𝐞𝐧𝐢𝐚",
+        "🇲🇾 𝐌𝐚𝐥𝐚𝐲𝐬𝐢𝐚",
+        "🇵🇱 𝐏𝐨𝐥𝐚𝐧𝐝",
+        "🇸🇰 𝐒𝐥𝐨𝐯𝐚𝐤𝐢𝐚",
+        "🇱🇹 𝐋𝐢𝐭𝐡𝐮𝐚𝐧𝐢𝐚",
+        "🇪🇨 𝐄𝐜𝐮𝐚𝐝𝐨𝐫"
+      ],
+      "interrupt_exist_connections": true
     },
     {
-      "name": "🔄 Update Daily",
-      "type": "url-test",
-      "url": "http://www.msftconnecttest.com/connecttest.txt",
-      "interval": 600,
-      "tolerance": 50,
-      "proxies": [
+      "type": "selector",
+      "tag": "Lowest Urmia 👾🎶🎲",
+      "default": "🇦🇲 𝐀𝐫𝐦𝐞𝐧𝐢𝐚",
+      "outbounds": [
+        "🇦🇲 𝐀𝐫𝐦𝐞𝐧𝐢𝐚",
+        "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲",
+        "🇮🇱 𝐈𝐬𝐫𝐚𝐞𝐥",
+        "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
+        "🇷🇴 𝐑𝐨𝐦𝐚𝐧𝐢𝐚",
+        "🇧🇬 𝐁𝐮𝐥𝐠𝐚𝐫𝐢𝐚",
+        "🇲🇩 𝐌𝐨𝐥𝐝𝐨𝐯𝐚",
+        "🇺🇦 𝐔𝐤𝐫𝐚𝐢𝐧𝐞",
+        "🇦🇱 𝐀𝐥𝐛𝐚𝐧𝐢𝐚",
+        "🇺🇿 𝐔𝐳𝐛𝐞𝐤𝐢𝐬𝐭𝐚𝐧"
+      ],
+      "interrupt_exist_connections": true
+    },
+    {
+      "type": "selector",
+      "tag": "📺 YouTube",
+      "default": "🇷🇺 𝐑𝐮𝐬𝐬𝐢𝐚",
+      "outbounds": [
+        "🇷🇺 𝐑𝐮𝐬𝐬𝐢𝐚",
+        "🇦🇱 𝐀𝐥𝐛𝐚𝐧𝐢𝐚",
+        " 🇰🇿 𝐊𝐚𝐳𝐚𝐤𝐡𝐬𝐭𝐚𝐧",
+        "🇫🇷 𝐅𝐫𝐚𝐧𝐜𝐞",
+        "🇺🇦 𝐔𝐤𝐫𝐚𝐢𝐧𝐞"
+      ],
+      "interrupt_exist_connections": true
+    },
+    {
+      "type": "selector",
+      "tag": "👾 Game Booster",
+      "default": "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲",
+      "outbounds": [
+        "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲",
+        "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
+        "🇳🇱 𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬",
+        "🇬🇧 𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦",
+        "🇵🇱 𝐏𝐨𝐥𝐚𝐧𝐝"
+      ],
+      "interrupt_exist_connections": true
+    },
+    {
+      "type": "urltest",
+      "tag": "🔄 Update Daily",
+      "outbounds": [
         "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
         "🇺🇿 𝐔𝐳𝐛𝐞𝐤𝐢𝐬𝐭𝐚𝐧",
         "🇮🇱 𝐈𝐬𝐫𝐚𝐞𝐥",
@@ -683,28 +223,1159 @@
         "🇬🇧 𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦",
         "🇪🇸 𝐒𝐩𝐚𝐢𝐧",
         "🇸🇬 𝐒𝐢𝐧𝐠𝐚𝐩𝐨𝐫𝐞",
-        "🇨🇦 𝐂𝐚𝐧𝐚𝐝𝐚",
         "🇯🇵 𝐉𝐚𝐩𝐚𝐧",
+        "🇨🇦 𝐂𝐚𝐧𝐚𝐝𝐚",
         "🇺🇸 𝐔𝐧𝐢𝐭𝐞𝐝 𝐒𝐭𝐚𝐭𝐞𝐬",
         "🇧🇷 𝐁𝐫𝐚𝐳𝐢𝐥",
-        "🇲🇽 🇲𝐞𝐱𝐢𝐜𝐨",
+        "🇲🇽 𝐌𝐞𝐱𝐢𝐜𝐨",
         "🇷🇴 𝐑𝐨𝐦𝐚𝐧𝐢𝐚",
         "🇧🇩 𝐁𝐚𝐧𝐠𝐥𝐚𝐝𝐞𝐬𝐡",
         "🇪🇪 𝐄𝐬𝐭𝐨𝐧𝐢𝐚",
         "🇨🇿 𝐂𝐳𝐞𝐜𝐡",
-        "🇳🇴 🇳𝐨𝐫𝐰𝐚𝐲",
+        "🇳🇴 𝐍𝐨𝐫𝐰𝐚𝐲",
         "🇹🇼 𝐓𝐚𝐢𝐰𝐚𝐧",
         "🇰🇭 𝐂𝐚𝐦𝐛𝐨𝐝𝐢𝐚",
-        "🇳🇿 𝑵𝒆𝒘 𝒁𝒆𝒂𝒍𝒂𝒏𝒅",
+        "🇳🇿 𝐍𝐞𝐰 𝐙𝐞𝐚𝐥𝐚𝐧𝐝",
         "🇰🇷 𝐒𝐨𝐮𝐭𝐡 𝐊𝐨𝐫𝐞𝐚",
-        "🇬🇪 𝙂𝙚𝙤𝙧𝙜𝙞𝙖",
+        "🇬🇪 𝐆𝐞𝐨𝐫𝐠𝐢𝐚",
         "🇮🇳 𝐈𝐧𝐝𝐢𝐚",
         "🇭🇰 𝐇𝐨𝐧𝐠 𝐊𝐨𝐧𝐠",
-        "🇦🇷 🇦𝐫𝐠𝐞𝐧𝐭𝐢𝐧𝐚"
-      ]
+        "🇦🇷 𝐀𝐫𝐠𝐞𝐧𝐭𝐢𝐧𝐚",
+        "🇧🇬 𝐁𝐮𝐥𝐠𝐚𝐫𝐢𝐚",
+        "🇦🇺 𝐀𝐮𝐬𝐭𝐫𝐚𝐥𝐢𝐚",
+        "🇧🇪 𝐁𝐞𝐥𝐠𝐢𝐮𝐦",
+        "🇿🇦 𝐒𝐨𝐮𝐭𝐡 𝐀𝐟𝐫𝐢𝐜𝐚",
+        "🇮🇸 𝐈𝐜𝐞𝐥𝐚𝐧𝐝",
+        "🇲🇩 𝐌𝐨𝐥𝐝𝐨𝐯𝐚",
+        "🇹🇭 𝐓𝐡𝐚𝐢𝐥𝐚𝐧𝐝",
+        "🇩🇰 𝐃𝐞𝐧𝐦𝐚𝐫𝐤",
+        "🇦🇱 𝐀𝐥𝐛𝐚𝐧𝐢𝐚",
+        "🇦🇲 𝐀𝐫𝐦𝐞𝐧𝐢𝐚",
+        "🇲🇾 𝐌𝐚𝐥𝐚𝐲𝐬𝐢𝐚",
+        "🇵🇱 𝐏𝐨𝐥𝐚𝐧𝐝",
+        "🇸🇰 𝐒𝐥𝐨𝐯𝐚𝐤𝐢𝐚",
+        "🇱🇹 𝐋𝐢𝐭𝐡𝐮𝐚𝐧𝐢𝐚",
+        "🇪🇨 𝐄𝐜𝐮𝐚𝐝𝐨𝐫"
+      ],
+      "interval": "1440m0s",
+      "tolerance": 1,
+      "idle_timeout": "1440m0s",
+      "url": "http://www.msftconnecttest.com/connecttest.txt"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "vless",
+      "tag": "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=176.97.66.175?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇿 𝐔𝐳𝐛𝐞𝐤𝐢𝐬𝐭𝐚𝐧",
+      "server": "104.20.41.24",
+      "server_port": 2095,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=157.22.128.7?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇱 𝐈𝐬𝐫𝐚𝐞𝐥",
+      "server": "bakieh.ir",
+      "server_port": 80,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "domain_resolver": "dns_direct",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=45.150.108.59?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=185.219.132.27?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": " 🇰🇿 𝐊𝐚𝐳𝐚𝐤𝐡𝐬𝐭𝐚𝐧",
+      "server": "katabump.com",
+      "server_port": 2082,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "domain_resolver": "dns_direct",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=91.200.148.120:443?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇺 𝐑𝐮𝐬𝐬𝐢𝐚",
+      "server": "104.20.41.24",
+      "server_port": 80,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=95.188.72.67?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇦 𝐔𝐤𝐫𝐚𝐢𝐧𝐞",
+      "server": "blacklegends.umc-mansur13.workers.dev",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "domain_resolver": "dns_direct",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=91.238.105.102:443?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇱🇻 𝐋𝐚𝐭𝐯𝐢𝐚",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=212.6.44.68:443?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇹 𝐈𝐭𝐚𝐥𝐲",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=83.229.6.134:443?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 𝐅𝐢𝐧𝐥𝐚𝐧𝐝",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=45.14.165.234?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=79.132.141.125?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇪 𝐒𝐰𝐞𝐝𝐞𝐧",
+      "server": "103.21.244.49",
+      "server_port": 2052,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=95.141.241.216?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇱 𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬",
+      "server": "10az10.ir",
+      "server_port": 2095,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "domain_resolver": "dns_direct",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=209.38.99.215?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 𝐅𝐫𝐚𝐧𝐜𝐞",
+      "server": "11.my7mhg.ir",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "domain_resolver": "dns_direct",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=134.209.19.200?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦",
+      "server": "110book.ir",
+      "server_port": 2052,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "domain_resolver": "dns_direct",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=67.207.80.155?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇪🇸 𝐒𝐩𝐚𝐢𝐧",
+      "server": "4kia.gioogle.ir",
+      "server_port": 2095,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "domain_resolver": "dns_direct",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=194.154.28.227?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 𝐒𝐢𝐧𝐠𝐚𝐩𝐨𝐫𝐞",
+      "server": "15.my7mhg.ir",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "domain_resolver": "dns_direct",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=209.97.160.109?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 𝐉𝐚𝐩𝐚𝐧",
+      "server": "4kia.gioogle.ir",
+      "server_port": 80,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "domain_resolver": "dns_direct",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=43.170.8.95?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇦 𝐂𝐚𝐧𝐚𝐝𝐚",
+      "server": "blacklegends.umc-mansur13.workers.dev",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "domain_resolver": "dns_direct",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=192.99.169.176?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 𝐔𝐧𝐢𝐭𝐞𝐝 𝐒𝐭𝐚𝐭𝐞𝐬",
+      "server": "kali.org",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "domain_resolver": "dns_direct",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=147.182.229.237?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇧🇷 𝐁𝐫𝐚𝐳𝐢𝐥",
+      "server": "104.20.41.24",
+      "server_port": 2095,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=38.180.78.255?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇲🇽 𝐌𝐞𝐱𝐢𝐜𝐨",
+      "server": "104.20.41.24",
+      "server_port": 2095,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=131.196.254.151?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇴 𝐑𝐨𝐦𝐚𝐧𝐢𝐚",
+      "server": "104.20.41.24",
+      "server_port": 2095,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=45.13.38.120?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇧🇩 𝐁𝐚𝐧𝐠𝐥𝐚𝐝𝐞𝐬𝐡",
+      "server": "4kia.gioogle.ir",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "domain_resolver": "dns_direct",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=38.54.42.124?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇪🇪 𝐄𝐬𝐭𝐨𝐧𝐢𝐚",
+      "server": "104.20.41.24",
+      "server_port": 2095,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=38.180.10.97?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇿 𝐂𝐳𝐞𝐜𝐡",
+      "server": "104.20.41.24",
+      "server_port": 2095,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=37.205.15.169?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇴 𝐍𝐨𝐫𝐰𝐚𝐲",
+      "server": "104.20.41.24",
+      "server_port": 2095,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=194.5.98.17?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇼 𝐓𝐚𝐢𝐰𝐚𝐧",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=188.253.6.249?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇭 𝐂𝐚𝐦𝐛𝐨𝐝𝐢𝐚",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=38.54.4.209?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇿 𝐍𝐞𝐰 𝐙𝐞𝐚𝐥𝐚𝐧𝐝",
+      "server": "4kia.gioogle.ir",
+      "server_port": 2095,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "domain_resolver": "dns_direct",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=185.71.230.237?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇷 𝐒𝐨𝐮𝐭𝐡 𝐊𝐨𝐫𝐞𝐚",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=141.164.42.2?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇪 𝐆𝐞𝐨𝐫𝐠𝐢𝐚",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=38.180.109.174?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇳 𝐈𝐧𝐝𝐢𝐚",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=172.236.187.52?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 𝐇𝐨𝐧𝐠 𝐊𝐨𝐧𝐠",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=154.16.183.190?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇦🇷 𝐀𝐫𝐠𝐞𝐧𝐭𝐢𝐧𝐚",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=38.54.45.184?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇧🇬 𝐁𝐮𝐥𝐠𝐚𝐫𝐢𝐚",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=212.113.118.25?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇦🇺 𝐀𝐮𝐬𝐭𝐫𝐚𝐥𝐢𝐚",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=170.64.232.210?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇧🇪 𝐁𝐞𝐥𝐠𝐢𝐮𝐦",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=35.241.172.224?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇿🇦 𝐒𝐨𝐮𝐭𝐡 𝐀𝐟𝐫𝐢𝐜𝐚",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=84.8.142.203?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇸 𝐈𝐜𝐞𝐥𝐚𝐧𝐝",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=195.246.230.125?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇲🇩 𝐌𝐨𝐥𝐝𝐨𝐯𝐚",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=185.163.45.40?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇭 𝐓𝐡𝐚𝐢𝐥𝐚𝐧𝐝",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=157.254.192.20?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇰 𝐃𝐞𝐧𝐦𝐚𝐫𝐤",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=92.113.146.87?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇦🇱 𝐀𝐥𝐛𝐚𝐧𝐢𝐚",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=185.75.243.102?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇦🇲 𝐀𝐫𝐦𝐞𝐧𝐢𝐚",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=2.56.204.183?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇲🇾 𝐌𝐚𝐥𝐚𝐲𝐬𝐢𝐚",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=47.250.212.59?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 𝐏𝐨𝐥𝐚𝐧𝐝",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=191.101.184.50?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇰 𝐒𝐥𝐨𝐯𝐚𝐤𝐢𝐚",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=37.9.171.189?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇱🇹 𝐋𝐢𝐭𝐡𝐮𝐚𝐧𝐢𝐚",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=89.40.1.179?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇪🇨 𝐄𝐜𝐮𝐚𝐝𝐨𝐫",
+      "server": "104.20.41.24",
+      "server_port": 8080,
+      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "tls": {
+        "enabled": false,
+        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=130.94.116.44?ed=2560",
+        "headers": {
+          "Host": "blacklegends.umc-mansur13.workers.dev"
+        }
+      }
     }
   ],
-  "rules": [
-    "MATCH,Proxy"
-  ]
+  "route": {
+    "rules": [
+      {
+        "inbound": "tun-in",
+        "action": "sniff",
+        "timeout": "1s"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "domain_keyword": [
+          "filimo"
+        ],
+        "outbound": "🛰️ Service"
+      },
+      {
+        "rule_set": [
+          "geosite-ir",
+          "geoip-ir"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "rule_set": [
+          "geosite-category-doh-plus"
+        ],
+        "action": "reject"
+      },
+      {
+        "rule_set": [
+          "geosite-youtube"
+        ],
+        "outbound": "📺 YouTube"
+      },
+      {
+        "rule_set": [
+          "geosite-category-gaming"
+        ],
+        "outbound": "👾 Game Booster"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "geosite-ir",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-ir.srs",
+        "update_interval": "30d"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-ir",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-ir.srs",
+        "update_interval": "30d"
+      },
+      {
+        "tag": "geosite-category-doh-plus",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/DDCHlsq/sing-ruleset/ruleset/httpdns.srs",
+        "update_interval": "30d"
+      },
+      {
+        "tag": "geosite-youtube",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set-unstable/geosite-youtube.srs",
+        "update_interval": "30d"
+      },
+      {
+        "tag": "geosite-category-gaming",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/nxdomainx/tidal-drifting/main/geosite-gaming.srs",
+        "update_interval": "30d"
+      }
+    ],
+    "final": "🛰️ Service",
+    "auto_detect_interface": true,
+    "default_domain_resolver": "dns_direct"
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": true
+    }
+  }
 }
