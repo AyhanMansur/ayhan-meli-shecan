@@ -150,11 +150,9 @@
         "🇱🇹 𝐋𝐢𝐭𝐡𝐮𝐚𝐧𝐢𝐚",
         "🇪🇨 𝐄𝐜𝐮𝐚𝐝𝐨𝐫"
       ],
-      "url": "http://www.msftconnecttest.com/connecttest.txt",
-      "interval": "10m0s",
-      "tolerance": 50,
-      "idle_timeout": "30m0s"
+      "interrupt_exist_connections": true
     },
+    {
       "type": "urltest",
       "tag": "🔄 Update Daily",
       "outbounds": [
@@ -210,9 +208,10 @@
         "🇱🇹 𝐋𝐢𝐭𝐡𝐮𝐚𝐧𝐢𝐚",
         "🇪🇨 𝐄𝐜𝐮𝐚𝐝𝐨𝐫"
       ],
-      "interval": "1440m0s",
-      "tolerance": 1,
-      "idle_timeout": "1440m0s"
+      "url": "http://www.msftconnecttest.com/connecttest.txt",
+      "interval": "10m0s",
+      "tolerance": 50,
+      "idle_timeout": "30m0s"
     },
     {
       "type": "vless",
