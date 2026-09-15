@@ -1,3 +1,4 @@
+
 {
   "log": {
     "disabled": false,
@@ -147,6 +148,7 @@
         "🇵🇱 𝐏𝐨𝐥𝐚𝐧𝐝",
         "🇧🇾 𝐁𝐞𝐥𝐚𝐫𝐮𝐬",
         "🇱🇹 𝐋𝐢𝐭𝐡𝐮𝐚𝐧𝐢𝐚",
+        "🇪🇨 𝐄𝐜𝐮𝐚𝐝𝐨𝐫"
       ],
       "interrupt_exist_connections": true
     },
@@ -203,6 +205,7 @@
         "🇵🇱 𝐏𝐨𝐥𝐚𝐧𝐝",
         "🇧🇾 𝐁𝐞𝐥𝐚𝐫𝐮𝐬",
         "🇱🇹 𝐋𝐢𝐭𝐡𝐮𝐚𝐧𝐢𝐚",
+        "🇪🇨 𝐄𝐜𝐮𝐚𝐝𝐨𝐫"
       ],
       "url": "http://www.msftconnecttest.com/connecttest.txt",
       "interval": "10m0s",
