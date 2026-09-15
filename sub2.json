@@ -7,46 +7,41 @@
   "dns": {
     "servers": [
       {
-        "type": "https",
         "tag": "dns_proxy",
-        "server": "8.8.8.8",
-        "path": "/dns-query",
-        "domain_resolver": "dns_direct",
-        "detour": "🛰️ Service"
+        "address": "https://fastest-config-by-ayhan.umc-mansur13.workers.dev/dns-query",
+        "address_resolver": "dns_local",
+        "strategy": "ipv4_only",
+        "detour": "Proxy"
       },
       {
-        "tag": "dns_direct",
-        "type": "udp",
-        "server": "8.8.8.8"
+        "tag": "dns_local",
+        "address": "local",
+        "detour": "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝",
+        "strategy": "prefer_ipv4"
       },
       {
-        "type": "hosts",
-        "tag": "dns_hosts",
-        "predefined": {
-          "raw.githubusercontent.com": [
-            "185.199.108.133",
-            "185.199.109.133",
-            "185.199.110.133",
-            "185.199.111.133"
-          ]
-        }
+        "tag": "dns_success",
+        "address": "rcode://success"
       },
       {
-        "type": "fakeip",
+        "tag": "dns_refused",
+        "address": "rcode://refused"
+      },
+      {
         "tag": "dns_fakeip",
-        "inet4_range": "198.18.0.0/15",
-        "inet6_range": "fc00::/18"
+        "address": "fakeip"
       }
     ],
     "rules": [
       {
-        "rule_set": "geosite-ir",
-        "server": "dns_proxy"
+        "outbound": "any",
+        "server": "dns_local"
       },
       {
         "query_type": [
           "A",
-          "AAAA"
+          "AAAA",
+          "CNAME"
         ],
         "server": "dns_fakeip"
       },
@@ -54,55 +49,53 @@
         "query_type": [
           "A",
           "AAAA",
-          "CNAME",
-          "SRV",
-          "TXT"
+          "CNAME"
         ],
         "invert": true,
-        "action": "reject"
+        "server": "dns_refused",
+        "disable_cache": true
       }
     ],
     "final": "dns_proxy",
-    "strategy": "ipv4_only"
-  },
-  "ntp": {
-    "enabled": true,
-    "server": "17.253.18.131",
-    "server_port": 123,
-    "interval": "30m",
-    "detour": "🛰️ Service"
-  },
-  "http_clients": [
-    {
-      "tag": "default_http_client",
-      "engine": "go",
-      "version": 2,
-      "disable_version_fallback": false,
-      "tls": {
-        "insecure": true
-      },
-      "detour": "🛰️ Service"
+    "independent_cache": true,
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
     }
-  ],
+  },
   "inbounds": [
     {
       "type": "tun",
       "tag": "tun-in",
-      "mtu": 1430,
+      "interface_name": "singbox-tun",
+      "mtu": 576,
       "auto_route": true,
       "strict_route": true,
       "stack": "gvisor",
       "address": [
-        "172.16.0.1/30",
-        "fd00::1/126"
+        "172.18.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "route_exclude_address": [
+        "127.0.0.0/8",
+        "10.0.0.0/8",
+        "172.16.0.0/12",
+        "192.168.0.0/16",
+        "169.254.0.0/16",
+        "224.0.0.0/4",
+        "255.255.255.255/32"
+      ],
+      "exclude_package": [
+        "ir.mci.ecareapp",
+        "com.myirancell"
       ]
     }
   ],
   "outbounds": [
     {
       "type": "selector",
-      "tag": "🛰️ Service",
-      "default": "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
+      "tag": "Proxy",
       "outbounds": [
         "🔄 Update Daily",
         "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
@@ -153,53 +146,7 @@
         "🇲🇾 𝐌𝐚𝐥𝐚𝐲𝐬𝐢𝐚",
         "🇵🇱 𝐏𝐨𝐥𝐚𝐧𝐝",
         "🇸🇰 𝐒𝐥𝐨𝐯𝐚𝐤𝐢𝐚",
-        "🇱🇹 𝐋𝐢𝐭𝐡𝐮𝐚𝐧𝐢𝐚",
-        "🇪🇨 𝐄𝐜𝐮𝐚𝐝𝐨𝐫",
-        "🇩🇪 𝐆𝐞𝐫𝐦𝐚𝐧𝐲"
-      ],
-      "interrupt_exist_connections": true
-    },
-    {
-      "type": "selector",
-      "tag": "Lowest Urmia 👾🎶🎲",
-      "default": "🇦🇲 𝐀𝐫𝐦𝐞𝐧𝐢𝐚",
-      "outbounds": [
-        "🇦🇲 𝐀𝐫𝐦𝐞𝐧𝐢𝐚",
-        "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲",
-        "🇮🇱 𝐈𝐬𝐫𝐚𝐞𝐥",
-        "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
-        "🇷🇴 𝐑𝐨𝐦𝐚𝐧𝐢𝐚",
-        "🇧🇬 𝐁𝐮𝐥𝐠𝐚𝐫𝐢𝐚",
-        "🇲🇩 𝐌𝐨𝐥𝐝𝐨𝐯𝐚",
-        "🇺🇦 𝐔𝐤𝐫𝐚𝐢𝐧𝐞",
-        "🇦🇱 𝐀𝐥𝐛𝐚𝐧𝐢𝐚",
-        "🇺🇿 𝐔𝐳𝐛𝐞𝐤𝐢𝐬𝐭𝐚𝐧"
-      ],
-      "interrupt_exist_connections": true
-    },
-    {
-      "type": "selector",
-      "tag": "📺 YouTube",
-      "default": "🇷🇺 𝐑𝐮𝐬𝐬𝐢𝐚",
-      "outbounds": [
-        "🇷🇺 𝐑𝐮𝐬𝐬𝐢𝐚",
-        "🇦🇱 𝐀𝐥𝐛𝐚𝐧𝐢𝐚",
-        " 🇰🇿 𝐊𝐚𝐳𝐚𝐤𝐡𝐬𝐭𝐚𝐧",
-        "🇫🇷 𝐅𝐫𝐚𝐧𝐜𝐞",
-        "🇺🇦 𝐔𝐤𝐫𝐚𝐢𝐧𝐞"
-      ],
-      "interrupt_exist_connections": true
-    },
-    {
-      "type": "selector",
-      "tag": "👾 Game Booster",
-      "default": "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲",
-      "outbounds": [
-        "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲",
-        "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
-        "🇳🇱 𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬",
-        "🇬🇧 𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦",
-        "🇵🇱 𝐏𝐨𝐥𝐚𝐧𝐝"
+        "🇱🇹 𝐋𝐢𝐭𝐡𝐮𝐚𝐧𝐢𝐚"
       ],
       "interrupt_exist_connections": true
     },
@@ -255,23 +202,17 @@
         "🇲🇾 𝐌𝐚𝐥𝐚𝐲𝐬𝐢𝐚",
         "🇵🇱 𝐏𝐨𝐥𝐚𝐧𝐝",
         "🇸🇰 𝐒𝐥𝐨𝐯𝐚𝐤𝐢𝐚",
-        "🇱🇹 𝐋𝐢𝐭𝐡𝐮𝐚𝐧𝐢𝐚",
-        "🇪🇨 𝐄𝐜𝐮𝐚𝐝𝐨𝐫",
-        "🇩🇪 𝐆𝐞𝐫𝐦𝐚𝐧𝐲"
+        "🇱🇹 𝐋𝐢𝐭𝐡𝐮𝐚𝐧𝐢𝐚"
       ],
-      "interval": "1440m0s",
-      "tolerance": 1,
-      "idle_timeout": "1440m0s",
-      "url": "http://www.msftconnecttest.com/connecttest.txt"
-    },
-    {
-      "type": "direct",
-      "tag": "direct"
+      "url": "http://www.msftconnecttest.com/connecttest.txt",
+      "interval": "10m0s",
+      "tolerance": 50,
+      "idle_timeout": "30m0s"
     },
     {
       "type": "vless",
       "tag": "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "transport": {
@@ -285,7 +226,7 @@
     {
       "type": "vless",
       "tag": "🇺🇿 𝐔𝐳𝐛𝐞𝐤𝐢𝐬𝐭𝐚𝐧",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -307,7 +248,7 @@
     {
       "type": "vless",
       "tag": "🇮🇱 𝐈𝐬𝐫𝐚𝐞𝐥",
-      "server": "194.36.55.146",
+      "server": "bakieh.ir",
       "server_port": 80,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -325,8 +266,8 @@
     {
       "type": "vless",
       "tag": "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲",
-      "server": "194.36.55.146",
-      "server_port": 2052,
+      "server": "104.20.41.24",
+      "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
         "enabled": false,
@@ -343,7 +284,7 @@
     {
       "type": "vless",
       "tag": " 🇰🇿 𝐊𝐚𝐳𝐚𝐤𝐡𝐬𝐭𝐚𝐧",
-      "server": "194.36.55.146",
+      "server": "katabump.com",
       "server_port": 2082,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -365,7 +306,7 @@
     {
       "type": "vless",
       "tag": "🇷🇺 𝐑𝐮𝐬𝐬𝐢𝐚",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 80,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -383,7 +324,7 @@
     {
       "type": "vless",
       "tag": "🇺🇦 𝐔𝐤𝐫𝐚𝐢𝐧𝐞",
-      "server": "194.36.55.146",
+      "server": "blacklegends.umc-mansur13.workers.dev",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -401,11 +342,11 @@
     {
       "type": "vless",
       "tag": "🇱🇻 𝐋𝐚𝐭𝐯𝐢𝐚",
-      "server": "194.36.55.146",
-      "server_port": 443,
+      "server": "104.20.41.24",
+      "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
-        "enabled": true,
+        "enabled": false,
         "server_name": "blacklegends.umc-mansur13.workers.dev"
       },
       "transport": {
@@ -419,7 +360,7 @@
     {
       "type": "vless",
       "tag": "🇮🇹 𝐈𝐭𝐚𝐥𝐲",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -437,7 +378,7 @@
     {
       "type": "vless",
       "tag": "🇫🇮 𝐅𝐢𝐧𝐥𝐚𝐧𝐝",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -455,30 +396,31 @@
     {
       "type": "vless",
       "tag": "🇩🇪 𝐆𝐞𝐫𝐦𝐚𝐧𝐲",
-      "server": "194.36.55.146",
-      "server_port": 8080,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
+      "server": "24janebi.ir",
+      "server_port": 2087,
+      "uuid": "dd8a3557-5a9d-4f1d-b6b0-f31f35dd0093",
       "tls": {
-        "enabled": false,
-        "server_name": "blacklegends.umc-mansur13.workers.dev",
+        "enabled": true,
+        "server_name": "blacklegends.kdns.fr",
+        "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
         "type": "ws",
-        "path": "/task/video/QhRAHEZWEAgPCRIVFA8YF0xHSEpbUVVIGgxGd0pcBVkRHkdGWEVHEllBVhAXQycYDExaFxUWRVdGRFZMVVNGDBFSDVtHVxdTSl5aBF1cXFtJTwsAFkpWVEtSRExQQltFURgPUl1HSlFBEEkUSVlGERQJAAIUVBs=?ed=2560",
+        "path": "/",
         "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
+          "Host": "blacklegends.kdns.fr"
         }
       }
     },
     {
       "type": "vless",
       "tag": "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝",
-      "server": "194.36.55.146",
-      "server_port": 2052,
+      "server": "104.20.41.24",
+      "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
         "enabled": false,
@@ -495,7 +437,7 @@
     {
       "type": "vless",
       "tag": "🇸🇪 𝐒𝐰𝐞𝐝𝐞𝐧",
-      "server": "194.36.55.146",
+      "server": "103.21.244.49",
       "server_port": 2052,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -513,7 +455,7 @@
     {
       "type": "vless",
       "tag": "🇳🇱 𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬",
-      "server": "194.36.55.146",
+      "server": "10az10.ir",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -531,7 +473,7 @@
     {
       "type": "vless",
       "tag": "🇫🇷 𝐅𝐫𝐚𝐧𝐜𝐞",
-      "server": "194.36.55.146",
+      "server": "11.my7mhg.ir",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -549,7 +491,7 @@
     {
       "type": "vless",
       "tag": "🇬🇧 𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦",
-      "server": "194.36.55.146",
+      "server": "110book.ir",
       "server_port": 2052,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -567,7 +509,7 @@
     {
       "type": "vless",
       "tag": "🇪🇸 𝐒𝐩𝐚𝐢𝐧",
-      "server": "194.36.55.146",
+      "server": "4kia.gioogle.ir",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -585,7 +527,7 @@
     {
       "type": "vless",
       "tag": "🇸🇬 𝐒𝐢𝐧𝐠𝐚𝐩𝐨𝐫𝐞",
-      "server": "194.36.55.146",
+      "server": "15.my7mhg.ir",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -603,7 +545,7 @@
     {
       "type": "vless",
       "tag": "🇯🇵 𝐉𝐚𝐩𝐚𝐧",
-      "server": "194.36.55.146",
+      "server": "4kia.gioogle.ir",
       "server_port": 80,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -621,7 +563,7 @@
     {
       "type": "vless",
       "tag": "🇨🇦 𝐂𝐚𝐧𝐚𝐝𝐚",
-      "server": "194.36.55.146",
+      "server": "blacklegends.umc-mansur13.workers.dev",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -639,7 +581,7 @@
     {
       "type": "vless",
       "tag": "🇺🇸 𝐔𝐧𝐢𝐭𝐞𝐝 𝐒𝐭𝐚𝐭𝐞𝐬",
-      "server": "194.36.55.146",
+      "server": "kali.org",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -657,7 +599,7 @@
     {
       "type": "vless",
       "tag": "🇧🇷 𝐁𝐫𝐚𝐳𝐢𝐥",
-      "server": "linux.cloudflare.com",
+      "server": "104.20.41.24",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -675,7 +617,7 @@
     {
       "type": "vless",
       "tag": "🇲🇽 𝐌𝐞𝐱𝐢𝐜𝐨",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -693,7 +635,7 @@
     {
       "type": "vless",
       "tag": "🇷🇴 𝐑𝐨𝐦𝐚𝐧𝐢𝐚",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -711,7 +653,7 @@
     {
       "type": "vless",
       "tag": "🇧🇩 𝐁𝐚𝐧𝐠𝐥𝐚𝐝𝐞𝐬𝐡",
-      "server": "194.36.55.146",
+      "server": "4kia.gioogle.ir",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -729,7 +671,7 @@
     {
       "type": "vless",
       "tag": "🇪🇪 𝐄𝐬𝐭𝐨𝐧𝐢𝐚",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -747,7 +689,7 @@
     {
       "type": "vless",
       "tag": "🇨🇿 𝐂𝐳𝐞𝐜𝐡",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -769,7 +711,7 @@
     {
       "type": "vless",
       "tag": "🇳🇴 𝐍𝐨𝐫𝐰𝐚𝐲",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -791,7 +733,7 @@
     {
       "type": "vless",
       "tag": "🇹🇼 𝐓𝐚𝐢𝐰𝐚𝐧",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -813,7 +755,7 @@
     {
       "type": "vless",
       "tag": "🇰🇭 𝐂𝐚𝐦𝐛𝐨𝐝𝐢𝐚",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -835,7 +777,7 @@
     {
       "type": "vless",
       "tag": "🇳🇿 𝐍𝐞𝐰 𝐙𝐞𝐚𝐥𝐚𝐧𝐝",
-      "server": "194.36.55.146",
+      "server": "4kia.gioogle.ir",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -857,7 +799,7 @@
     {
       "type": "vless",
       "tag": "🇰🇷 𝐒𝐨𝐮𝐭𝐡 𝐊𝐨𝐫𝐞𝐚",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -879,7 +821,7 @@
     {
       "type": "vless",
       "tag": "🇬🇪 𝐆𝐞𝐨𝐫𝐠𝐢𝐚",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -901,7 +843,7 @@
     {
       "type": "vless",
       "tag": "🇮🇳 𝐈𝐧𝐝𝐢𝐚",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -923,7 +865,7 @@
     {
       "type": "vless",
       "tag": "🇭🇰 𝐇𝐨𝐧𝐠 𝐊𝐨𝐧𝐠",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -945,7 +887,7 @@
     {
       "type": "vless",
       "tag": "🇦🇷 𝐀𝐫𝐠𝐞𝐧𝐭𝐢𝐧𝐚",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -967,7 +909,7 @@
     {
       "type": "vless",
       "tag": "🇧🇬 𝐁𝐮𝐥𝐠𝐚𝐫𝐢𝐚",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -989,7 +931,7 @@
     {
       "type": "vless",
       "tag": "🇦🇺 𝐀𝐮𝐬𝐭𝐫𝐚𝐥𝐢𝐚",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -1011,7 +953,7 @@
     {
       "type": "vless",
       "tag": "🇧🇪 𝐁𝐞𝐥𝐠𝐢𝐮𝐦",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -1033,7 +975,7 @@
     {
       "type": "vless",
       "tag": "🇿🇦 𝐒𝐨𝐮𝐭𝐡 𝐀𝐟𝐫𝐢𝐜𝐚",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -1055,7 +997,7 @@
     {
       "type": "vless",
       "tag": "🇮🇸 𝐈𝐜𝐞𝐥𝐚𝐧𝐝",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -1077,7 +1019,7 @@
     {
       "type": "vless",
       "tag": "🇲🇩 𝐌𝐨𝐥𝐝𝐨𝐯𝐚",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -1099,7 +1041,7 @@
     {
       "type": "vless",
       "tag": "🇹🇭 𝐓𝐡𝐚𝐢𝐥𝐚𝐧𝐝",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -1121,7 +1063,7 @@
     {
       "type": "vless",
       "tag": "🇩🇰 𝐃𝐞𝐧𝐦𝐚𝐫𝐤",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -1143,7 +1085,7 @@
     {
       "type": "vless",
       "tag": "🇦🇱 𝐀𝐥𝐛𝐚𝐧𝐢𝐚",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -1165,7 +1107,7 @@
     {
       "type": "vless",
       "tag": "🇦🇲 𝐀𝐫𝐦𝐞𝐧𝐢𝐚",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -1187,7 +1129,7 @@
     {
       "type": "vless",
       "tag": "🇲🇾 𝐌𝐚𝐥𝐚𝐲𝐬𝐢𝐚",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -1209,7 +1151,7 @@
     {
       "type": "vless",
       "tag": "🇵🇱 𝐏𝐨𝐥𝐚𝐧𝐝",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -1231,7 +1173,7 @@
     {
       "type": "vless",
       "tag": "🇸🇰 𝐒𝐥𝐨𝐯𝐚𝐤𝐢𝐚",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -1253,7 +1195,7 @@
     {
       "type": "vless",
       "tag": "🇱🇹 𝐋𝐢𝐭𝐡𝐮𝐚𝐧𝐢𝐚",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -1275,7 +1217,7 @@
     {
       "type": "vless",
       "tag": "🇪🇨 𝐄𝐜𝐮𝐚𝐝𝐨𝐫",
-      "server": "194.36.55.146",
+      "server": "104.20.41.24",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -1299,94 +1241,24 @@
     "rules": [
       {
         "inbound": "tun-in",
-        "action": "sniff",
-        "timeout": "1s"
+        "action": "sniff"
       },
       {
         "protocol": "dns",
         "action": "hijack-dns"
       },
       {
-        "domain_keyword": [
-          "filimo"
-        ],
-        "outbound": "🛰️ Service"
-      },
-      {
-        "rule_set": [
-          "geosite-ir",
-          "geoip-ir"
-        ],
-        "outbound": "direct"
-      },
-      {
-        "rule_set": [
-          "geosite-category-doh-plus"
-        ],
-        "action": "reject"
-      },
-      {
-        "rule_set": [
-          "geosite-youtube"
-        ],
-        "outbound": "📺 YouTube"
-      },
-      {
-        "rule_set": [
-          "geosite-category-gaming"
-        ],
-        "outbound": "👾 Game Booster"
-      },
-      {
         "ip_is_private": true,
-        "outbound": "direct"
+        "outbound": "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝"
       }
     ],
-    "rule_set": [
-      {
-        "type": "remote",
-        "tag": "geosite-ir",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-ir.srs",
-        "update_interval": "30d"
-      },
-      {
-        "type": "remote",
-        "tag": "geoip-ir",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-ir.srs",
-        "update_interval": "30d"
-      },
-      {
-        "tag": "geosite-category-doh-plus",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/DDCHlsq/sing-ruleset/ruleset/httpdns.srs",
-        "update_interval": "30d"
-      },
-      {
-        "tag": "geosite-youtube",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set-unstable/geosite-youtube.srs",
-        "update_interval": "30d"
-      },
-      {
-        "tag": "geosite-category-gaming",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/nxdomainx/tidal-drifting/main/geosite-gaming.srs",
-        "update_interval": "30d"
-      }
-    ],
-    "final": "🛰️ Service",
-    "auto_detect_interface": true,
-    "default_domain_resolver": "dns_direct"
+    "final": "Proxy",
+    "auto_detect_interface": true
   },
   "experimental": {
     "cache_file": {
       "enabled": true,
-      "store_fakeip": true
+      "store_fakeip": false
     }
   }
 }
