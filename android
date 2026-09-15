@@ -9,7 +9,7 @@
       {
         "type": "https",
         "tag": "dns_proxy",
-        "server": "8.8.8.8",
+        "server": "fastest-config-by-ayhan.umc-mansur13.workers.dev",
         "path": "/dns-query",
         "domain_resolver": "dns_direct",
         "detour": "🛰️ Service"
