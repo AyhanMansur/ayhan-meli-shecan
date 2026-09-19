@@ -212,7 +212,7 @@
     {
       "type": "vless",
       "tag": "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
-      "server": "45.131.4.44",
+      "server": "172.67.193.239",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "transport": {
@@ -226,7 +226,7 @@
     {
       "type": "vless",
       "tag": "🇺🇿 𝐔𝐳𝐛𝐞𝐤𝐢𝐬𝐭𝐚𝐧",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -248,7 +248,7 @@
     {
       "type": "vless",
       "tag": "🇮🇱 𝐈𝐬𝐫𝐚𝐞𝐥",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 80,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -266,7 +266,7 @@
     {
       "type": "vless",
       "tag": "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 2052,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -288,7 +288,7 @@
     {
       "type": "vless",
       "tag": " 🇰🇿 𝐊𝐚𝐳𝐚𝐤𝐡𝐬𝐭𝐚𝐧",
-      "server": "45.131.4.34",
+      "server": "172.67.193.239",
       "server_port": 2082,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -310,7 +310,7 @@
     {
       "type": "vless",
       "tag": "🇷🇺 𝐑𝐮𝐬𝐬𝐢𝐚",
-      "server": "admin.arexhub.ir",
+      "server": "172.67.193.239",
       "server_port": 2082,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -328,7 +328,7 @@
     {
       "type": "vless",
       "tag": "🇺🇦 𝐔𝐤𝐫𝐚𝐢𝐧𝐞",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -346,7 +346,7 @@
     {
       "type": "vless",
       "tag": "🇱🇻 𝐋𝐚𝐭𝐯𝐢𝐚",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -364,7 +364,7 @@
     {
       "type": "vless",
       "tag": "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -382,7 +382,7 @@
     {
       "type": "vless",
       "tag": "🇮🇹 𝐈𝐭𝐚𝐥𝐲",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -400,7 +400,7 @@
     {
       "type": "vless",
       "tag": "🇫🇮 𝐅𝐢𝐧𝐥𝐚𝐧𝐝",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -418,7 +418,7 @@
     {
       "type": "vless",
       "tag": "🇩🇪 𝐆𝐞𝐫𝐦𝐚𝐧𝐲",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -440,7 +440,7 @@
     {
       "type": "vless",
       "tag": "🇸🇪 𝐒𝐰𝐞𝐝𝐞𝐧",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 2052,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -458,7 +458,7 @@
     {
       "type": "vless",
       "tag": "🇳🇱 𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -476,7 +476,7 @@
     {
       "type": "vless",
       "tag": "🇫🇷 𝐅𝐫𝐚𝐧𝐜𝐞",
-      "server": "admin.arexhub.ir",
+      "server": "172.67.193.239",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -494,7 +494,7 @@
     {
       "type": "vless",
       "tag": "🇬🇧 𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 2052,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -512,7 +512,7 @@
     {
       "type": "vless",
       "tag": "🇸🇬 𝐒𝐢𝐧𝐠𝐚𝐩𝐨𝐫𝐞",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -530,7 +530,7 @@
     {
       "type": "vless",
       "tag": "🇪🇸 𝐒𝐩𝐚𝐢𝐧",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -548,7 +548,7 @@
     {
       "type": "vless",
       "tag": "🇨🇦 𝐂𝐚𝐧𝐚𝐝𝐚",
-      "server": "admin.arexhub.ir",
+      "server": "172.67.193.239",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -566,7 +566,7 @@
     {
       "type": "vless",
       "tag": "🇯🇵 𝐉𝐚𝐩𝐚𝐧",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 80,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -584,7 +584,7 @@
     {
       "type": "trojan",
       "tag": "🇺🇸 𝐔𝐧𝐢𝐭𝐞𝐝 𝐒𝐭𝐚𝐭𝐞𝐬",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 443,
       "password": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -602,7 +602,7 @@
     {
       "type": "vless",
       "tag": "🇧🇷 𝐁𝐫𝐚𝐳𝐢𝐥",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -620,7 +620,7 @@
     {
       "type": "vless",
       "tag": "🇲🇽 𝐌𝐞𝐱𝐢𝐜𝐨",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -638,7 +638,7 @@
     {
       "type": "vless",
       "tag": "🇷🇴 𝐑𝐨𝐦𝐚𝐧𝐢𝐚",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -656,7 +656,7 @@
     {
       "type": "vless",
       "tag": "🇪🇪 𝐄𝐬𝐭𝐨𝐧𝐢𝐚",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -674,7 +674,7 @@
     {
       "type": "vless",
       "tag": "🇲🇰 𝐍𝐨𝐫𝐭𝐡 𝐌𝐚𝐜𝐞𝐝𝐨𝐧𝐢𝐚",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -692,7 +692,7 @@
     {
       "type": "vless",
       "tag": "🇨🇿 𝐂𝐳𝐞𝐜𝐡",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -714,7 +714,7 @@
     {
       "type": "vless",
       "tag": "🇳🇴 𝐍𝐨𝐫𝐰𝐚𝐲",
-      "server": "45.131.4.74",
+      "server": "172.67.193.239",
       "server_port": 2082,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -736,7 +736,7 @@
     {
       "type": "vless",
       "tag": "🇹🇼 𝐓𝐚𝐢𝐰𝐚𝐧",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -758,7 +758,7 @@
     {
       "type": "vless",
       "tag": "🇰🇭 𝐂𝐚𝐦𝐛𝐨𝐝𝐢𝐚",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -780,7 +780,7 @@
     {
       "type": "vless",
       "tag": "🇳🇿 𝐍𝐞𝐰 𝐙𝐞𝐚𝐥𝐚𝐧𝐝",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 2095,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -802,7 +802,7 @@
     {
       "type": "vless",
       "tag": "🇰🇷 𝐒𝐨𝐮𝐭𝐡 𝐊𝐨𝐫𝐞𝐚",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -824,7 +824,7 @@
     {
       "type": "vless",
       "tag": "🇭🇺 𝐇𝐮𝐧𝐠𝐚𝐫𝐲",
-      "server": "45.131.4.93",
+      "server": "172.67.193.239",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -846,7 +846,7 @@
     {
       "type": "vless",
       "tag": "🇮🇳 𝐈𝐧𝐝𝐢𝐚",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -868,7 +868,7 @@
     {
       "type": "vless",
       "tag": "🇭🇰 𝐇𝐨𝐧𝐠 𝐊𝐨𝐧𝐠",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -890,7 +890,7 @@
     {
       "type": "vless",
       "tag": "🇦🇷 𝐀𝐫𝐠𝐞𝐧𝐭𝐢𝐧𝐚",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -912,7 +912,7 @@
     {
       "type": "vless",
       "tag": "🇧🇬 𝐁𝐮𝐥𝐠𝐚𝐫𝐢𝐚",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -934,7 +934,7 @@
     {
       "type": "vless",
       "tag": "🇦🇺 𝐀𝐮𝐬𝐭𝐫𝐚𝐥𝐢𝐚",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -956,7 +956,7 @@
     {
       "type": "vless",
       "tag": "🇧🇪 𝐁𝐞𝐥𝐠𝐢𝐮𝐦",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -978,7 +978,7 @@
     {
       "type": "vless",
       "tag": "🇿🇦 𝐒𝐨𝐮𝐭𝐡 𝐀𝐟𝐫𝐢𝐜𝐚",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -1000,7 +1000,7 @@
     {
       "type": "vless",
       "tag": "🇮🇸 𝐈𝐜𝐞𝐥𝐚𝐧𝐝",
-      "server": "5.10.244.0",
+      "server": "172.67.193.239",
       "server_port": 8080,
       "uuid": "964e6322-afad-4594-8508-86d634d732e6",
       "tls": {
@@ -1018,206 +1018,6 @@
           "Host": "blacklegends.umc-mansur13.workers.dev"
         }
       }
-    },
-    {
-      "type": "vless",
-      "tag": "🇲🇩 𝐌𝐨𝐥𝐝𝐨𝐯𝐚",
-      "server": "45.131.4.44",
-      "server_port": 8080,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": false,
-        "server_name": "blacklegends.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/gmaetunnel/proxyip=185.163.45.40?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇭 𝐓𝐡𝐚𝐢𝐥𝐚𝐧𝐝",
-      "server": "5.10.244.0",
-      "server_port": 8080,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": false,
-        "server_name": "blacklegends.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/gmaetunnel/proxyip=157.254.192.20?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇩🇰 𝐃𝐞𝐧𝐦𝐚𝐫𝐤",
-      "server": "5.10.244.0",
-      "server_port": 8080,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": false,
-        "server_name": "blacklegends.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/gmaetunnel/proxyip=92.113.146.87?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇦🇲 𝐀𝐫𝐦𝐞𝐧𝐢𝐚",
-      "server": "5.10.244.0",
-      "server_port": 2082,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": false,
-        "server_name": "blacklegends.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/gmaetunnel/proxyip=2.56.204.183?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇲🇾 𝐌𝐚𝐥𝐚𝐲𝐬𝐢𝐚",
-      "server": "5.10.244.0",
-      "server_port": 8080,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": false,
-        "server_name": "blacklegends.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/gmaetunnel/proxyip=47.250.212.59?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇵🇱 𝐏𝐨𝐥𝐚𝐧𝐝",
-      "server": "5.10.244.0",
-      "server_port": 8080,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": false,
-        "server_name": "blacklegends.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/gmaetunnel/proxyip=191.101.184.50?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇧🇾 𝐁𝐞𝐥𝐚𝐫𝐮𝐬",
-      "server": "45.131.4.44",
-      "server_port": 8080,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": false,
-        "server_name": "blacklegends.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/gmaetunnel/proxyip=212.60.4.134?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇱🇹 𝐋𝐢𝐭𝐡𝐮𝐚𝐧𝐢𝐚",
-      "server": "5.10.244.0",
-      "server_port": 8080,
-      "uuid": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": false,
-        "server_name": "blacklegends.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/gmaetunnel/proxyip=89.40.1.179?ed=2560",
-        "headers": {
-          "Host": "blacklegends.umc-mansur13.workers.dev"
-        }
-      }
     }
-  ],
-  "route": {
-    "rules": [
-      {
-        "inbound": "tun-in",
-        "action": "sniff"
-      },
-      {
-        "protocol": "dns",
-        "action": "hijack-dns"
-      },
-      {
-        "ip_is_private": true,
-        "outbound": "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝"
-      }
-    ],
-    "final": "Proxy",
-    "auto_detect_interface": true
-  },
-  "experimental": {
-    "cache_file": {
-      "enabled": true,
-      "store_fakeip": false
-    }
-  }
+  ]
 }
