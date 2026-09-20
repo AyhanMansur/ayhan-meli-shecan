@@ -206,7 +206,6 @@
       "interval": "10m0s",
       "tolerance": 50,
       "idle_timeout": "30m0s"
-    },
     {
       "type": "vless",
       "tag": "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
