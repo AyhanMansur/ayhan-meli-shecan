@@ -17,12 +17,12 @@
       {
         "tag": "dns_game",
         "type": "udp",
-        "server": "10.202.10.10"
+        "server": "1.1.1.1"
       },
       {
         "tag": "dns_game_alt",
         "type": "udp",
-        "server": "1.1.1.1"
+        "server": "10.202.10.10"
       },
       {
         "tag": "dns_direct",
@@ -1303,10 +1303,22 @@
         "action": "hijack-dns"
       },
       {
-        "network": ["tcp"],
+        "network": [
+          "tcp"
+        ],
         "port": [
-          3013, 18082, 50000, 65010, 65050,
-          10012, 13004, 14000, 17000, 17500, 18081, 20371
+          3013,
+          18082,
+          50000,
+          65010,
+          65050,
+          10012,
+          13004,
+          14000,
+          17000,
+          17500,
+          18081,
+          20371
         ],
         "port_range": [
           "10000:10019",
@@ -1315,10 +1327,24 @@
         "outbound": "👾 Game Booster"
       },
       {
-        "network": ["udp"],
+        "network": [
+          "udp"
+        ],
         "port": [
-          8700, 8011, 9030, 10491, 10612, 12235, 13748,
-          17000, 17500, 10039, 10096, 11455, 13894, 13972
+          8700,
+          8011,
+          9030,
+          10491,
+          10612,
+          12235,
+          13748,
+          17000,
+          17500,
+          10039,
+          10096,
+          11455,
+          13894,
+          13972
         ],
         "port_range": [
           "7085:7995",
@@ -1327,6 +1353,22 @@
           "20000:20002",
           "12070:12460",
           "41182:41192"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "domain_keyword": [
+          "callofduty",
+          "codmobile",
+          "cod-mobile",
+          "activision",
+          "pubgmobile",
+          "pubg",
+          "tencentgames",
+          "levelinfinite"
+        ],
+        "network": [
+          "tcp"
         ],
         "outbound": "👾 Game Booster"
       },
@@ -1341,7 +1383,10 @@
           "tencentgames",
           "levelinfinite"
         ],
-        "outbound": "👾 Game Booster"
+        "network": [
+          "udp"
+        ],
+        "outbound": "direct"
       },
       {
         "domain_keyword": [
