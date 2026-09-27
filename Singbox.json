@@ -22,7 +22,7 @@
       {
         "tag": "dns_game_alt",
         "type": "udp",
-        "server": "78.157.42.101"
+        "server": "1.1.1.1"
       },
       {
         "tag": "dns_direct",
