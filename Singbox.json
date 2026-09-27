@@ -203,6 +203,7 @@
       "tag": "👾 Game Booster",
       "default": "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲",
       "outbounds": [
+        "🇮🇷 𝐈𝐫𝐚𝐧",
         "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲",
         "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
         "🇳🇱 𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬",
@@ -1294,6 +1295,19 @@
       {
         "protocol": "dns",
         "action": "hijack-dns"
+      },
+      {
+        "domain_keyword": [
+          "callofduty",
+          "codmobile",
+          "cod-mobile",
+          "activision",
+          "pubgmobile",
+          "pubg",
+          "tencentgames",
+          "levelinfinite"
+        ],
+        "outbound": "👾 Game Booster"
       },
       {
         "domain_keyword": [
