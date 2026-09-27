@@ -84,6 +84,16 @@
       "detour": "🛰️ Service"
     }
   ],
+  "endpoints": [
+    {
+      "type": "tailscale",
+      "tag": "🇺🇸 Tailscale US",
+      "auth_key": "tskey-auth-kiyZXtPX1D21CNTRL-a7DFv1pzGdZh9rE1hjAucZB4kkVyJHMsF",
+      "hostname": "ayhanspc.tail8d7b34.ts.net",
+      "exit_node": "100.117.153.68",
+      "ephemeral": false
+    }
+  ],
   "inbounds": [
     {
       "type": "tun",
@@ -105,6 +115,7 @@
       "default": "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
       "outbounds": [
         "🔄 Update Daily",
+        "🇺🇸 Tailscale US",
         "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
         "🇺🇿 𝐔𝐳𝐛𝐞𝐤𝐢𝐬𝐭𝐚𝐧",
         "🇮🇱 𝐈𝐬𝐫𝐚𝐞𝐥",
@@ -1310,12 +1321,6 @@
         "outbound": "📺 YouTube"
       },
       {
-        "rule_set": [
-          "geosite-category-gaming"
-        ],
-        "outbound": "👾 Game Booster"
-      },
-      {
         "ip_is_private": true,
         "outbound": "direct"
       }
@@ -1346,14 +1351,7 @@
         "tag": "geosite-youtube",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set-unstable/geosite-youtube.srs",
-        "update_interval": "30d"
-      },
-      {
-        "tag": "geosite-category-gaming",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/nxdomainx/tidal-drifting/main/geosite-gaming.srs",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-youtube.srs",
         "update_interval": "30d"
       }
     ],
