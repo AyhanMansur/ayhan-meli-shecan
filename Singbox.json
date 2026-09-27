@@ -87,7 +87,7 @@
   "endpoints": [
     {
       "type": "tailscale",
-      "tag": "🇺🇸 Tailscale US",
+      "tag": "🇮🇷 𝐈𝐫𝐚𝐧",
       "auth_key": "tskey-auth-ks95utBQJE11CNTRL-8NcRVwkLT4Q1qCsKve6E4Qkz4nRRjnM1",
       "hostname": "ios-client",
       "exit_node": "100.117.153.68",
@@ -115,7 +115,7 @@
       "default": "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
       "outbounds": [
         "🔄 Update Daily",
-        "🇺🇸 Tailscale US",
+        "🇮🇷 𝐈𝐫𝐚𝐧",
         "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
         "🇺🇿 𝐔𝐳𝐛𝐞𝐤𝐢𝐬𝐭𝐚𝐧",
         "🇮🇱 𝐈𝐬𝐫𝐚𝐞𝐥",
