@@ -88,8 +88,8 @@
     {
       "type": "tailscale",
       "tag": "🇺🇸 Tailscale US",
-      "auth_key": "tskey-auth-kiyZXtPX1D21CNTRL-a7DFv1pzGdZh9rE1hjAucZB4kkVyJHMsF",
-      "hostname": "ayhanspc.tail8d7b34.ts.net",
+      "auth_key": "tskey-auth-ks95utBQJE11CNTRL-8NcRVwkLT4Q1qCsKve6E4Qkz4nRRjnM1",
+      "hostname": "ios-client",
       "exit_node": "100.117.153.68",
       "ephemeral": false
     }
