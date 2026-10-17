@@ -26,7 +26,7 @@
       },
       {
         "tag": "dns_direct",
-        "type": "tcp",
+        "type": "udp",
         "server": "185.55.226.26"
       },
       {
