@@ -27,7 +27,7 @@
       {
         "tag": "dns_direct",
         "type": "udp",
-        "server": "8.8.8.8"
+        "server": "4.2.2.2"
       },
       {
         "type": "hosts",
