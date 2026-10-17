@@ -26,8 +26,8 @@
       },
       {
         "tag": "dns_direct",
-        "type": "tcp",
-        "server": "185.55.226.26"
+        "type": "udp",
+        "server": "8.8.8.8"
       },
       {
         "type": "hosts",
@@ -208,7 +208,7 @@
     },
     {
       "type": "selector",
-      "tag": "📺 𝐘𝐨𝐮𝐓𝐮𝐛𝐞",
+      "tag": "📺 𝐘𝐨𝐮𝐓𝐮𝐛𝐞 ⅓",
       "default": "🇷🇺 𝐑𝐮𝐬𝐬𝐢𝐚 ⅓",
       "outbounds": [
         "🇷🇺 𝐑𝐮𝐬𝐬𝐢𝐚 ⅓",
@@ -252,7 +252,7 @@
     },
     {
       "type": "selector",
-      "tag": "🔄🧩🤖🧠 𝔸𝕝 & 𝐌𝐮𝐬𝐢𝐜 𝐏𝐨𝐬𝐝𝐜𝐚𝐭𝐬♻️🎵",
+      "tag": "🧩🤖🧠𝔸𝕝 & 𝐌𝐮𝐬𝐢𝐜.𝐏𝐨𝐬𝐝𝐜𝐚𝐭𝐬🎵",
       "default": "🇺🇸 𝐔𝐧𝐢𝐭𝐞𝐝 𝐒𝐭𝐚𝐭𝐞𝐬",
       "outbounds": [
 				"🇨🇦 𝐂𝐚𝐧𝐚𝐝𝐚",
@@ -2036,7 +2036,7 @@
           "geosite-deezer",
           "geosite-tidal"
         ],
-        "outbound": "🔄🧩🤖🧠 𝔸𝕝 & 𝐌𝐮𝐬𝐢𝐜 𝐏𝐨𝐬𝐝𝐜𝐚𝐭𝐬♻️🎵"
+        "outbound": "🧩🤖🧠𝔸𝕝 & 𝐌𝐮𝐬𝐢𝐜.𝐏𝐨𝐬𝐝𝐜𝐚𝐭𝐬🎵"
       },
       {
         "network": [
@@ -2147,7 +2147,7 @@
         "rule_set": [
           "geosite-youtube"
         ],
-        "outbound": "📺 𝐘𝐨𝐮𝐓𝐮𝐛𝐞"
+        "outbound": "📺 𝐘𝐨𝐮𝐓𝐮𝐛𝐞 ⅓"
       },
       {
         "ip_is_private": true,
