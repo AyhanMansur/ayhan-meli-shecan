@@ -107,6 +107,34 @@
       "detour": "🍁🕹️📟 𝐀𝐲𝐡𝐚𝐧𝐗-𝐅𝐫𝐞𝐞𝐝𝐨𝐦.👾🛡 ⚔️ 🔄"
     }
   ],
+  "endpoints": [
+    {
+      "type": "wireguard",
+      "tag": "🇮🇷 𝐢𝐫𝐚𝐧",
+      "system": false,
+      "mtu": 1430,
+      "address": [
+        "172.16.0.2/32",
+      ],
+      "private_key": "wF4MIEolgwPyXrxK8Wr04lm2r2nsawfv+cwtP0I9SHY=",
+      "peers": [
+        {
+          "address": "8.6.112.224",
+          "port": 8886,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "reserved": [
+            74,
+            71,
+            6
+          ]
+        }
+      ]
+    }
+  ],
   "inbounds": [
     {
       "type": "tun",
@@ -181,30 +209,30 @@
     {
       "type": "selector",
       "tag": "📺 𝐘𝐨𝐮𝐓𝐮𝐛𝐞",
-      "default": "🇷🇺 𝐑𝐮𝐬𝐬𝐢𝐚",
+      "default": "🇷🇺 𝐑𝐮𝐬𝐬𝐢𝐚 ⅓",
       "outbounds": [
-        "🇷🇺 𝐑𝐮𝐬𝐬𝐢𝐚",
-        "🇰🇿 𝐊𝐚𝐳𝐚𝐤𝐡𝐬𝐭𝐚𝐧",
-        "🇫🇷 𝐅𝐫𝐚𝐧𝐜𝐞",
-        "🇧🇬 𝐁𝐮𝐥𝐠𝐚𝐫𝐢𝐚",
-        "🇸🇪 𝐒𝐰𝐞𝐝𝐞𝐧",
-        "🇳🇴 𝐍𝐨𝐫𝐰𝐚𝐲",
-        "🇩🇪 𝐆𝐞𝐫𝐦𝐚𝐧𝐲",
-        "🇨🇦 𝐂𝐚𝐧𝐚𝐝𝐚",
-        "🇧🇷 𝐁𝐫𝐚𝐳𝐢𝐥",
-        "🇷🇴 𝐑𝐨𝐦𝐚𝐢𝐚",
-        "🇨🇿 𝐂𝐳𝐞𝐜𝐡",
-        "🇪🇪 𝐄𝐬𝐭𝐨𝐧𝐢𝐚",
-        "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲",
-        "🇮🇸 𝐈𝐜𝐞𝐥𝐚𝐧𝐝",
-        "🇮🇱 𝐈𝐬𝐫𝐚𝐞𝐥",
-        "🇭🇰 𝐇𝐨𝐧𝐠 𝐊𝐨𝐧𝐠",
-        "🇦🇺 𝐀𝐮𝐬𝐭𝐫𝐚𝐥𝐢𝐚",
-        "🇪🇸 𝐒𝐩𝐚𝐢𝐧",
-        "🇻🇳 𝐕𝐢𝐞𝐭𝐧𝐚𝐦",
-        "🇩🇰 𝐃𝐞𝐧𝐦𝐚𝐫𝐤",
-        "🇬🇧 𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦",
-        "🇳🇱 𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬"
+        "🇷🇺 𝐑𝐮𝐬𝐬𝐢𝐚 ⅓",
+        "🇰🇿 𝐊𝐚𝐳𝐚𝐤𝐡𝐬𝐭𝐚𝐧 ⅓",
+        "🇫🇷 𝐅𝐫𝐚𝐧𝐜𝐞 ⅓",
+        "🇧🇬 𝐁𝐮𝐥𝐠𝐚𝐫𝐢𝐚 ⅓",
+        "🇸🇪 𝐒𝐰𝐞𝐝𝐞𝐧 ⅓",
+        "🇳🇴 𝐍𝐨𝐫𝐰𝐚𝐲 ⅓",
+        "🇩🇪 𝐆𝐞𝐫𝐦𝐚𝐧𝐲 ⅓",
+        "🇨🇦 𝐂𝐚𝐧𝐚𝐝𝐚 ⅓",
+        "🇧🇷 𝐁𝐫𝐚𝐳𝐢𝐥 ⅓",
+        "🇷🇴 𝐑𝐨𝐦𝐚𝐢𝐚 ⅓",
+        "🇨🇿 𝐂𝐳𝐞𝐜𝐡 ⅓",
+        "🇪🇪 𝐄𝐬𝐭𝐨𝐧𝐢𝐚 ⅓",
+        "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲 ⅓",
+        "🇮🇸 𝐈𝐜𝐞𝐥𝐚𝐧𝐝 ⅓",
+        "🇮🇱 𝐈𝐬𝐫𝐚𝐞𝐥 ⅓",
+        "🇭🇰 𝐇𝐨𝐧𝐠 𝐊𝐨𝐧𝐠 ⅓",
+        "🇦🇺 𝐀𝐮𝐬𝐭𝐫𝐚𝐥𝐢𝐚 ⅓",
+        "🇪🇸 𝐒𝐩𝐚𝐢𝐧 ⅓",
+        "🇻🇳 𝐕𝐢𝐞𝐭𝐧𝐚𝐦 ⅓",
+        "🇩🇰 𝐃𝐞𝐧𝐦𝐚𝐫𝐤 ⅓",
+        "🇬🇧 𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦 ⅓",
+        "🇳🇱 𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬 ⅓"
       ],
       "interrupt_exist_connections": true
     },
@@ -219,6 +247,46 @@
         "🇵🇱 𝐏𝐨𝐥𝐚𝐧𝐝",
         "🇭🇺 𝐇𝐮𝐧𝐠𝐚𝐫𝐲",
         "🇧🇬 𝐁𝐮𝐥𝐠𝐚𝐫𝐢𝐚"
+      ],
+      "interrupt_exist_connections": true
+    },
+    {
+      "type": "selector",
+      "tag": "🔄♻️🎶🤖🧠 𝐒𝐮𝐩𝐞𝐫 𝐢𝐧𝐭𝐞𝐥𝐥𝐢𝐠𝐞𝐧𝐜𝐞",
+      "default": "🇺🇸 𝐔𝐧𝐢𝐭𝐞𝐝 𝐒𝐭𝐚𝐭𝐞𝐬",
+      "outbounds": [
+        "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
+        "🇮🇱 𝐈𝐬𝐫𝐚𝐞𝐥",
+        "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲",
+        "🇰🇿 𝐊𝐚𝐳𝐚𝐤𝐡𝐬𝐭𝐚𝐧",
+        "🇮🇹 𝐈𝐭𝐚𝐥𝐲",
+        "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝",
+        "🇫🇮 𝐅𝐢𝐧𝐥𝐚𝐧𝐝",
+        "🇩🇪 𝐆𝐞𝐫𝐦𝐚𝐧𝐲",
+        "🇸🇪 𝐒𝐰𝐞𝐝𝐞𝐧",
+        "🇫🇷 𝐅𝐫𝐚𝐧𝐜𝐞",
+        "🇳🇱 𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬",
+        "🇬🇧 𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦",
+        "🇸🇬 𝐒𝐢𝐧𝐠𝐚𝐩𝐨𝐫𝐞",
+        "🇪🇸 𝐒𝐩𝐚𝐢𝐧",
+        "🇨🇦 𝐂𝐚𝐧𝐚𝐝𝐚",
+        "🇯🇵 𝐉𝐚𝐩𝐚𝐧",
+        "🇺🇸 𝐔𝐧𝐢𝐭𝐞𝐝 𝐒𝐭𝐚𝐭𝐞𝐬",
+        "🇧🇷 𝐁𝐫𝐚𝐳𝐢𝐥",
+        "🇲🇽 𝐌𝐞𝐱𝐢𝐜𝐨",
+        "🇮🇩 𝐈𝐧𝐝𝐨𝐧𝐞𝐬𝐢𝐚",
+        "🇷🇴 𝐑𝐨𝐦𝐚𝐢𝐚",
+        "🇪🇪 𝐄𝐬𝐭𝐨𝐧𝐢𝐚",
+        "🇳🇴 𝐍𝐨𝐫𝐰𝐚𝐲",
+        "🇨🇿 𝐂𝐳𝐞𝐜𝐡",
+        "🇰🇷 𝐒𝐨𝐮𝐭𝐡 𝐊𝐨𝐫𝐞𝐚",
+        "🇮🇳 𝐢𝐧𝐝𝐢𝐚",
+        "🇦🇷 𝐀𝐫𝐠𝐞𝐧𝐭𝐢𝐧𝐚",
+        "🇧🇬 𝐁𝐮𝐥𝐠𝐚𝐫𝐢𝐚",
+        "🇦🇺 𝐀𝐮𝐬𝐭𝐫𝐚𝐥𝐢𝐚",
+        "🇧🇪 𝐁𝐞𝐥𝐠𝐢𝐮𝐦",
+        "🇮🇸 𝐈𝐜𝐞𝐥𝐚𝐧𝐝",
+        "🇩🇰 𝐃𝐞𝐧𝐦𝐚𝐫𝐤",
       ],
       "interrupt_exist_connections": true
     },
@@ -1636,6 +1704,314 @@
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
       }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇷🇺 𝐑𝐮𝐬𝐬𝐢𝐚 ⅓",
+      "server": "www.kali.org",
+      "server_port": 2082,
+      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=95.188.72.67?ed=2560",
+        "headers": {
+          "Host": "small-block-f048.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇰🇿 𝐊𝐚𝐳𝐚𝐤𝐡𝐬𝐭𝐚𝐧 ⅓",
+      "server": "www.kali.org",
+      "server_port": 2082,
+      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=109.248.170.245?ed=2560",
+        "headers": {
+          "Host": "small-block-f048.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇫🇷 𝐅𝐫𝐚𝐧𝐜𝐞 ⅓",
+      "server": "www.kali.org",
+      "server_port": 2082,
+      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=134.209.19.200?ed=2560",
+        "headers": {
+          "Host": "small-block-f048.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇧🇬 𝐁𝐮𝐥𝐠𝐚𝐫𝐢𝐚 ⅓",
+      "server": "www.kali.org",
+      "server_port": 2082,
+      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=212.113.118.25?ed=2560",
+        "headers": {
+          "Host": "small-block-f048.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇸🇪 𝐒𝐰𝐞𝐝𝐞𝐧 ⅓",
+      "server": "www.kali.org",
+      "server_port": 2082,
+      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=95.141.241.216?ed=2560",
+        "headers": {
+          "Host": "small-block-f048.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇳🇴 𝐍𝐨𝐫𝐰𝐚𝐲 ⅓",
+      "server": "www.kali.org",
+      "server_port": 2082,
+      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=194.5.98.17?ed=2560",
+        "headers": {
+          "Host": "small-block-f048.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇩🇪 𝐆𝐞𝐫𝐦𝐚𝐧𝐲 ⅓",
+      "server": "www.kali.org",
+      "server_port": 2082,
+      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=209.38.246.159?ed=2560",
+        "headers": {
+          "Host": "small-block-f048.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇨🇦 𝐂𝐚𝐧𝐚𝐝𝐚 ⅓",
+      "server": "www.kali.org",
+      "server_port": 2082,
+      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=192.99.169.176?ed=2560",
+        "headers": {
+          "Host": "small-block-f048.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇧🇷 𝐁𝐫𝐚𝐳𝐢𝐥 ⅓",
+      "server": "www.kali.org",
+      "server_port": 2082,
+      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=38.180.78.255?ed=2560",
+        "headers": {
+          "Host": "small-block-f048.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇷🇴 𝐑𝐨𝐦𝐚𝐢𝐚 ⅓",
+      "server": "www.kali.org",
+      "server_port": 2082,
+      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=45.13.38.120?ed=2560",
+        "headers": {
+          "Host": "small-block-f048.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇨🇿 𝐂𝐳𝐞𝐜𝐡 ⅓",
+      "server": "www.kali.org",
+      "server_port": 2082,
+      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=37.205.15.169?ed=2560",
+        "headers": {
+          "Host": "small-block-f048.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇪🇪 𝐄𝐬𝐭𝐨𝐧𝐢𝐚 ⅓",
+      "server": "www.kali.org",
+      "server_port": 2082,
+      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=38.180.10.97?ed=2560",
+        "headers": {
+          "Host": "small-block-f048.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲 ⅓",
+      "server": "45.131.4.44",
+      "server_port": 2082,
+      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=185.255.93.189?ed=2560",
+        "headers": {
+          "Host": "small-block-f048.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇮🇸 𝐈𝐜𝐞𝐥𝐚𝐧𝐝 ⅓",
+      "server": "www.kali.org",
+      "server_port": 2082,
+      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=195.246.230.125?ed=2560",
+        "headers": {
+          "Host": "small-block-f048.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇮🇱 𝐈𝐬𝐫𝐚𝐞𝐥 ⅓",
+      "server": "www.kali.org",
+      "server_port": 2082,
+      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=45.150.108.59?ed=2560",
+        "headers": {
+          "Host": "small-block-f048.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇭🇰 𝐇𝐨𝐧𝐠 𝐊𝐨𝐧𝐠 ⅓",
+      "server": "www.kali.org",
+      "server_port": 2082,
+      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=154.16.183.190?ed=2560",
+        "headers": {
+          "Host": "small-block-f048.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇦🇺 𝐀𝐮𝐬𝐭𝐫𝐚𝐥𝐢𝐚 ⅓",
+      "server": "www.kali.org",
+      "server_port": 2082,
+      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=170.64.232.210?ed=2560",
+        "headers": {
+          "Host": "small-block-f048.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇪🇸 𝐒𝐩𝐚𝐢𝐧 ⅓",
+      "server": "www.kali.org",
+      "server_port": 2082,
+      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=194.154.28.227?ed=2560",
+        "headers": {
+          "Host": "small-block-f048.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇻🇳 𝐕𝐢𝐞𝐭𝐧𝐚𝐦 ⅓",
+      "server": "www.kali.org",
+      "server_port": 2082,
+      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=163.61.74.121?ed=2560",
+        "headers": {
+          "Host": "small-block-f048.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇩🇰 𝐃𝐞𝐧𝐦𝐚𝐫𝐤 ⅓",
+      "server": "www.kali.org",
+      "server_port": 2082,
+      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=193.180.211.155?ed=2560",
+        "headers": {
+          "Host": "small-block-f048.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇬🇧 𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦 ⅓",
+      "server": "www.kali.org",
+      "server_port": 2082,
+      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=67.207.80.155?ed=2560",
+        "headers": {
+          "Host": "small-block-f048.umc-mansur13.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇳🇱 𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬 ⅓",
+      "server": "www.kali.org",
+      "server_port": 2082,
+      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "transport": {
+        "type": "ws",
+        "path": "/gmaetunnel/proxyip=209.38.99.215?ed=2560",
+        "headers": {
+          "Host": "small-block-f048.umc-mansur13.workers.dev"
+        }
+      }
     }
   ],
   "route": {
@@ -1648,6 +2024,36 @@
       {
         "protocol": "dns",
         "action": "hijack-dns"
+      },
+      {
+        "network": [
+          "udp"
+        ],
+        "rule_set": [
+          "geosite-whatsapp",
+          "geosite-telegram",
+          "geosite-instagram",
+          "geosite-facebook",
+          "geoip-telegram",
+          "geoip-facebook"
+        ],
+        "outbound": "🇮🇷 𝐢𝐫𝐚𝐧"
+      },
+      {
+        "rule_set": [
+          "geosite-category-ai",
+          "geosite-openai",
+          "geosite-anthropic",
+          "geosite-google-gemini",
+          "geosite-perplexity",
+          "geosite-xai",
+          "geosite-huggingface",
+          "geosite-spotify",
+          "geosite-soundcloud",
+          "geosite-deezer",
+          "geosite-tidal"
+        ],
+        "outbound": "🔄♻️🎶🤖🧠 𝐒𝐮𝐩𝐞𝐫 𝐢𝐧𝐭𝐞𝐥𝐥𝐢𝐠𝐞𝐧𝐜𝐞"
       },
       {
         "network": [
@@ -1739,7 +2145,7 @@
         "domain_keyword": [
           "filimo"
         ],
-        "outbound": "🍁🕹️📟 𝐀𝐲𝐡𝐚𝐧𝐗-𝐅𝐫𝐞𝐞𝐝𝐨𝐦.👾🛡 ⚔️ 🔄"
+        "outbound": "direct"
       },
       {
         "rule_set": [
@@ -1792,6 +2198,125 @@
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-youtube.srs",
+        "update_interval": "30d"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-whatsapp",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-whatsapp.srs",
+        "update_interval": "30d"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-telegram",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-telegram.srs",
+        "update_interval": "30d"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-instagram",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-instagram.srs",
+        "update_interval": "30d"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-facebook",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-facebook.srs",
+        "update_interval": "30d"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-telegram",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/telegram.srs",
+        "update_interval": "30d"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-facebook",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/facebook.srs",
+        "update_interval": "30d"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-category-ai",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ai-%21cn.srs",
+        "update_interval": "30d"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-openai",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
+        "update_interval": "30d"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-anthropic",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-anthropic.srs",
+        "update_interval": "30d"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-google-gemini",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google-gemini.srs",
+        "update_interval": "30d"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-perplexity",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-perplexity.srs",
+        "update_interval": "30d"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-xai",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-xai.srs",
+        "update_interval": "30d"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-huggingface",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-huggingface.srs",
+        "update_interval": "30d"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-spotify",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-spotify.srs",
+        "update_interval": "30d"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-soundcloud",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-soundcloud.srs",
+        "update_interval": "30d"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-deezer",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-deezer.srs",
+        "update_interval": "30d"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-tidal",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-tidal.srs",
         "update_interval": "30d"
       }
     ],
