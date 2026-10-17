@@ -111,7 +111,7 @@
     {
       "type": "tun",
       "tag": "tun-in",
-      "mtu": 756,
+      "mtu": 1430,
       "auto_route": true,
       "strict_route": true,
       "stack": "system",
