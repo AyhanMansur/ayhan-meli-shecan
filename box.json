@@ -112,9 +112,9 @@
       "type": "wireguard",
       "tag": "🇮🇷 𝐢𝐫𝐚𝐧",
       "system": false,
-      "mtu": 1430,
+      "mtu": 1280,
       "address": [
-        "172.16.0.2/32",
+        "172.16.0.2/32"
       ],
       "private_key": "wF4MIEolgwPyXrxK8Wr04lm2r2nsawfv+cwtP0I9SHY=",
       "peers": [
@@ -130,7 +130,8 @@
             74,
             71,
             6
-          ]
+          ],
+          "persistent_keepalive_interval": 25
         }
       ]
     }
@@ -194,7 +195,6 @@
         "🇧🇪 𝐁𝐞𝐥𝐠𝐢𝐮𝐦",
         "🇿🇦 𝐒𝐨𝐮𝐭𝐡 𝐀𝐟𝐫𝐢𝐜𝐚",
         "🇮🇸 𝐈𝐜𝐞𝐥𝐚𝐧𝐝",
-        "🇮🇪 𝐈𝐫𝐞𝐥𝐚𝐧𝐝",
         "🇻🇳 𝐕𝐢𝐞𝐭𝐧𝐚𝐦",
         "🇹🇭 𝐓𝐡𝐚𝐢𝐥𝐚𝐧𝐝",
         "🇩🇰 𝐃𝐞𝐧𝐦𝐚𝐫𝐤",
@@ -245,8 +245,8 @@
         "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
         "🇦🇲 𝐀𝐫𝐦𝐞𝐢𝐚",
         "🇵🇱 𝐏𝐨𝐥𝐚𝐧𝐝",
-				"🇧🇬 𝐁𝐮𝐥𝐠𝐚𝐫𝐢𝐚",
-        "🇭🇺 𝐇𝐮𝐧𝐠𝐚𝐫𝐲",
+        "🇧🇬 𝐁𝐮𝐥𝐠𝐚𝐫𝐢𝐚",
+        "🇭🇺 𝐇𝐮𝐧𝐠𝐚𝐫𝐲"
       ],
       "interrupt_exist_connections": true
     },
@@ -255,21 +255,21 @@
       "tag": "🧩🤖🧠𝔸𝕝 & 𝐌𝐮𝐬𝐢𝐜.𝐏𝐨𝐬𝐝𝐜𝐚𝐭𝐬🎵",
       "default": "🇺🇸 𝐔𝐧𝐢𝐭𝐞𝐝 𝐒𝐭𝐚𝐭𝐞𝐬",
       "outbounds": [
-				"🇨🇦 𝐂𝐚𝐧𝐚𝐝𝐚",
-				"🇫🇷 𝐅𝐫𝐚𝐧𝐜𝐞",
-			  "🇰🇿 𝐊𝐚𝐳𝐚𝐤𝐡𝐬𝐭𝐚𝐧",
+        "🇨🇦 𝐂𝐚𝐧𝐚𝐝𝐚",
+        "🇫🇷 𝐅𝐫𝐚𝐧𝐜𝐞",
+        "🇰🇿 𝐊𝐚𝐳𝐚𝐤𝐡𝐬𝐭𝐚𝐧",
         "🇸🇪 𝐒𝐰𝐞𝐝𝐞𝐧",
-				"🇧🇪 𝐁𝐞𝐥𝐠𝐢𝐮𝐦",
-				"🇬🇧 𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦",
+        "🇧🇪 𝐁𝐞𝐥𝐠𝐢𝐮𝐦",
+        "🇬🇧 𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦",
         "🇳🇱 𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬",
-				"🇫🇮 𝐅𝐢𝐧𝐥𝐚𝐧𝐝",
-				"🇧🇬 𝐁𝐮𝐥𝐠𝐚𝐫𝐢𝐚",
-				"🇪🇪 𝐄𝐬𝐭𝐨𝐧𝐢𝐚",
-				"🇺🇸 𝐔𝐧𝐢𝐭𝐞𝐝 𝐒𝐭𝐚𝐭𝐞𝐬",
+        "🇫🇮 𝐅𝐢𝐧𝐥𝐚𝐧𝐝",
+        "🇧🇬 𝐁𝐮𝐥𝐠𝐚𝐫𝐢𝐚",
+        "🇪🇪 𝐄𝐬𝐭𝐨𝐧𝐢𝐚",
+        "🇺🇸 𝐔𝐧𝐢𝐭𝐞𝐝 𝐒𝐭𝐚𝐭𝐞𝐬",
         "🇷🇴 𝐑𝐨𝐦𝐚𝐢𝐚",
-				"🇳🇴 𝐍𝐨𝐫𝐰𝐚𝐲",
-				"🇪🇸 𝐒𝐩𝐚𝐢𝐧",
-        "🇨🇿 𝐂𝐳𝐞𝐜𝐡",
+        "🇳🇴 𝐍𝐨𝐫𝐰𝐚𝐲",
+        "🇪🇸 𝐒𝐩𝐚𝐢𝐧",
+        "🇨🇿 𝐂𝐳𝐞𝐜𝐡"
       ],
       "interrupt_exist_connections": true
     },
@@ -318,7 +318,6 @@
         "🇧🇪 𝐁𝐞𝐥𝐠𝐢𝐮𝐦",
         "🇿🇦 𝐒𝐨𝐮𝐭𝐡 𝐀𝐟𝐫𝐢𝐜𝐚",
         "🇮🇸 𝐈𝐜𝐞𝐥𝐚𝐧𝐝",
-        "🇮🇪 𝐈𝐫𝐞𝐥𝐚𝐧𝐝",
         "🇻🇳 𝐕𝐢𝐞𝐭𝐧𝐚𝐦",
         "🇹🇭 𝐓𝐡𝐚𝐢𝐥𝐚𝐧𝐝",
         "🇩🇰 𝐃𝐞𝐧𝐦𝐚𝐫𝐤",
@@ -340,49 +339,27 @@
     },
     {
       "type": "trojan",
-      "tag": "🍁🕹️📟 𝐀𝐲𝐡𝐚𝐧𝐗-𝐅𝐫𝐞𝐞𝐝𝐨𝐦.👾🛡 ⚔🔄",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "9BK_OfDsXhbPKs7zX",
-      "tls": {
-        "enabled": true,
-        "server_name": "tsit7pyhmabrlriqecwb4miphh125sn.ayhan919292.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "tag": "🍁🕹️📟 𝐀𝐲𝐡𝐚𝐧𝐗-𝐅𝐫𝐞𝐞𝐝𝐨𝐦.👾🛡⚔🔄",
+      "server": "104.16.100.100",
+      "server_port": 8080,
+      "password": "b51436a6-7716-ef2a-e450-8f2b95152b0b",
       "transport": {
         "type": "ws",
-        "path": "/tr/ScfQ8Q2ZJR89fiiL7xVg9aDFxY?ed=2560",
+        "path": "/eyJqdW5rIjoiNU9wa2NGamo4SjkiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
-          "Host": "tsit7pyhmabrlriqecwb4miphh125sn.ayhan919292.workers.dev"
+          "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
       }
     },
     {
       "type": "trojan",
       "tag": "🕹️ 📟🫆𝐀𝐲𝐡𝐚𝐧𝐗-𝐅𝐫𝐞𝐞𝐝𝐨𝐦.🌌🍀 🔄",
-      "server": "atomicmail.io",
-      "server_port": 2083,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.17.0.1",
+      "server_port": 8080,
+      "password": "06a7c544-4936-d4c8-60ca-94a4cc839e08",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=37.205.15.169?ed=2560",
+        "path": "/eyJqdW5rIjoiWDA0VHpLZWlBdm4iLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -391,23 +368,12 @@
     {
       "type": "trojan",
       "tag": "𝐉𝐨𝐢𝐧 .🍁🪾 <..@𝐚𝐲𝐡𝐚𝐧𝐝𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫..>🔄",
-      "server": "atomicmail.io",
-      "server_port": 2096,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.17.0.1",
+      "server_port": 8080,
+      "password": "70e2ffcb-9d4a-e745-d870-daaafe3f9116",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=95.188.72.67?ed=2560",
+        "path": "/eyJqdW5rIjoiRjhLbGZ1N3o3dDUiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -416,23 +382,12 @@
     {
       "type": "trojan",
       "tag": "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.17.0.1",
+      "server_port": 8080,
+      "password": "c3575334-963b-0def-1578-ebad7dfe6c3b",
       "transport": {
         "type": "ws",
-        "path": "/out.php/m/gmaetunnel/proxyip=176.97.66.175?ed=2560",
+        "path": "/eyJqdW5rIjoiNHgyM3ZTOWRtQ3kiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -441,23 +396,12 @@
     {
       "type": "trojan",
       "tag": "🇺🇿 𝐔𝐳𝐛𝐞𝐤𝐢𝐬𝐭𝐚𝐧",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.17.0.1",
+      "server_port": 8080,
+      "password": "c4dd6666-39dd-9b12-f350-ae116370af1e",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=157.22.128.7?ed=2560",
+        "path": "/eyJqdW5rIjoiMjl4dWhzVFYxTlYiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -466,23 +410,12 @@
     {
       "type": "trojan",
       "tag": "🇮🇱 𝐈𝐬𝐫𝐚𝐞𝐥",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.17.0.1",
+      "server_port": 8080,
+      "password": "9b88cf33-2fbe-e026-6d9e-b06af47d1f18",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=45.150.108.59?ed=2560",
+        "path": "/eyJqdW5rIjoiOWowM2ZFOHR5dVMiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -491,23 +424,12 @@
     {
       "type": "trojan",
       "tag": "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.17.0.1",
+      "server_port": 8080,
+      "password": "d03ac618-54ff-9712-9f7f-d11369f78c7e",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=185.255.93.189?ed=2560",
+        "path": "/eyJqdW5rIjoiaXp2aUx4MUZhUDgiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -516,23 +438,12 @@
     {
       "type": "trojan",
       "tag": "🇰🇿 𝐊𝐚𝐳𝐚𝐤𝐡𝐬𝐭𝐚𝐧",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.17.0.1",
+      "server_port": 8080,
+      "password": "80d4cb87-ac70-e074-bc82-6313d2d1b539",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=109.248.170.245?ed=2560",
+        "path": "/eyJqdW5rIjoiZXJaQklLRUh1R0UiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -541,23 +452,12 @@
     {
       "type": "trojan",
       "tag": "🇷🇺 𝐑𝐮𝐬𝐬𝐢𝐚",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.17.0.1",
+      "server_port": 8080,
+      "password": "70e2ffcb-9d4a-e745-d870-daaafe3f9116",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=95.188.72.67?ed=2560",
+        "path": "/eyJqdW5rIjoiRjhLbGZ1N3o3dDUiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -566,23 +466,12 @@
     {
       "type": "trojan",
       "tag": "🇮🇹 𝐈𝐭𝐚𝐥𝐲",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.17.0.1",
+      "server_port": 8080,
+      "password": "f273e90b-28bf-345d-78fd-6dfb6d043033",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=83.229.6.134:443?ed=2560",
+        "path": "/eyJqdW5rIjoiRlBmMDdZWEFWekMiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -592,22 +481,11 @@
       "type": "trojan",
       "tag": "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝",
       "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server_port": 8080,
+      "password": "244fa069-181c-b386-ff5b-4fbd0f725fa0",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=79.132.141.152?ed=2560",
+        "path": "/eyJqdW5rIjoiUmVzZFFtczAzMGgiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoxfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -616,23 +494,12 @@
     {
       "type": "trojan",
       "tag": "🇱🇻 𝐋𝐚𝐭𝐯𝐢𝐚",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.17.0.1",
+      "server_port": 8080,
+      "password": "cd5b0478-bf0d-75de-e93a-ff6a14756ab2",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=212.6.44.68:443?ed=2560",
+        "path": "/eyJqdW5rIjoiN0U0b0xTcjI4QjMiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -641,23 +508,12 @@
     {
       "type": "trojan",
       "tag": "🇫🇮 𝐅𝐢𝐧𝐥𝐚𝐧𝐝",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.17.0.1",
+      "server_port": 8080,
+      "password": "ce0bdef4-8780-14be-4a40-99a1604b1312",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=138.124.7.136?ed=2560",
+        "path": "/eyJqdW5rIjoiZHkwYU5tOFRhTFAiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -666,23 +522,12 @@
     {
       "type": "trojan",
       "tag": "🇩🇪 𝐆𝐞𝐫𝐦𝐚𝐧𝐲",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.17.0.1",
+      "server_port": 8080,
+      "password": "6b458e6d-d808-23ca-9d1a-35e099734a79",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=209.38.246.159?ed=2560",
+        "path": "/eyJqdW5rIjoid2tNNkNGR1lncHAiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -691,23 +536,12 @@
     {
       "type": "trojan",
       "tag": "🇸🇪 𝐒𝐰𝐞𝐝𝐞𝐧",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.17.0.1",
+      "server_port": 8080,
+      "password": "b51436a6-7716-ef2a-e450-8f2b95152b0b",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=95.141.241.216?ed=2560",
+        "path": "/eyJqdW5rIjoiNU9wa2NGamo4SjkiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -716,23 +550,12 @@
     {
       "type": "trojan",
       "tag": "🇫🇷 𝐅𝐫𝐚𝐧𝐜𝐞",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.100.100",
+      "server_port": 8080,
+      "password": "9efd3661-bcde-6692-2a9f-21e426a28a33",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=134.209.19.200?ed=2560",
+        "path": "/eyJqdW5rIjoib0pRTnhkRzFadTAiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -741,23 +564,12 @@
     {
       "type": "trojan",
       "tag": "🇳🇱 𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.17.0.1",
+      "server_port": 8080,
+      "password": "4cb20c33-9839-d5b9-691c-9b6bbdc41a66",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=209.38.99.215?ed=2560",
+        "path": "/eyJqdW5rIjoieG5RQ0pSSlBPeWsiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -766,23 +578,12 @@
     {
       "type": "trojan",
       "tag": "🇬🇧 𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.100.100",
+      "server_port": 8080,
+      "password": "afefacaf-1b6c-3923-3c0d-d9d5199801fc",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=67.207.80.155?ed=2560",
+        "path": "/eyJqdW5rIjoiTFRSamdxRzQwTTQiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -791,23 +592,12 @@
     {
       "type": "trojan",
       "tag": "🇸🇬 𝐒𝐢𝐧𝐠𝐚𝐩𝐨𝐫𝐞",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "page.gitlab.com",
+      "server_port": 8080,
+      "password": "67d2876b-d373-2dcb-c935-8f50a38978ef",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=188.166.251.234?ed=2560",
+        "path": "/eyJqdW5rIjoiYkxiRUpxN1Y5SzciLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoxfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -816,23 +606,12 @@
     {
       "type": "trojan",
       "tag": "🇪🇸 𝐒𝐩𝐚𝐢𝐧",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "page.gitlab.com",
+      "server_port": 8080,
+      "password": "084a6655-8afc-0ca0-edd1-081ec4c4667f",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=194.154.28.227?ed=2560",
+        "path": "/eyJqdW5rIjoiT0lxZlNQenNtUnoiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -841,23 +620,12 @@
     {
       "type": "trojan",
       "tag": "🇨🇦 𝐂𝐚𝐧𝐚𝐝𝐚",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "page.gitlab.com",
+      "server_port": 8080,
+      "password": "06a7c544-4936-d4c8-60ca-94a4cc839e08",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=192.99.169.176?ed=2560",
+        "path": "/eyJqdW5rIjoiWDA0VHpLZWlBdm4iLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -866,23 +634,12 @@
     {
       "type": "trojan",
       "tag": "🇯🇵 𝐉𝐚𝐩𝐚𝐧",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "atomicmail.io",
+      "server_port": 8080,
+      "password": "b7e199c6-9546-8146-32ce-07d628cd686d",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=43.170.8.95?ed=2560",
+        "path": "/eyJqdW5rIjoiY0gxNDNoOEZOQ1giLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoxfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -891,23 +648,12 @@
     {
       "type": "trojan",
       "tag": "🇺🇸 𝐔𝐧𝐢𝐭𝐞𝐝 𝐒𝐭𝐚𝐭𝐞𝐬",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.100.100",
+      "server_port": 8080,
+      "password": "30900eb8-88cf-2e59-0098-8f8c23c2d030",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=147.182.229.237:443?ed=2560",
+        "path": "/eyJqdW5rIjoiazR1ZFJzbVlPRkUiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -916,23 +662,12 @@
     {
       "type": "trojan",
       "tag": "🇧🇷 𝐁𝐫𝐚𝐳𝐢𝐥",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.100.100",
+      "server_port": 8080,
+      "password": "7af2936d-011a-b7d3-98d0-d32ce4d6e45f",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=38.180.78.255?ed=2560",
+        "path": "/eyJqdW5rIjoidmFpS0FsM3ZQcFUiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoxfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -941,23 +676,12 @@
     {
       "type": "trojan",
       "tag": "🇲🇽 𝐌𝐞𝐱𝐢𝐜𝐨",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.100.100",
+      "server_port": 8080,
+      "password": "62ef3838-486c-349d-6ac5-3cd7fafb5624",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=131.196.254.151?ed=2560",
+        "path": "/eyJqdW5rIjoiNHVpNTFrV2VUMnYiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -966,23 +690,12 @@
     {
       "type": "trojan",
       "tag": "🇮🇩 𝐈𝐧𝐝𝐨𝐧𝐞𝐬𝐢𝐚",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "atomicmail.io",
+      "server_port": 8080,
+      "password": "d57306c5-a4ef-3413-5e12-0dcaae961705",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=147.139.189.225:443?ed=2560",
+        "path": "/eyJqdW5rIjoiQ0hnQTltaFpGbmsiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -991,23 +704,12 @@
     {
       "type": "trojan",
       "tag": "🇷🇴 𝐑𝐨𝐦𝐚𝐢𝐚",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.100.45",
+      "server_port": 8080,
+      "password": "93279ebe-ca58-4510-acdf-052e89a7fca0",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=45.13.38.120?ed=2560",
+        "path": "/eyJqdW5rIjoiMDMyazlzNEVzU2ciLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1016,23 +718,12 @@
     {
       "type": "trojan",
       "tag": "🇪🇪 𝐄𝐬𝐭𝐨𝐧𝐢𝐚",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.100.41",
+      "server_port": 8080,
+      "password": "bb7a4887-cbaa-535a-5537-b31645f3142b",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=38.180.10.97?ed=2560",
+        "path": "/eyJqdW5rIjoiR1FUaGhwMWtIY0siLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1041,23 +732,12 @@
     {
       "type": "trojan",
       "tag": "🇦🇹 𝐀𝐮𝐬𝐭𝐫𝐢𝐚",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.100.32",
+      "server_port": 8080,
+      "password": "f7fe19c5-1cb3-09af-f323-2fec620ee815",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=185.175.58.196?ed=2560",
+        "path": "/eyJqdW5rIjoidlk2Q0o0dmY2dmwiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjozfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1066,23 +746,12 @@
     {
       "type": "trojan",
       "tag": "🇳🇴 𝐍𝐨𝐫𝐰𝐚𝐲",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.100.87",
+      "server_port": 8080,
+      "password": "caf156b4-56cc-795e-ca74-23b69ca33c6e",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=194.5.98.17?ed=2560",
+        "path": "/eyJqdW5rIjoiSmFVOVhUSTJ3TkMiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1091,23 +760,12 @@
     {
       "type": "trojan",
       "tag": "🇨🇿 𝐂𝐳𝐞𝐜𝐡",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.100.86",
+      "server_port": 8080,
+      "password": "6ea68ba4-4400-0267-5cbf-163f333bdaeb",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=37.205.15.169?ed=2560",
+        "path": "/eyJqdW5rIjoicjlHRnI4NEJsSkQiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1116,23 +774,12 @@
     {
       "type": "trojan",
       "tag": "🇹🇼 𝐓𝐚𝐢𝐰𝐚𝐧",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.100.94",
+      "server_port": 8080,
+      "password": "dcb424f6-af02-9213-2319-7d7a5544f54f",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=188.253.6.249?ed=2560",
+        "path": "/eyJqdW5rIjoiOUNYSjMya1BXclAiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1141,23 +788,12 @@
     {
       "type": "trojan",
       "tag": "🇰🇭 𝐂𝐚𝐦𝐛𝐨𝐝𝐢𝐚",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.99.86",
+      "server_port": 8080,
+      "password": "1a9d8c90-2636-47fc-17dd-37ff03e06819",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=38.54.4.209?ed=2560",
+        "path": "/eyJqdW5rIjoiV0g0T3N2WTQwa0ciLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1166,23 +802,12 @@
     {
       "type": "trojan",
       "tag": "🇳🇿 𝑵𝒆𝒘 𝒁𝒆𝒂𝒍𝒂𝒏𝒅",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.99.86",
+      "server_port": 8080,
+      "password": "7bb18796-ee88-d4c0-ddec-4dac0b3a6257",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=185.71.230.237?ed=2560",
+        "path": "/eyJqdW5rIjoidFczYVlualVwNkwiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1191,23 +816,12 @@
     {
       "type": "trojan",
       "tag": "🇰🇷 𝐒𝐨𝐮𝐭𝐡 𝐊𝐨𝐫𝐞𝐚",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.84.84",
+      "server_port": 8080,
+      "password": "cf5e922d-3ace-b23e-ca27-4aec22d6dc54",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=152.70.239.74?ed=2560",
+        "path": "/eyJqdW5rIjoieEl0UzAyTkVieEoiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1216,23 +830,12 @@
     {
       "type": "trojan",
       "tag": "🇭🇺 𝐇𝐮𝐧𝐠𝐚𝐫𝐲",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.99.86",
+      "server_port": 8080,
+      "password": "202ec85f-0d90-2dc9-beee-cf162d7796a7",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=38.180.109.174?ed=2560",
+        "path": "/eyJqdW5rIjoicFJnc0h6enplUzkiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1241,23 +844,12 @@
     {
       "type": "trojan",
       "tag": "🇮🇳 𝐢𝐧𝐝𝐢𝐚",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.99.86",
+      "server_port": 8080,
+      "password": "3a9e69da-1644-d646-e4f1-1d4729449664",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=172.236.187.52?ed=2560",
+        "path": "/eyJqdW5rIjoiZUU1ZEZNMUUwMksiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1266,23 +858,12 @@
     {
       "type": "trojan",
       "tag": "🇭🇰 𝐇𝐨𝐧𝐠 𝐊𝐨𝐧𝐠",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.99.86",
+      "server_port": 8080,
+      "password": "3b2cbecd-a8a5-298c-bb02-22856760c20a",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=154.16.183.190?ed=2560",
+        "path": "/eyJqdW5rIjoibGdtTUxtN3Q3WXEiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1291,23 +872,12 @@
     {
       "type": "trojan",
       "tag": "🇦🇷 𝐀𝐫𝐠𝐞𝐧𝐭𝐢𝐧𝐚",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.99.89",
+      "server_port": 8080,
+      "password": "8c50f4f2-8202-0449-a37b-95e27a398560",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=38.54.45.184?ed=2560",
+        "path": "/eyJqdW5rIjoiOXVNUHY3WktXb1oiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1316,23 +886,12 @@
     {
       "type": "trojan",
       "tag": "🇧🇬 𝐁𝐮𝐥𝐠𝐚𝐫𝐢𝐚",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.99.86",
+      "server_port": 8080,
+      "password": "4521da38-681c-25a8-f82f-39c5a371e576",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=212.113.118.25?ed=2560",
+        "path": "/eyJqdW5rIjoiZWgxOGN2ZlpKdVIiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1341,23 +900,12 @@
     {
       "type": "trojan",
       "tag": "🇦🇺 𝐀𝐮𝐬𝐭𝐫𝐚𝐥𝐢𝐚",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.99.89",
+      "server_port": 8080,
+      "password": "82b9e628-1110-d65c-ad30-06742ce275e2",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=170.64.232.210?ed=2560",
+        "path": "/eyJqdW5rIjoiVmxwUTRQaXNHMXUiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1366,23 +914,12 @@
     {
       "type": "trojan",
       "tag": "🇧🇪 𝐁𝐞𝐥𝐠𝐢𝐮𝐦",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.99.86",
+      "server_port": 8080,
+      "password": "bf588a18-c974-0aed-c93f-5dc75f189edf",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=35.241.172.224?ed=2560",
+        "path": "/eyJqdW5rIjoicjhiQ2RlbWx5ck4iLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1391,23 +928,12 @@
     {
       "type": "trojan",
       "tag": "🇿🇦 𝐒𝐨𝐮𝐭𝐡 𝐀𝐟𝐫𝐢𝐜𝐚",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.99.89",
+      "server_port": 8080,
+      "password": "82ae2bd9-ba64-30d8-e032-0dd3aeaf45b7",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=139.84.236.69:443?ed=2560",
+        "path": "/eyJqdW5rIjoiRHVTVGgxZ0xYQXAiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1416,48 +942,12 @@
     {
       "type": "trojan",
       "tag": "🇮🇸 𝐈𝐜𝐞𝐥𝐚𝐧𝐝",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.99.86",
+      "server_port": 8080,
+      "password": "79b462ea-88db-52bb-565d-d4b18aae71ac",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=195.246.230.125?ed=2560",
-        "headers": {
-          "Host": "small-block-f048.umc-mansur13.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇮🇪 𝐈𝐫𝐞𝐥𝐚𝐧𝐝",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/gmaetunnel/proxyip=198.55.103.168?ed=2560",
+        "path": "/eyJqdW5rIjoiTnBmQVN0OW5ES20iLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1466,23 +956,12 @@
     {
       "type": "trojan",
       "tag": "🇻🇳 𝐕𝐢𝐞𝐭𝐧𝐚𝐦",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.99.86",
+      "server_port": 8080,
+      "password": "64f96403-f32c-575f-1829-0844ce632235",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=163.61.74.121?ed=2560",
+        "path": "/eyJqdW5rIjoic1JZcEdRTUZQTWoiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1491,23 +970,12 @@
     {
       "type": "trojan",
       "tag": "🇹🇭 𝐓𝐡𝐚𝐢𝐥𝐚𝐧𝐝",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.17.0.1",
+      "server_port": 8080,
+      "password": "390298b2-f05d-b426-b934-751ded63caf1",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=157.254.192.20?ed=2560",
+        "path": "/eyJqdW5rIjoiVmZzTmUzZDluUjYiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1516,23 +984,12 @@
     {
       "type": "trojan",
       "tag": "🇩🇰 𝐃𝐞𝐧𝐦𝐚𝐫𝐤",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.17.0.1",
+      "server_port": 8080,
+      "password": "c6cc2b6a-59b1-c8cf-b462-0b64a3e9fc9a",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=193.180.211.155?ed=2560",
+        "path": "/eyJqdW5rIjoidTl5VlhIeTRFc2kiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1541,23 +998,12 @@
     {
       "type": "trojan",
       "tag": "🇦🇲 𝐀𝐫𝐦𝐞𝐢𝐚",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.99.86",
+      "server_port": 8080,
+      "password": "4bdf6541-0916-1d93-c919-aec66abc5532",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=2.56.204.246?ed=2560",
+        "path": "/eyJqdW5rIjoiU3c4d2JlZUdtZHMiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1566,23 +1012,12 @@
     {
       "type": "trojan",
       "tag": "🇲🇾 𝐌𝐚𝐥𝐚𝐲𝐬𝐢𝐚",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.99.86",
+      "server_port": 8080,
+      "password": "4ec5d866-abcb-e1ab-dd3f-e2f50102830d",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=47.250.212.59?ed=2560",
+        "path": "/eyJqdW5rIjoiRUduUVBweFhpNHUiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1591,23 +1026,12 @@
     {
       "type": "trojan",
       "tag": "🇵🇱 𝐏𝐨𝐥𝐚𝐧𝐝",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.99.86",
+      "server_port": 8080,
+      "password": "01ac8c05-9996-2c8e-ebe2-dbb75d94c45b",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=191.101.184.50?ed=2560",
+        "path": "/eyJqdW5rIjoiRURPMjdGcElGNnMiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1616,23 +1040,12 @@
     {
       "type": "trojan",
       "tag": "🇱🇹 𝐋𝐢𝐭𝐡𝐮𝐚𝐧𝐢𝐚",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.99.86",
+      "server_port": 8080,
+      "password": "eac0d9d3-9072-86cc-da88-96aaeb573084",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=89.40.1.179?ed=2560",
+        "path": "/eyJqdW5rIjoiSHRGaVptdkNVZUEiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1641,23 +1054,12 @@
     {
       "type": "trojan",
       "tag": "🇧🇾 𝐁𝐞𝐥𝐚𝐫𝐮𝐬",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.16.99.86",
+      "server_port": 8080,
+      "password": "5b755e32-e59d-8a3d-538e-10d20a2364ee",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=212.60.4.134:443?ed=2560",
+        "path": "/eyJqdW5rIjoiZlMxbWZ4SkJKU3MiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1666,23 +1068,12 @@
     {
       "type": "trojan",
       "tag": "🇪🇨 𝐄𝐜𝐮𝐚𝐝𝐨𝐫𝐦",
-      "server": "www.kali.org",
-      "server_port": 2087,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
-      "tls": {
-        "enabled": true,
-        "server_name": "small-block-f048.umc-mansur13.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "alpn": [
-          "http/1.1"
-        ]
-      },
+      "server": "104.17.0.1",
+      "server_port": 8080,
+      "password": "f1e1c829-b525-92c6-dab4-1cc7f456118f",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=130.94.116.44?ed=2560",
+        "path": "/eyJqdW5rIjoicGh3ZmI1WFNNdHEiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1691,12 +1082,12 @@
     {
       "type": "trojan",
       "tag": "🇷🇺 𝐑𝐮𝐬𝐬𝐢𝐚 ⅓",
-      "server": "www.kali.org",
-      "server_port": 2082,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "server": "104.17.0.1",
+      "server_port": 8080,
+      "password": "70e2ffcb-9d4a-e745-d870-daaafe3f9116",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=95.188.72.67?ed=2560",
+        "path": "/eyJqdW5rIjoiRjhLbGZ1N3o3dDUiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1705,12 +1096,12 @@
     {
       "type": "trojan",
       "tag": "🇰🇿 𝐊𝐚𝐳𝐚𝐤𝐡𝐬𝐭𝐚𝐧 ⅓",
-      "server": "www.kali.org",
-      "server_port": 2082,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "server": "104.17.0.1",
+      "server_port": 8080,
+      "password": "80d4cb87-ac70-e074-bc82-6313d2d1b539",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=109.248.170.245?ed=2560",
+        "path": "/eyJqdW5rIjoiZXJaQklLRUh1R0UiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1719,12 +1110,12 @@
     {
       "type": "trojan",
       "tag": "🇫🇷 𝐅𝐫𝐚𝐧𝐜𝐞 ⅓",
-      "server": "www.kali.org",
-      "server_port": 2082,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "server": "104.16.100.100",
+      "server_port": 8080,
+      "password": "9efd3661-bcde-6692-2a9f-21e426a28a33",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=134.209.19.200?ed=2560",
+        "path": "/eyJqdW5rIjoib0pRTnhkRzFadTAiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1733,12 +1124,12 @@
     {
       "type": "trojan",
       "tag": "🇧🇬 𝐁𝐮𝐥𝐠𝐚𝐫𝐢𝐚 ⅓",
-      "server": "www.kali.org",
-      "server_port": 2082,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "server": "104.16.99.86",
+      "server_port": 8080,
+      "password": "4521da38-681c-25a8-f82f-39c5a371e576",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=212.113.118.25?ed=2560",
+        "path": "/eyJqdW5rIjoiZWgxOGN2ZlpKdVIiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1747,12 +1138,12 @@
     {
       "type": "trojan",
       "tag": "🇸🇪 𝐒𝐰𝐞𝐝𝐞𝐧 ⅓",
-      "server": "www.kali.org",
-      "server_port": 2082,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "server": "104.17.0.1",
+      "server_port": 8080,
+      "password": "b51436a6-7716-ef2a-e450-8f2b95152b0b",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=95.141.241.216?ed=2560",
+        "path": "/eyJqdW5rIjoiNU9wa2NGamo4SjkiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1761,12 +1152,12 @@
     {
       "type": "trojan",
       "tag": "🇳🇴 𝐍𝐨𝐫𝐰𝐚𝐲 ⅓",
-      "server": "www.kali.org",
-      "server_port": 2082,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "server": "104.16.100.87",
+      "server_port": 8080,
+      "password": "caf156b4-56cc-795e-ca74-23b69ca33c6e",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=194.5.98.17?ed=2560",
+        "path": "/eyJqdW5rIjoiSmFVOVhUSTJ3TkMiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1775,12 +1166,12 @@
     {
       "type": "trojan",
       "tag": "🇩🇪 𝐆𝐞𝐫𝐦𝐚𝐧𝐲 ⅓",
-      "server": "www.kali.org",
-      "server_port": 2082,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "server": "104.17.0.1",
+      "server_port": 8080,
+      "password": "6b458e6d-d808-23ca-9d1a-35e099734a79",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=209.38.246.159?ed=2560",
+        "path": "/eyJqdW5rIjoid2tNNkNGR1lncHAiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1789,12 +1180,12 @@
     {
       "type": "trojan",
       "tag": "🇨🇦 𝐂𝐚𝐧𝐚𝐝𝐚 ⅓",
-      "server": "www.kali.org",
-      "server_port": 2082,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "server": "page.gitlab.com",
+      "server_port": 8080,
+      "password": "06a7c544-4936-d4c8-60ca-94a4cc839e08",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=192.99.169.176?ed=2560",
+        "path": "/eyJqdW5rIjoiWDA0VHpLZWlBdm4iLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1803,12 +1194,12 @@
     {
       "type": "trojan",
       "tag": "🇧🇷 𝐁𝐫𝐚𝐳𝐢𝐥 ⅓",
-      "server": "www.kali.org",
-      "server_port": 2082,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "server": "104.16.100.100",
+      "server_port": 8080,
+      "password": "7af2936d-011a-b7d3-98d0-d32ce4d6e45f",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=38.180.78.255?ed=2560",
+        "path": "/eyJqdW5rIjoidmFpS0FsM3ZQcFUiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoxfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1817,12 +1208,12 @@
     {
       "type": "trojan",
       "tag": "🇷🇴 𝐑𝐨𝐦𝐚𝐢𝐚 ⅓",
-      "server": "www.kali.org",
-      "server_port": 2082,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "server": "104.16.100.45",
+      "server_port": 8080,
+      "password": "93279ebe-ca58-4510-acdf-052e89a7fca0",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=45.13.38.120?ed=2560",
+        "path": "/eyJqdW5rIjoiMDMyazlzNEVzU2ciLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1831,12 +1222,12 @@
     {
       "type": "trojan",
       "tag": "🇨🇿 𝐂𝐳𝐞𝐜𝐡 ⅓",
-      "server": "www.kali.org",
-      "server_port": 2082,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "server": "104.16.100.86",
+      "server_port": 8080,
+      "password": "6ea68ba4-4400-0267-5cbf-163f333bdaeb",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=37.205.15.169?ed=2560",
+        "path": "/eyJqdW5rIjoicjlHRnI4NEJsSkQiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1845,12 +1236,12 @@
     {
       "type": "trojan",
       "tag": "🇪🇪 𝐄𝐬𝐭𝐨𝐧𝐢𝐚 ⅓",
-      "server": "www.kali.org",
-      "server_port": 2082,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "server": "104.16.100.41",
+      "server_port": 8080,
+      "password": "bb7a4887-cbaa-535a-5537-b31645f3142b",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=38.180.10.97?ed=2560",
+        "path": "/eyJqdW5rIjoiR1FUaGhwMWtIY0siLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1859,12 +1250,12 @@
     {
       "type": "trojan",
       "tag": "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲 ⅓",
-      "server": "45.131.4.44",
-      "server_port": 2082,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "server": "104.17.0.1",
+      "server_port": 8080,
+      "password": "d03ac618-54ff-9712-9f7f-d11369f78c7e",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=185.255.93.189?ed=2560",
+        "path": "/eyJqdW5rIjoiaXp2aUx4MUZhUDgiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1873,12 +1264,12 @@
     {
       "type": "trojan",
       "tag": "🇮🇸 𝐈𝐜𝐞𝐥𝐚𝐧𝐝 ⅓",
-      "server": "www.kali.org",
-      "server_port": 2082,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "server": "104.16.99.86",
+      "server_port": 8080,
+      "password": "79b462ea-88db-52bb-565d-d4b18aae71ac",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=195.246.230.125?ed=2560",
+        "path": "/eyJqdW5rIjoiTnBmQVN0OW5ES20iLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1887,12 +1278,12 @@
     {
       "type": "trojan",
       "tag": "🇮🇱 𝐈𝐬𝐫𝐚𝐞𝐥 ⅓",
-      "server": "www.kali.org",
-      "server_port": 2082,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "server": "104.17.0.1",
+      "server_port": 8080,
+      "password": "9b88cf33-2fbe-e026-6d9e-b06af47d1f18",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=45.150.108.59?ed=2560",
+        "path": "/eyJqdW5rIjoiOWowM2ZFOHR5dVMiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1901,12 +1292,12 @@
     {
       "type": "trojan",
       "tag": "🇭🇰 𝐇𝐨𝐧𝐠 𝐊𝐨𝐧𝐠 ⅓",
-      "server": "www.kali.org",
-      "server_port": 2082,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "server": "104.16.99.86",
+      "server_port": 8080,
+      "password": "3b2cbecd-a8a5-298c-bb02-22856760c20a",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=154.16.183.190?ed=2560",
+        "path": "/eyJqdW5rIjoibGdtTUxtN3Q3WXEiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1915,12 +1306,12 @@
     {
       "type": "trojan",
       "tag": "🇦🇺 𝐀𝐮𝐬𝐭𝐫𝐚𝐥𝐢𝐚 ⅓",
-      "server": "www.kali.org",
-      "server_port": 2082,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "server": "104.16.99.89",
+      "server_port": 8080,
+      "password": "82b9e628-1110-d65c-ad30-06742ce275e2",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=170.64.232.210?ed=2560",
+        "path": "/eyJqdW5rIjoiVmxwUTRQaXNHMXUiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1929,12 +1320,12 @@
     {
       "type": "trojan",
       "tag": "🇪🇸 𝐒𝐩𝐚𝐢𝐧 ⅓",
-      "server": "www.kali.org",
-      "server_port": 2082,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "server": "page.gitlab.com",
+      "server_port": 8080,
+      "password": "084a6655-8afc-0ca0-edd1-081ec4c4667f",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=194.154.28.227?ed=2560",
+        "path": "/eyJqdW5rIjoiT0lxZlNQenNtUnoiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1943,12 +1334,12 @@
     {
       "type": "trojan",
       "tag": "🇻🇳 𝐕𝐢𝐞𝐭𝐧𝐚𝐦 ⅓",
-      "server": "www.kali.org",
-      "server_port": 2082,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "server": "104.16.99.86",
+      "server_port": 8080,
+      "password": "64f96403-f32c-575f-1829-0844ce632235",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=163.61.74.121?ed=2560",
+        "path": "/eyJqdW5rIjoic1JZcEdRTUZQTWoiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1957,12 +1348,12 @@
     {
       "type": "trojan",
       "tag": "🇩🇰 𝐃𝐞𝐧𝐦𝐚𝐫𝐤 ⅓",
-      "server": "www.kali.org",
-      "server_port": 2082,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "server": "104.17.0.1",
+      "server_port": 8080,
+      "password": "c6cc2b6a-59b1-c8cf-b462-0b64a3e9fc9a",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=193.180.211.155?ed=2560",
+        "path": "/eyJqdW5rIjoidTl5VlhIeTRFc2kiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1971,12 +1362,12 @@
     {
       "type": "trojan",
       "tag": "🇬🇧 𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦 ⅓",
-      "server": "www.kali.org",
-      "server_port": 2082,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "server": "104.16.100.100",
+      "server_port": 8080,
+      "password": "afefacaf-1b6c-3923-3c0d-d9d5199801fc",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=67.207.80.155?ed=2560",
+        "path": "/eyJqdW5rIjoiTFRSamdxRzQwTTQiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -1985,12 +1376,12 @@
     {
       "type": "trojan",
       "tag": "🇳🇱 𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬 ⅓",
-      "server": "www.kali.org",
-      "server_port": 2082,
-      "password": "964e6322-afad-4594-8508-86d634d732e6",
+      "server": "104.17.0.1",
+      "server_port": 8080,
+      "password": "4cb20c33-9839-d5b9-691c-9b6bbdc41a66",
       "transport": {
         "type": "ws",
-        "path": "/gmaetunnel/proxyip=209.38.99.215?ed=2560",
+        "path": "/eyJqdW5rIjoieG5RQ0pSSlBPeWsiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "small-block-f048.umc-mansur13.workers.dev"
         }
@@ -2013,10 +1404,7 @@
           "udp"
         ],
         "rule_set": [
-          "geosite-whatsapp",
-          "geosite-telegram",
-          "geosite-instagram",
-          "geosite-facebook",
+          "geosite-calls",
           "geoip-telegram",
           "geoip-facebook"
         ],
@@ -2024,17 +1412,7 @@
       },
       {
         "rule_set": [
-          "geosite-category-ai",
-          "geosite-openai",
-          "geosite-anthropic",
-          "geosite-google-gemini",
-          "geosite-perplexity",
-          "geosite-xai",
-          "geosite-huggingface",
-          "geosite-spotify",
-          "geosite-soundcloud",
-          "geosite-deezer",
-          "geosite-tidal"
+          "geosite-ai-music"
         ],
         "outbound": "🧩🤖🧠𝔸𝕝 & 𝐌𝐮𝐬𝐢𝐜.𝐏𝐨𝐬𝐝𝐜𝐚𝐭𝐬🎵"
       },
@@ -2185,34 +1563,6 @@
       },
       {
         "type": "remote",
-        "tag": "geosite-whatsapp",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-whatsapp.srs",
-        "update_interval": "30d"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-telegram",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-telegram.srs",
-        "update_interval": "30d"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-instagram",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-instagram.srs",
-        "update_interval": "30d"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-facebook",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-facebook.srs",
-        "update_interval": "30d"
-      },
-      {
-        "type": "remote",
         "tag": "geoip-telegram",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/telegram.srs",
@@ -2226,81 +1576,762 @@
         "update_interval": "30d"
       },
       {
-        "type": "remote",
-        "tag": "geosite-category-ai",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ai-%21cn.srs",
-        "update_interval": "30d"
+        "type": "inline",
+        "tag": "geosite-calls",
+        "rules": [
+          {
+            "domain_suffix": [
+              "wa.me",
+              "whatsapp-plus.info",
+              "whatsapp-plus.me",
+              "whatsapp-plus.net",
+              "whatsapp.cc",
+              "whatsapp.com",
+              "whatsapp.info",
+              "whatsapp.net",
+              "whatsapp.org",
+              "whatsapp.tv",
+              "whatsappbrand.com",
+              "cdn-telegram.org",
+              "comments.app",
+              "contest.com",
+              "fragment.com",
+              "graph.org",
+              "quiz.directory",
+              "t.me",
+              "tdesktop.com",
+              "telega.one",
+              "telegra.ph",
+              "telegram-cdn.org",
+              "telegram.dog",
+              "telegram.me",
+              "telegram.org",
+              "telegram.space",
+              "telesco.pe",
+              "tg.dev",
+              "ton.org",
+              "toncenter.com",
+              "tx.me",
+              "usercontent.dev",
+              "achat-followers-instagram.com",
+              "acheter-followers-instagram.com",
+              "acheterdesfollowersinstagram.com",
+              "acheterfollowersinstagram.com",
+              "bookstagram.com",
+              "carstagram.com",
+              "cdninstagram.com",
+              "chickstagram.com",
+              "graph-fallback.instagram.com",
+              "graph.instagram.com",
+              "ig.me",
+              "igcdn.com",
+              "igsonar.com",
+              "igtv.com",
+              "imstagram.com",
+              "imtagram.com",
+              "instaadder.com",
+              "instachecker.com",
+              "instafallow.com",
+              "instafollower.com",
+              "instagainer.com",
+              "instagda.com",
+              "instagify.com",
+              "instagmania.com",
+              "instagor.com",
+              "instagram-brand.com",
+              "instagram-engineering.com",
+              "instagram-help.com",
+              "instagram-press.com",
+              "instagram-press.net",
+              "instagram.com",
+              "instagramci.com",
+              "instagramcn.com",
+              "instagramdi.com",
+              "instagramhashtags.net",
+              "instagramhilecim.com",
+              "instagramhilesi.org",
+              "instagramium.com",
+              "instagramizlenme.com",
+              "instagramkusu.com",
+              "instagramlogin.com",
+              "instagramm.com",
+              "instagramn.com",
+              "instagrampartners.com",
+              "instagramphoto.com",
+              "instagramq.com",
+              "instagramsepeti.com",
+              "instagramtakipcisatinal.net",
+              "instagramtakiphilesi.com",
+              "instagramtips.com",
+              "instagramtr.com",
+              "instagran.com",
+              "instagranm.com",
+              "instagrem.com",
+              "instagrm.com",
+              "instagtram.com",
+              "instagy.com",
+              "instamgram.com",
+              "instangram.com",
+              "instanttelegram.com",
+              "instaplayer.net",
+              "instastyle.tv",
+              "instgram.com",
+              "intagram.com",
+              "intagrm.com",
+              "intgram.com",
+              "kingstagram.com",
+              "lnstagram-help.com",
+              "oninstagram.com",
+              "online-instagram.com",
+              "onlineinstagram.com",
+              "theinstagramhack.com",
+              "web-instagram.net",
+              "wwwinstagram.com",
+              "aboutfacebook.com",
+              "accessfacebookfromschool.com",
+              "acebooik.com",
+              "acebook.com",
+              "advancediddetection.com",
+              "analytics.facebook.com",
+              "askfacebook.net",
+              "askfacebook.org",
+              "atdmt2.com",
+              "atlasdmt.com",
+              "atlasonepoint.com",
+              "buyingfacebooklikes.com",
+              "careersatfb.com",
+              "celebgramme.com",
+              "china-facebook.com",
+              "click-url.com",
+              "como-hackearfacebook.com",
+              "crowdtangle.com",
+              "dacebook.com",
+              "dlfacebook.com",
+              "dotfacebook.com",
+              "dotfacebook.net",
+              "expresswifi.com",
+              "faacebok.com",
+              "faacebook.com",
+              "faasbook.com",
+              "facbebook.com",
+              "facbeok.com",
+              "facboo.com",
+              "facbook.com",
+              "facbool.com",
+              "facboox.com",
+              "faccebook.com",
+              "faccebookk.com",
+              "facdbook.com",
+              "facdebook.com",
+              "face-book.com",
+              "faceabook.com",
+              "facebboc.com",
+              "facebbook.com",
+              "facebboook.com",
+              "facebcook.com",
+              "facebdok.com",
+              "facebgook.com",
+              "facebhook.com",
+              "facebkkk.com",
+              "facebo-ok.com",
+              "faceboak.com",
+              "facebock.com",
+              "facebocke.com",
+              "facebof.com",
+              "faceboik.com",
+              "facebok.com",
+              "facebokbook.com",
+              "facebokc.com",
+              "facebokk.com",
+              "facebokok.com",
+              "faceboks.com",
+              "facebol.com",
+              "facebolk.com",
+              "facebomok.com",
+              "faceboo.com",
+              "facebooa.com",
+              "faceboob.com",
+              "faceboobok.com",
+              "facebooc.com",
+              "faceboock.com",
+              "facebood.com",
+              "facebooe.com",
+              "faceboof.com",
+              "facebooi.com",
+              "facebooik.com",
+              "facebooik.org",
+              "facebooj.com",
+              "facebook-corp.com",
+              "facebook-covid-19.com",
+              "facebook-ebook.com",
+              "facebook-forum.com",
+              "facebook-hardware.com",
+              "facebook-inc.com",
+              "facebook-login.com",
+              "facebook-newsroom.com",
+              "facebook-newsroom.org",
+              "facebook-pmdcenter.com",
+              "facebook-pmdcenter.net",
+              "facebook-pmdcenter.org",
+              "facebook-privacy.com",
+              "facebook-program.com",
+              "facebook-studio.com",
+              "facebook-support.org",
+              "facebook-texas-holdem.com",
+              "facebook-texas-holdem.net",
+              "facebook.br",
+              "facebook.ca",
+              "facebook.cc",
+              "facebook.com",
+              "facebook.design",
+              "facebook.hu",
+              "facebook.in",
+              "facebook.net",
+              "facebook.nl",
+              "facebook.org",
+              "facebook.se",
+              "facebook.shop",
+              "facebook.tv",
+              "facebook.us",
+              "facebook.wang",
+              "facebook123.org",
+              "facebook30.com",
+              "facebook30.net",
+              "facebook30.org",
+              "facebook4business.com",
+              "facebookads.com",
+              "facebookadvertisingsecrets.com",
+              "facebookatschool.com",
+              "facebookawards.com",
+              "facebookblueprint.net",
+              "facebookbrand.com",
+              "facebookbrand.net",
+              "facebookcanadianelectionintegrityinitiative.com",
+              "facebookcareer.com",
+              "facebookcheats.com",
+              "facebookck.com",
+              "facebookclub.com",
+              "facebookcom.com",
+              "facebookconsultant.org",
+              "facebookcoronavirus.com",
+              "facebookcovers.org",
+              "facebookcredits.info",
+              "facebookdating.net",
+              "facebookdusexe.org",
+              "facebookemail.com",
+              "facebookenespanol.com",
+              "facebookexchange.com",
+              "facebookexchange.net",
+              "facebookfacebook.com",
+              "facebookflow.com",
+              "facebookgames.com",
+              "facebookgraphsearch.com",
+              "facebookgraphsearch.info",
+              "facebookgroups.com",
+              "facebookhome.cc",
+              "facebookhome.com",
+              "facebookhome.info",
+              "facebookhub.com",
+              "facebooki.com",
+              "facebookinc.com",
+              "facebookland.com",
+              "facebooklikeexchange.com",
+              "facebooklive.com",
+              "facebooklivestaging.net",
+              "facebooklivestaging.org",
+              "facebooklogin.com",
+              "facebooklogin.info",
+              "facebookloginhelp.net",
+              "facebooklogs.com",
+              "facebookmail.com",
+              "facebookmail.tv",
+              "facebookmanager.info",
+              "facebookmarketing.info",
+              "facebookmarketingpartner.com",
+              "facebookmarketingpartners.com",
+              "facebookmobile.com",
+              "facebookmsn.com",
+              "facebooknews.com",
+              "facebooknfl.com",
+              "facebooknude.com",
+              "facebookofsex.com",
+              "facebookook.com",
+              "facebookpaper.com",
+              "facebookpay.com",
+              "facebookphonenumber.net",
+              "facebookphoto.com",
+              "facebookphotos.com",
+              "facebookpmdcenter.com",
+              "facebookpoke.net",
+              "facebookpoke.org",
+              "facebookpoker.info",
+              "facebookpokerchips.info",
+              "facebookporn.net",
+              "facebookporn.org",
+              "facebookporno.net",
+              "facebookportal.com",
+              "facebooks.com",
+              "facebooksafety.com",
+              "facebooksecurity.net",
+              "facebookshop.com",
+              "facebooksignup.net",
+              "facebooksite.net",
+              "facebookstories.com",
+              "facebookstudios.net",
+              "facebookstudios.org",
+              "facebooksupplier.com",
+              "facebooksuppliers.com",
+              "facebookswagemea.com",
+              "facebookswagstore.com",
+              "facebooksz.com",
+              "facebookthreads.net",
+              "facebooktv.net",
+              "facebooktv.org",
+              "facebookvacation.com",
+              "facebookw.com",
+              "facebookwork.com",
+              "facebookworld.com",
+              "facebool.com",
+              "facebool.info",
+              "facebooll.com",
+              "faceboom.com",
+              "faceboon.com",
+              "faceboonk.com",
+              "faceboooik.com",
+              "faceboook.com",
+              "faceboop.com",
+              "faceboot.com",
+              "faceboox.com",
+              "facebopk.com",
+              "facebpook.com",
+              "facebuk.com",
+              "facebuok.com",
+              "facebvook.com",
+              "facebyook.com",
+              "facebzook.com",
+              "facecbgook.com",
+              "facecbook.com",
+              "facecbook.org",
+              "facecook.com",
+              "facecook.org",
+              "facedbook.com",
+              "faceebok.com",
+              "faceebook.com",
+              "faceebot.com",
+              "facegbok.com",
+              "facegbook.com",
+              "faceobk.com",
+              "faceobok.com",
+              "faceobook.com",
+              "faceook.com",
+              "facerbooik.com",
+              "facerbook.com",
+              "facesbooc.com",
+              "facesounds.com",
+              "facetook.com",
+              "facevbook.com",
+              "facewbook.co",
+              "facewook.com",
+              "facfacebook.com",
+              "facfebook.com",
+              "fackebook.com",
+              "facnbook.com",
+              "facrbook.com",
+              "facvebook.com",
+              "facwebook.com",
+              "facxebook.com",
+              "fadebook.com",
+              "faebok.com",
+              "faebook.com",
+              "faebookc.com",
+              "faeboook.com",
+              "faecebok.com",
+              "faesebook.com",
+              "fafacebook.com",
+              "faicbooc.com",
+              "fasebokk.com",
+              "fasebook.com",
+              "faseboox.com",
+              "favebook.com",
+              "faycbok.com",
+              "fb.careers",
+              "fb.com",
+              "fb.gg",
+              "fb.me",
+              "fb.watch",
+              "fbacebook.com",
+              "fbbmarket.com",
+              "fbboostyourbusiness.com",
+              "fbcdn.com",
+              "fbcdn.net",
+              "fbfeedback.com",
+              "fbhome.com",
+              "fbidb.io",
+              "fbinc.com",
+              "fbinnovation.com",
+              "fbmarketing.com",
+              "fbreg.com",
+              "fbrpms.com",
+              "fbsbx.com",
+              "fbsbx.net",
+              "fbsupport-covid.net",
+              "fbthirdpartypixel.com",
+              "fbthirdpartypixel.net",
+              "fbthirdpartypixel.org",
+              "fburl.com",
+              "fbwat.ch",
+              "fbworkmail.com",
+              "fcacebook.com",
+              "fcaebook.com",
+              "fcebook.com",
+              "fcebookk.com",
+              "fcfacebook.com",
+              "fdacebook.info",
+              "feacboo.com",
+              "feacbook.com",
+              "feacbooke.com",
+              "feacebook.com",
+              "fecbbok.com",
+              "fecbooc.com",
+              "fecbook.com",
+              "feceboock.com",
+              "fecebook.net",
+              "feceboox.com",
+              "fececbook.com",
+              "feook.com",
+              "ferabook.com",
+              "fescebook.com",
+              "fesebook.com",
+              "ffacebook.com",
+              "fgacebook.com",
+              "ficeboock.com",
+              "fmcebook.com",
+              "fnacebook.com",
+              "fosebook.com",
+              "fpacebook.com",
+              "fqcebook.com",
+              "fracebook.com",
+              "freeb.com",
+              "freebasics.com",
+              "freebasics.net",
+              "freebs.com",
+              "freefacebook.com",
+              "freefacebook.net",
+              "freefacebookads.net",
+              "freefblikes.com",
+              "freindfeed.com",
+              "friendbook.info",
+              "friendfed.com",
+              "friendfeed-api.com",
+              "friendfeed-media.com",
+              "friendfeed.com",
+              "friendfeedmedia.com",
+              "fsacebok.com",
+              "fscebook.com",
+              "fundraisingwithfacebook.com",
+              "funnyfacebook.org",
+              "futureofbusinesssurvey.org",
+              "gacebook.com",
+              "gameroom.com",
+              "gfacecbook.com",
+              "groups.com",
+              "hackerfacebook.com",
+              "hackfacebook.com",
+              "hackfacebookid.com",
+              "hifacebook.info",
+              "howtohackfacebook-account.com",
+              "hsfacebook.com",
+              "httpfacebook.com",
+              "httpsfacebook.com",
+              "httpwwwfacebook.com",
+              "i.org",
+              "internet.org",
+              "klik.me",
+              "liverail.com",
+              "liverail.tv",
+              "login-account.net",
+              "markzuckerberg.com",
+              "midentsolutions.com",
+              "mobilefacebook.com",
+              "moneywithfacebook.com",
+              "myfbfans.com",
+              "newsfeed.com",
+              "nextstop.com",
+              "online-deals.net",
+              "opencreate.org",
+              "pixel.facebook.com",
+              "reachtheworldonfacebook.com",
+              "redkix.com",
+              "shopfacebook.com",
+              "sportsfacebook.com",
+              "sportstream.com",
+              "supportfacebook.com",
+              "terragraph.com",
+              "tfbnw.net",
+              "thefacebook.com",
+              "thefacebook.net",
+              "thefind.com",
+              "toplayerserver.com",
+              "viewpointsfromfacebook.com",
+              "whyfacebook.com",
+              "workplace.com",
+              "workplaceusecases.com",
+              "worldhack.com",
+              "www-facebook.com",
+              "wwwfacebok.com",
+              "wwwfacebook.com",
+              "wwwmfacebook.com",
+              "zuckerberg.com",
+              "zuckerberg.net"
+            ],
+            "domain": [
+              "fbcdn-a.akamaihd.net"
+            ]
+          }
+        ]
       },
       {
-        "type": "remote",
-        "tag": "geosite-openai",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
-        "update_interval": "30d"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-anthropic",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-anthropic.srs",
-        "update_interval": "30d"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-google-gemini",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google-gemini.srs",
-        "update_interval": "30d"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-perplexity",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-perplexity.srs",
-        "update_interval": "30d"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-xai",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-xai.srs",
-        "update_interval": "30d"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-huggingface",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-huggingface.srs",
-        "update_interval": "30d"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-spotify",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-spotify.srs",
-        "update_interval": "30d"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-soundcloud",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-soundcloud.srs",
-        "update_interval": "30d"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-deezer",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-deezer.srs",
-        "update_interval": "30d"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-tidal",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-tidal.srs",
-        "update_interval": "30d"
+        "type": "inline",
+        "tag": "geosite-ai-music",
+        "rules": [
+          {
+            "domain": [
+              "ai.google.dev",
+              "alkalicore-pa.clients6.google.com",
+              "alkalimakersuite-pa.clients6.google.com",
+              "antigravity-pa.googleapis.com",
+              "antigravity.googleapis.com",
+              "browser-intake-datadoghq.com",
+              "cloudaicompanion.googleapis.com",
+              "cloudcode-pa.googleapis.com",
+              "copilot-proxy.githubusercontent.com",
+              "copilot-telemetry-service.githubusercontent.com",
+              "copilot-telemetry.githubusercontent.com",
+              "copilot-workspace.githubnext.com",
+              "copilotprodattachments.blob.core.windows.net",
+              "daily-cloudcode-pa.googleapis.com",
+              "geminiweb-pa.clients.google.com",
+              "geminiweb-pa.clients6.google.com",
+              "notebooklm-pa.googleapis.com",
+              "notebooklm.googleapis.com",
+              "o33249.ingest.sentry.io",
+              "openai.qualtrics.com",
+              "openaiapi-site.azureedge.net",
+              "openaiassets.blob.core.windows.net",
+              "openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net",
+              "openaicom.imgix.net",
+              "openaicomproductionae4b.blob.core.windows.net",
+              "ppl-ai-file-upload.s3.amazonaws.com",
+              "pplx-res.cloudinary.com",
+              "production-openaicom-storage.azureedge.net",
+              "servd-anthropic-website.b-cdn.net",
+              "webchannel-alkalimakersuite-pa.clients6.google.com",
+              "adeventtracker.spotify.com",
+              "adstudio-assets.scdn.co",
+              "audio-ak-spotify-com.akamaized.net",
+              "audio4-ak-spotify-com.akamaized.net",
+              "bloodhound.spotify.com",
+              "cdn-spotify-experiments.conductrics.com",
+              "heads-ak-spotify-com.akamaized.net",
+              "heads4-ak-spotify-com.akamaized.net",
+              "spotify.com.edgesuite.net",
+              "spotify.map.fastly.net",
+              "spotify.map.fastlylb.net"
+            ],
+            "domain_suffix": [
+              "agentclientprotocol.com",
+              "ai.studio",
+              "aicode.googleapis.com",
+              "aida.googleapis.com",
+              "aisandbox-pa.googleapis.com",
+              "aistudio.google.com",
+              "anthropic.com",
+              "antigravity-unleash.goog",
+              "antigravity.google",
+              "anythingllm.com",
+              "arena.ai",
+              "bard.google.com",
+              "cerebras.ai",
+              "chat.com",
+              "chatgpt.com",
+              "chatgpt.livekit.cloud",
+              "chatgpt.site",
+              "chutes.ai",
+              "cici.com",
+              "ciciai.com",
+              "ciciaicdn.com",
+              "clau.de",
+              "claude.ai",
+              "claude.com",
+              "claude.dev",
+              "claudemcpclient.com",
+              "claudemcpcontent.com",
+              "claudeusercontent.com",
+              "clawhub.ai",
+              "clipdrop.co",
+              "codeium.com",
+              "codeiumdata.com",
+              "coderabbit.ai",
+              "coderabbit.gallery.vsassets.io",
+              "cohere.ai",
+              "cohere.com",
+              "comfy.org",
+              "comfyci.org",
+              "comfyregistry.org",
+              "copilot-stg.com",
+              "copilot.cloud.microsoft",
+              "copilot.com",
+              "copilot.microsoft.com",
+              "coze.com",
+              "crewai.com",
+              "crixet.com",
+              "cursor-cdn.com",
+              "cursor.com",
+              "cursor.sh",
+              "cursorapi.com",
+              "cursorvm.com",
+              "deepmind.com",
+              "deepmind.google",
+              "deepwiki.com",
+              "deepwiki.org",
+              "devin.ai",
+              "diabrowser.com",
+              "diabrowser.engineering",
+              "dify.ai",
+              "dola.com",
+              "dreamgen.com",
+              "duck.ai",
+              "elevenlabs.com",
+              "elevenlabs.io",
+              "envato-static.com",
+              "envato.com",
+              "envatousercontent.com",
+              "flow.google",
+              "flow.google.com",
+              "gateway.ai.cloudflare.com",
+              "geller-pa.googleapis.com",
+              "gemini.google",
+              "gemini.google.com",
+              "gemini.gstatic.com",
+              "generativeai.google",
+              "generativelanguage.googleapis.com",
+              "githubcopilot.com",
+              "grazie.ai",
+              "grazie.aws.intellij.net",
+              "grok.com",
+              "grok.x.com",
+              "grokipedia.com",
+              "groq.com",
+              "h2o.ai",
+              "hf.co",
+              "hf.space",
+              "host.livekit.cloud",
+              "huggingface.co",
+              "jasper.ai",
+              "jetbrains.ai",
+              "jules.google",
+              "jules.google.com",
+              "kimi.ai",
+              "kiro.dev",
+              "labs.google",
+              "labs.google.com",
+              "labstailwind.pa.googleapis.com",
+              "langchain.com",
+              "liveperson.net",
+              "lmstudio.ai",
+              "lovart.ai",
+              "lpsnmedia.net",
+              "makersuite.google.com",
+              "manus.im",
+              "manuscdn.com",
+              "marscode.com",
+              "meta.ai",
+              "metaaivm.com",
+              "midjourney.com",
+              "minimax.io",
+              "mistral.ai",
+              "moonshot.ai",
+              "mozilla.ai",
+              "muse.ai",
+              "notebook.google",
+              "notebook.google.com",
+              "notebooklm.google",
+              "notebooklm.google.com",
+              "notegpt.io",
+              "novelai.net",
+              "oaistatic.com",
+              "oaistatsig.com",
+              "oaiusercontent.com",
+              "ollama.com",
+              "opal.google",
+              "opal.google.com",
+              "openai.com",
+              "openai.com.cdn.cloudflare.net",
+              "openai.org",
+              "openart.ai",
+              "openclaw.ai",
+              "opencode.ai",
+              "openrouter.ai",
+              "openspec.dev",
+              "oystermercury.top",
+              "perplexity.ai",
+              "perplexity.com",
+              "plannotator.ai",
+              "poe.com",
+              "poecdn.net",
+              "pplx.ai",
+              "proactivebackend-pa.googleapis.com",
+              "qoder.com",
+              "robinfrontend-pa.googleapis.com",
+              "sider.ai",
+              "sora.com",
+              "spicywriter.com",
+              "stitch.withgoogle.com",
+              "syntx.ai",
+              "talkai.info",
+              "tapnow.ai",
+              "themeforest.net",
+              "trae.ai",
+              "tripo3d.ai",
+              "turn.livekit.cloud",
+              "typesafe.ai",
+              "windsurf.build",
+              "windsurf.com",
+              "x.ai",
+              "youmind.ai",
+              "youmind.com",
+              "youmind.site",
+              "byspotify.com",
+              "lifeatspotify.com",
+              "pscdn.co",
+              "scdn.co",
+              "spoti.fi",
+              "spotify-everywhere.com",
+              "spotify.com",
+              "spotify.design",
+              "spotify.link",
+              "spotifycdn.com",
+              "spotifycdn.net",
+              "spotifycharts.com",
+              "spotifycodes.com",
+              "spotifyforbrands.com",
+              "spotifyforvendors.com",
+              "spotifyjobs.com",
+              "tospotify.com",
+              "sndcdn.com",
+              "soundcloud.cloud",
+              "soundcloud.com",
+              "deezer.com",
+              "dzcdn.net",
+              "tidal.com",
+              "tidalhifi.com",
+              "wimpmusic.com"
+            ],
+            "domain_regex": [
+              "^chatgpt-async-webps-prod-\\S+-\\d+\\.webpubsub\\.azure\\.com$"
+            ]
+          }
+        ]
       }
     ],
     "final": "🍁🕹️📟 𝐀𝐲𝐡𝐚𝐧𝐗-𝐅𝐫𝐞𝐞𝐝𝐨𝐦.👾🛡 ⚔️ 🔄",
