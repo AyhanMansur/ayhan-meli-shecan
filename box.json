@@ -30,6 +30,22 @@
         "server": "185.55.226.26"
       },
       {
+        "tag": "dns_warp_1",
+        "type": "tcp",
+        "server": "185.55.226.26"
+      },
+      {
+        "tag": "dns_warp_2",
+        "type": "udp",
+        "server": "4.2.2.2",
+        "detour": "🇮🇷 𝐢𝐫𝐚𝐧"
+      },
+      {
+        "tag": "dns_warp_3",
+        "type": "udp",
+        "server": "78.157.42.100"
+      },
+      {
         "type": "hosts",
         "tag": "dns_hosts",
         "predefined": {
@@ -61,6 +77,60 @@
           "levelinfinite"
         ],
         "server": "dns_game"
+      },
+      {
+        "type": "logical",
+        "mode": "and",
+        "rules": [
+          {
+            "inbound": [
+              "tun-in"
+            ],
+            "invert": true
+          },
+          {
+            "rule_set": [
+              "calls-whatsapp"
+            ]
+          }
+        ],
+        "server": "dns_warp_1"
+      },
+      {
+        "type": "logical",
+        "mode": "and",
+        "rules": [
+          {
+            "inbound": [
+              "tun-in"
+            ],
+            "invert": true
+          },
+          {
+            "rule_set": [
+              "calls-telegram"
+            ]
+          }
+        ],
+        "server": "dns_warp_2"
+      },
+      {
+        "type": "logical",
+        "mode": "and",
+        "rules": [
+          {
+            "inbound": [
+              "tun-in"
+            ],
+            "invert": true
+          },
+          {
+            "rule_set": [
+              "calls-meta"
+            ]
+          }
+        ],
+        "server": "dns_warp_3"
       },
       {
         "rule_set": "geosite-ir",
@@ -175,8 +245,7 @@
         "🇪🇸 𝐒𝐩𝐚𝐢𝐧",
         "🇨🇦 𝐂𝐚𝐧𝐚𝐝𝐚",
         "🇯🇵 𝐉𝐚𝐩𝐚𝐧",
-				"🇦🇿 𝐀𝐳𝐞𝐫𝐛𝐚𝐢𝐣𝐚𝐧",
-				"🇮🇷 𝐢𝐫𝐚𝐧",
+        "🇦🇿 𝐀𝐳𝐞𝐫𝐛𝐚𝐢𝐣𝐚𝐧",
         "🇺🇸 𝐔𝐧𝐢𝐭𝐞𝐝 𝐒𝐭𝐚𝐭𝐞𝐬",
         "🇧🇷 𝐁𝐫𝐚𝐳𝐢𝐥",
         "🇲🇽 𝐌𝐞𝐱𝐢𝐜𝐨",
@@ -203,7 +272,7 @@
         "🇦🇲 𝐀𝐫𝐦𝐞𝐢𝐚",
         "🇲🇾 𝐌𝐚𝐥𝐚𝐲𝐬𝐢𝐚",
         "🇱🇹 𝐋𝐢𝐭𝐡𝐮𝐚𝐧𝐢𝐚",
-        "🇧🇾 𝐁𝐞𝐥𝐚𝐫𝐮𝐬",
+        "🇧🇾 𝐁𝐞𝐥𝐚𝐫𝐮𝐬"
       ],
       "interrupt_exist_connections": true
     },
@@ -245,10 +314,10 @@
         "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲",
         "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
         "🇦🇲 𝐀𝐫𝐦𝐞𝐢𝐚",
-				"🇦🇿 𝐀𝐳𝐞𝐫𝐛𝐚𝐢𝐣𝐚𝐧",
-				"🇮🇷 𝐢𝐫𝐚𝐧",
+        "🇦🇿 𝐀𝐳𝐞𝐫𝐛𝐚𝐢𝐣𝐚𝐧",
         "🇵🇱 𝐏𝐨𝐥𝐚𝐧𝐝",
         "🇧🇬 𝐁𝐮𝐥𝐠𝐚𝐫𝐢𝐚",
+        "🇭🇺 𝐇𝐮𝐧𝐠𝐚𝐫𝐲"
       ],
       "interrupt_exist_connections": true
     },
@@ -298,7 +367,7 @@
         "🇪🇸 𝐒𝐩𝐚𝐢𝐧",
         "🇨🇦 𝐂𝐚𝐧𝐚𝐝𝐚",
         "🇯🇵 𝐉𝐚𝐩𝐚𝐧",
-				"🇦🇿 𝐀𝐳𝐞𝐫𝐛𝐚𝐢𝐣𝐚𝐧",
+        "🇦🇿 𝐀𝐳𝐞𝐫𝐛𝐚𝐢𝐣𝐚𝐧",
         "🇺🇸 𝐔𝐧𝐢𝐭𝐞𝐝 𝐒𝐭𝐚𝐭𝐞𝐬",
         "🇧🇷 𝐁𝐫𝐚𝐳𝐢𝐥",
         "🇲🇽 𝐌𝐞𝐱𝐢𝐜𝐨",
@@ -328,7 +397,7 @@
         "🇲🇾 𝐌𝐚𝐥𝐚𝐲𝐬𝐢𝐚",
         "🇵🇱 𝐏𝐨𝐥𝐚𝐧𝐝",
         "🇱🇹 𝐋𝐢𝐭𝐡𝐮𝐚𝐧𝐢𝐚",
-        "🇧🇾 𝐁𝐞𝐥𝐚𝐫𝐮𝐬",
+        "🇧🇾 𝐁𝐞𝐥𝐚𝐫𝐮𝐬"
       ],
       "interval": "1440m0s",
       "tolerance": 1,
@@ -342,7 +411,7 @@
     {
       "type": "trojan",
       "tag": "🍁🕹️📟 𝐀𝐲𝐡𝐚𝐧𝐗-𝐅𝐫𝐞𝐞𝐝𝐨𝐦.👾🛡⚔🔄",
-      "server": "104.16.100.100",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "b51436a6-7716-ef2a-e450-8f2b95152b0b",
       "transport": {
@@ -356,7 +425,7 @@
     {
       "type": "trojan",
       "tag": "🕹️ 📟🫆𝐀𝐲𝐡𝐚𝐧𝐗-𝐅𝐫𝐞𝐞𝐝𝐨𝐦.🌌🍀 🔄",
-      "server": "104.17.0.1",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "06a7c544-4936-d4c8-60ca-94a4cc839e08",
       "transport": {
@@ -370,7 +439,7 @@
     {
       "type": "trojan",
       "tag": "𝐉𝐨𝐢𝐧 .🍁🪾 <..@𝐚𝐲𝐡𝐚𝐧𝐝𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫..>🔄",
-      "server": "104.17.0.1",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "70e2ffcb-9d4a-e745-d870-daaafe3f9116",
       "transport": {
@@ -384,7 +453,7 @@
     {
       "type": "trojan",
       "tag": "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
-      "server": "104.17.0.1",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "c3575334-963b-0def-1578-ebad7dfe6c3b",
       "transport": {
@@ -398,7 +467,7 @@
     {
       "type": "trojan",
       "tag": "🇺🇿 𝐔𝐳𝐛𝐞𝐤𝐢𝐬𝐭𝐚𝐧",
-      "server": "104.17.0.1",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "c4dd6666-39dd-9b12-f350-ae116370af1e",
       "transport": {
@@ -412,7 +481,7 @@
     {
       "type": "trojan",
       "tag": "🇮🇱 𝐈𝐬𝐫𝐚𝐞𝐥",
-      "server": "104.17.0.1",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "9b88cf33-2fbe-e026-6d9e-b06af47d1f18",
       "transport": {
@@ -426,7 +495,7 @@
     {
       "type": "trojan",
       "tag": "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲",
-      "server": "104.17.0.1",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "d03ac618-54ff-9712-9f7f-d11369f78c7e",
       "transport": {
@@ -440,7 +509,7 @@
     {
       "type": "trojan",
       "tag": "🇰🇿 𝐊𝐚𝐳𝐚𝐤𝐡𝐬𝐭𝐚𝐧",
-      "server": "104.17.0.1",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "80d4cb87-ac70-e074-bc82-6313d2d1b539",
       "transport": {
@@ -454,7 +523,7 @@
     {
       "type": "trojan",
       "tag": "🇷🇺 𝐑𝐮𝐬𝐬𝐢𝐚",
-      "server": "104.17.0.1",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "70e2ffcb-9d4a-e745-d870-daaafe3f9116",
       "transport": {
@@ -468,7 +537,7 @@
     {
       "type": "trojan",
       "tag": "🇮🇹 𝐈𝐭𝐚𝐥𝐲",
-      "server": "104.17.0.1",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "f273e90b-28bf-345d-78fd-6dfb6d043033",
       "transport": {
@@ -482,7 +551,7 @@
     {
       "type": "trojan",
       "tag": "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝",
-      "server": "www.kali.org",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "244fa069-181c-b386-ff5b-4fbd0f725fa0",
       "transport": {
@@ -496,7 +565,7 @@
     {
       "type": "trojan",
       "tag": "🇱🇻 𝐋𝐚𝐭𝐯𝐢𝐚",
-      "server": "104.17.0.1",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "cd5b0478-bf0d-75de-e93a-ff6a14756ab2",
       "transport": {
@@ -510,7 +579,7 @@
     {
       "type": "trojan",
       "tag": "🇫🇮 𝐅𝐢𝐧𝐥𝐚𝐧𝐝",
-      "server": "104.17.0.1",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "ce0bdef4-8780-14be-4a40-99a1604b1312",
       "transport": {
@@ -524,7 +593,7 @@
     {
       "type": "trojan",
       "tag": "🇩🇪 𝐆𝐞𝐫𝐦𝐚𝐧𝐲",
-      "server": "104.17.0.1",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "6b458e6d-d808-23ca-9d1a-35e099734a79",
       "transport": {
@@ -538,7 +607,7 @@
     {
       "type": "trojan",
       "tag": "🇸🇪 𝐒𝐰𝐞𝐝𝐞𝐧",
-      "server": "104.17.0.1",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "b51436a6-7716-ef2a-e450-8f2b95152b0b",
       "transport": {
@@ -552,7 +621,7 @@
     {
       "type": "trojan",
       "tag": "🇫🇷 𝐅𝐫𝐚𝐧𝐜𝐞",
-      "server": "104.16.100.100",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "9efd3661-bcde-6692-2a9f-21e426a28a33",
       "transport": {
@@ -566,7 +635,7 @@
     {
       "type": "trojan",
       "tag": "🇳🇱 𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬",
-      "server": "104.17.0.1",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "4cb20c33-9839-d5b9-691c-9b6bbdc41a66",
       "transport": {
@@ -580,7 +649,7 @@
     {
       "type": "trojan",
       "tag": "🇬🇧 𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦",
-      "server": "104.16.100.100",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "afefacaf-1b6c-3923-3c0d-d9d5199801fc",
       "transport": {
@@ -594,7 +663,7 @@
     {
       "type": "trojan",
       "tag": "🇸🇬 𝐒𝐢𝐧𝐠𝐚𝐩𝐨𝐫𝐞",
-      "server": "page.gitlab.com",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "67d2876b-d373-2dcb-c935-8f50a38978ef",
       "transport": {
@@ -608,7 +677,7 @@
     {
       "type": "trojan",
       "tag": "🇪🇸 𝐒𝐩𝐚𝐢𝐧",
-      "server": "page.gitlab.com",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "084a6655-8afc-0ca0-edd1-081ec4c4667f",
       "transport": {
@@ -622,7 +691,7 @@
     {
       "type": "trojan",
       "tag": "🇨🇦 𝐂𝐚𝐧𝐚𝐝𝐚",
-      "server": "page.gitlab.com",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "06a7c544-4936-d4c8-60ca-94a4cc839e08",
       "transport": {
@@ -650,7 +719,7 @@
     {
       "type": "trojan",
       "tag": "🇺🇸 𝐔𝐧𝐢𝐭𝐞𝐝 𝐒𝐭𝐚𝐭𝐞𝐬",
-      "server": "104.16.100.100",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "30900eb8-88cf-2e59-0098-8f8c23c2d030",
       "transport": {
@@ -664,7 +733,7 @@
     {
       "type": "trojan",
       "tag": "🇧🇷 𝐁𝐫𝐚𝐳𝐢𝐥",
-      "server": "104.16.100.100",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "7af2936d-011a-b7d3-98d0-d32ce4d6e45f",
       "transport": {
@@ -678,7 +747,7 @@
     {
       "type": "trojan",
       "tag": "🇲🇽 𝐌𝐞𝐱𝐢𝐜𝐨",
-      "server": "104.16.100.100",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "62ef3838-486c-349d-6ac5-3cd7fafb5624",
       "transport": {
@@ -706,7 +775,7 @@
     {
       "type": "trojan",
       "tag": "🇷🇴 𝐑𝐨𝐦𝐚𝐢𝐚",
-      "server": "104.16.100.45",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "93279ebe-ca58-4510-acdf-052e89a7fca0",
       "transport": {
@@ -720,7 +789,7 @@
     {
       "type": "trojan",
       "tag": "🇪🇪 𝐄𝐬𝐭𝐨𝐧𝐢𝐚",
-      "server": "104.16.100.41",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "bb7a4887-cbaa-535a-5537-b31645f3142b",
       "transport": {
@@ -734,7 +803,7 @@
     {
       "type": "trojan",
       "tag": "🇦🇹 𝐀𝐮𝐬𝐭𝐫𝐢𝐚",
-      "server": "104.16.100.32",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "f7fe19c5-1cb3-09af-f323-2fec620ee815",
       "transport": {
@@ -748,7 +817,7 @@
     {
       "type": "trojan",
       "tag": "🇳🇴 𝐍𝐨𝐫𝐰𝐚𝐲",
-      "server": "104.16.100.87",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "caf156b4-56cc-795e-ca74-23b69ca33c6e",
       "transport": {
@@ -762,7 +831,7 @@
     {
       "type": "trojan",
       "tag": "🇨🇿 𝐂𝐳𝐞𝐜𝐡",
-      "server": "104.16.100.86",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "6ea68ba4-4400-0267-5cbf-163f333bdaeb",
       "transport": {
@@ -776,7 +845,7 @@
     {
       "type": "trojan",
       "tag": "🇹🇼 𝐓𝐚𝐢𝐰𝐚𝐧",
-      "server": "104.16.100.94",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "dcb424f6-af02-9213-2319-7d7a5544f54f",
       "transport": {
@@ -790,7 +859,7 @@
     {
       "type": "trojan",
       "tag": "🇰🇭 𝐂𝐚𝐦𝐛𝐨𝐝𝐢𝐚",
-      "server": "104.16.99.86",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "1a9d8c90-2636-47fc-17dd-37ff03e06819",
       "transport": {
@@ -804,7 +873,7 @@
     {
       "type": "trojan",
       "tag": "🇳🇿 𝑵𝒆𝒘 𝒁𝒆𝒂𝒍𝒂𝒏𝒅",
-      "server": "104.16.99.86",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "7bb18796-ee88-d4c0-ddec-4dac0b3a6257",
       "transport": {
@@ -818,7 +887,7 @@
     {
       "type": "trojan",
       "tag": "🇰🇷 𝐒𝐨𝐮𝐭𝐡 𝐊𝐨𝐫𝐞𝐚",
-      "server": "104.16.84.84",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "cf5e922d-3ace-b23e-ca27-4aec22d6dc54",
       "transport": {
@@ -832,7 +901,7 @@
     {
       "type": "trojan",
       "tag": "🇭🇺 𝐇𝐮𝐧𝐠𝐚𝐫𝐲",
-      "server": "104.16.99.86",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "202ec85f-0d90-2dc9-beee-cf162d7796a7",
       "transport": {
@@ -846,7 +915,7 @@
     {
       "type": "trojan",
       "tag": "🇮🇳 𝐢𝐧𝐝𝐢𝐚",
-      "server": "104.16.99.86",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "3a9e69da-1644-d646-e4f1-1d4729449664",
       "transport": {
@@ -860,7 +929,7 @@
     {
       "type": "trojan",
       "tag": "🇭🇰 𝐇𝐨𝐧𝐠 𝐊𝐨𝐧𝐠",
-      "server": "104.16.99.86",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "3b2cbecd-a8a5-298c-bb02-22856760c20a",
       "transport": {
@@ -874,7 +943,7 @@
     {
       "type": "trojan",
       "tag": "🇦🇷 𝐀𝐫𝐠𝐞𝐧𝐭𝐢𝐧𝐚",
-      "server": "104.16.99.89",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "8c50f4f2-8202-0449-a37b-95e27a398560",
       "transport": {
@@ -888,7 +957,7 @@
     {
       "type": "trojan",
       "tag": "🇧🇬 𝐁𝐮𝐥𝐠𝐚𝐫𝐢𝐚",
-      "server": "104.16.99.86",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "4521da38-681c-25a8-f82f-39c5a371e576",
       "transport": {
@@ -902,7 +971,7 @@
     {
       "type": "trojan",
       "tag": "🇦🇺 𝐀𝐮𝐬𝐭𝐫𝐚𝐥𝐢𝐚",
-      "server": "104.16.99.89",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "82b9e628-1110-d65c-ad30-06742ce275e2",
       "transport": {
@@ -916,7 +985,7 @@
     {
       "type": "trojan",
       "tag": "🇧🇪 𝐁𝐞𝐥𝐠𝐢𝐮𝐦",
-      "server": "104.16.99.86",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "bf588a18-c974-0aed-c93f-5dc75f189edf",
       "transport": {
@@ -930,7 +999,7 @@
     {
       "type": "trojan",
       "tag": "🇿🇦 𝐒𝐨𝐮𝐭𝐡 𝐀𝐟𝐫𝐢𝐜𝐚",
-      "server": "104.16.99.89",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "82ae2bd9-ba64-30d8-e032-0dd3aeaf45b7",
       "transport": {
@@ -944,7 +1013,7 @@
     {
       "type": "trojan",
       "tag": "🇮🇸 𝐈𝐜𝐞𝐥𝐚𝐧𝐝",
-      "server": "104.16.99.86",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "79b462ea-88db-52bb-565d-d4b18aae71ac",
       "transport": {
@@ -958,7 +1027,7 @@
     {
       "type": "trojan",
       "tag": "🇻🇳 𝐕𝐢𝐞𝐭𝐧𝐚𝐦",
-      "server": "104.16.99.86",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "64f96403-f32c-575f-1829-0844ce632235",
       "transport": {
@@ -972,7 +1041,7 @@
     {
       "type": "trojan",
       "tag": "🇹🇭 𝐓𝐡𝐚𝐢𝐥𝐚𝐧𝐝",
-      "server": "104.17.0.1",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "390298b2-f05d-b426-b934-751ded63caf1",
       "transport": {
@@ -986,7 +1055,7 @@
     {
       "type": "trojan",
       "tag": "🇩🇰 𝐃𝐞𝐧𝐦𝐚𝐫𝐤",
-      "server": "104.17.0.1",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "c6cc2b6a-59b1-c8cf-b462-0b64a3e9fc9a",
       "transport": {
@@ -1000,7 +1069,7 @@
     {
       "type": "trojan",
       "tag": "🇦🇲 𝐀𝐫𝐦𝐞𝐢𝐚",
-      "server": "104.16.99.86",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "4bdf6541-0916-1d93-c919-aec66abc5532",
       "transport": {
@@ -1014,7 +1083,7 @@
     {
       "type": "trojan",
       "tag": "🇲🇾 𝐌𝐚𝐥𝐚𝐲𝐬𝐢𝐚",
-      "server": "104.16.99.86",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "4ec5d866-abcb-e1ab-dd3f-e2f50102830d",
       "transport": {
@@ -1028,7 +1097,7 @@
     {
       "type": "trojan",
       "tag": "🇵🇱 𝐏𝐨𝐥𝐚𝐧𝐝",
-      "server": "104.16.99.86",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "01ac8c05-9996-2c8e-ebe2-dbb75d94c45b",
       "transport": {
@@ -1042,7 +1111,7 @@
     {
       "type": "trojan",
       "tag": "🇱🇹 𝐋𝐢𝐭𝐡𝐮𝐚𝐧𝐢𝐚",
-      "server": "104.16.99.86",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "eac0d9d3-9072-86cc-da88-96aaeb573084",
       "transport": {
@@ -1056,7 +1125,7 @@
     {
       "type": "trojan",
       "tag": "🇧🇾 𝐁𝐞𝐥𝐚𝐫𝐮𝐬",
-      "server": "104.16.99.86",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "5b755e32-e59d-8a3d-538e-10d20a2364ee",
       "transport": {
@@ -1070,7 +1139,7 @@
     {
       "type": "trojan",
       "tag": "🇦🇿 𝐀𝐳𝐞𝐫𝐛𝐚𝐢𝐣𝐚𝐧",
-      "server": "104.17.0.1",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "f1e1c829-b525-92c6-dab4-1cc7f456118f",
       "transport": {
@@ -1084,7 +1153,7 @@
     {
       "type": "trojan",
       "tag": "🇷🇺 𝐑𝐮𝐬𝐬𝐢𝐚 ⅓",
-      "server": "104.17.0.1",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "70e2ffcb-9d4a-e745-d870-daaafe3f9116",
       "transport": {
@@ -1098,7 +1167,7 @@
     {
       "type": "trojan",
       "tag": "🇰🇿 𝐊𝐚𝐳𝐚𝐤𝐡𝐬𝐭𝐚𝐧 ⅓",
-      "server": "104.17.0.1",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "80d4cb87-ac70-e074-bc82-6313d2d1b539",
       "transport": {
@@ -1112,7 +1181,7 @@
     {
       "type": "trojan",
       "tag": "🇫🇷 𝐅𝐫𝐚𝐧𝐜𝐞 ⅓",
-      "server": "104.16.100.100",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "9efd3661-bcde-6692-2a9f-21e426a28a33",
       "transport": {
@@ -1126,7 +1195,7 @@
     {
       "type": "trojan",
       "tag": "🇧🇬 𝐁𝐮𝐥𝐠𝐚𝐫𝐢𝐚 ⅓",
-      "server": "104.16.99.86",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "4521da38-681c-25a8-f82f-39c5a371e576",
       "transport": {
@@ -1140,7 +1209,7 @@
     {
       "type": "trojan",
       "tag": "🇸🇪 𝐒𝐰𝐞𝐝𝐞𝐧 ⅓",
-      "server": "104.17.0.1",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "b51436a6-7716-ef2a-e450-8f2b95152b0b",
       "transport": {
@@ -1154,7 +1223,7 @@
     {
       "type": "trojan",
       "tag": "🇳🇴 𝐍𝐨𝐫𝐰𝐚𝐲 ⅓",
-      "server": "104.16.100.87",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "caf156b4-56cc-795e-ca74-23b69ca33c6e",
       "transport": {
@@ -1168,7 +1237,7 @@
     {
       "type": "trojan",
       "tag": "🇩🇪 𝐆𝐞𝐫𝐦𝐚𝐧𝐲 ⅓",
-      "server": "104.17.0.1",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "6b458e6d-d808-23ca-9d1a-35e099734a79",
       "transport": {
@@ -1182,7 +1251,7 @@
     {
       "type": "trojan",
       "tag": "🇨🇦 𝐂𝐚𝐧𝐚𝐝𝐚 ⅓",
-      "server": "page.gitlab.com",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "06a7c544-4936-d4c8-60ca-94a4cc839e08",
       "transport": {
@@ -1196,7 +1265,7 @@
     {
       "type": "trojan",
       "tag": "🇧🇷 𝐁𝐫𝐚𝐳𝐢𝐥 ⅓",
-      "server": "104.16.100.100",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "7af2936d-011a-b7d3-98d0-d32ce4d6e45f",
       "transport": {
@@ -1210,7 +1279,7 @@
     {
       "type": "trojan",
       "tag": "🇷🇴 𝐑𝐨𝐦𝐚𝐢𝐚 ⅓",
-      "server": "104.16.100.45",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "93279ebe-ca58-4510-acdf-052e89a7fca0",
       "transport": {
@@ -1224,7 +1293,7 @@
     {
       "type": "trojan",
       "tag": "🇨🇿 𝐂𝐳𝐞𝐜𝐡 ⅓",
-      "server": "104.16.100.86",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "6ea68ba4-4400-0267-5cbf-163f333bdaeb",
       "transport": {
@@ -1238,7 +1307,7 @@
     {
       "type": "trojan",
       "tag": "🇪🇪 𝐄𝐬𝐭𝐨𝐧𝐢𝐚 ⅓",
-      "server": "104.16.100.41",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "bb7a4887-cbaa-535a-5537-b31645f3142b",
       "transport": {
@@ -1252,7 +1321,7 @@
     {
       "type": "trojan",
       "tag": "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲 ⅓",
-      "server": "104.17.0.1",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "d03ac618-54ff-9712-9f7f-d11369f78c7e",
       "transport": {
@@ -1266,7 +1335,7 @@
     {
       "type": "trojan",
       "tag": "🇮🇸 𝐈𝐜𝐞𝐥𝐚𝐧𝐝 ⅓",
-      "server": "104.16.99.86",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "79b462ea-88db-52bb-565d-d4b18aae71ac",
       "transport": {
@@ -1280,7 +1349,7 @@
     {
       "type": "trojan",
       "tag": "🇮🇱 𝐈𝐬𝐫𝐚𝐞𝐥 ⅓",
-      "server": "104.17.0.1",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "9b88cf33-2fbe-e026-6d9e-b06af47d1f18",
       "transport": {
@@ -1294,7 +1363,7 @@
     {
       "type": "trojan",
       "tag": "🇭🇰 𝐇𝐨𝐧𝐠 𝐊𝐨𝐧𝐠 ⅓",
-      "server": "104.16.99.86",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "3b2cbecd-a8a5-298c-bb02-22856760c20a",
       "transport": {
@@ -1308,7 +1377,7 @@
     {
       "type": "trojan",
       "tag": "🇦🇺 𝐀𝐮𝐬𝐭𝐫𝐚𝐥𝐢𝐚 ⅓",
-      "server": "104.16.99.89",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "82b9e628-1110-d65c-ad30-06742ce275e2",
       "transport": {
@@ -1322,7 +1391,7 @@
     {
       "type": "trojan",
       "tag": "🇪🇸 𝐒𝐩𝐚𝐢𝐧 ⅓",
-      "server": "page.gitlab.com",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "084a6655-8afc-0ca0-edd1-081ec4c4667f",
       "transport": {
@@ -1336,7 +1405,7 @@
     {
       "type": "trojan",
       "tag": "🇻🇳 𝐕𝐢𝐞𝐭𝐧𝐚𝐦 ⅓",
-      "server": "104.16.99.86",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "64f96403-f32c-575f-1829-0844ce632235",
       "transport": {
@@ -1350,7 +1419,7 @@
     {
       "type": "trojan",
       "tag": "🇩🇰 𝐃𝐞𝐧𝐦𝐚𝐫𝐤 ⅓",
-      "server": "104.17.0.1",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "c6cc2b6a-59b1-c8cf-b462-0b64a3e9fc9a",
       "transport": {
@@ -1364,7 +1433,7 @@
     {
       "type": "trojan",
       "tag": "🇬🇧 𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦 ⅓",
-      "server": "104.16.100.100",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "afefacaf-1b6c-3923-3c0d-d9d5199801fc",
       "transport": {
@@ -1378,7 +1447,7 @@
     {
       "type": "trojan",
       "tag": "🇳🇱 𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬 ⅓",
-      "server": "104.17.0.1",
+      "server": "atomicmail.io",
       "server_port": 8080,
       "password": "4cb20c33-9839-d5b9-691c-9b6bbdc41a66",
       "transport": {
@@ -1406,7 +1475,9 @@
           "udp"
         ],
         "rule_set": [
-          "geosite-calls",
+          "calls-whatsapp",
+          "calls-telegram",
+          "calls-meta",
           "geoip-telegram",
           "geoip-facebook"
         ],
@@ -1579,7 +1650,250 @@
       },
       {
         "type": "inline",
-        "tag": "geosite-calls",
+        "tag": "geosite-ai-music",
+        "rules": [
+          {
+            "domain": [
+              "ai.google.dev",
+              "alkalicore-pa.clients6.google.com",
+              "alkalimakersuite-pa.clients6.google.com",
+              "antigravity-pa.googleapis.com",
+              "antigravity.googleapis.com",
+              "browser-intake-datadoghq.com",
+              "cloudaicompanion.googleapis.com",
+              "cloudcode-pa.googleapis.com",
+              "copilot-proxy.githubusercontent.com",
+              "copilot-telemetry-service.githubusercontent.com",
+              "copilot-telemetry.githubusercontent.com",
+              "copilot-workspace.githubnext.com",
+              "copilotprodattachments.blob.core.windows.net",
+              "daily-cloudcode-pa.googleapis.com",
+              "geminiweb-pa.clients.google.com",
+              "geminiweb-pa.clients6.google.com",
+              "notebooklm-pa.googleapis.com",
+              "notebooklm.googleapis.com",
+              "o33249.ingest.sentry.io",
+              "openai.qualtrics.com",
+              "openaiapi-site.azureedge.net",
+              "openaiassets.blob.core.windows.net",
+              "openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net",
+              "openaicom.imgix.net",
+              "openaicomproductionae4b.blob.core.windows.net",
+              "ppl-ai-file-upload.s3.amazonaws.com",
+              "pplx-res.cloudinary.com",
+              "production-openaicom-storage.azureedge.net",
+              "servd-anthropic-website.b-cdn.net",
+              "webchannel-alkalimakersuite-pa.clients6.google.com",
+              "adeventtracker.spotify.com",
+              "adstudio-assets.scdn.co",
+              "audio-ak-spotify-com.akamaized.net",
+              "audio4-ak-spotify-com.akamaized.net",
+              "bloodhound.spotify.com",
+              "cdn-spotify-experiments.conductrics.com",
+              "heads-ak-spotify-com.akamaized.net",
+              "heads4-ak-spotify-com.akamaized.net",
+              "spotify.com.edgesuite.net",
+              "spotify.map.fastly.net",
+              "spotify.map.fastlylb.net"
+            ],
+            "domain_suffix": [
+              "agentclientprotocol.com",
+              "ai.studio",
+              "aicode.googleapis.com",
+              "aida.googleapis.com",
+              "aisandbox-pa.googleapis.com",
+              "aistudio.google.com",
+              "anthropic.com",
+              "antigravity-unleash.goog",
+              "antigravity.google",
+              "anythingllm.com",
+              "arena.ai",
+              "bard.google.com",
+              "cerebras.ai",
+              "chat.com",
+              "chatgpt.com",
+              "chatgpt.livekit.cloud",
+              "chatgpt.site",
+              "chutes.ai",
+              "cici.com",
+              "ciciai.com",
+              "ciciaicdn.com",
+              "clau.de",
+              "claude.ai",
+              "claude.com",
+              "claude.dev",
+              "claudemcpclient.com",
+              "claudemcpcontent.com",
+              "claudeusercontent.com",
+              "clawhub.ai",
+              "clipdrop.co",
+              "codeium.com",
+              "codeiumdata.com",
+              "coderabbit.ai",
+              "coderabbit.gallery.vsassets.io",
+              "cohere.ai",
+              "cohere.com",
+              "comfy.org",
+              "comfyci.org",
+              "comfyregistry.org",
+              "copilot-stg.com",
+              "copilot.cloud.microsoft",
+              "copilot.com",
+              "copilot.microsoft.com",
+              "coze.com",
+              "crewai.com",
+              "crixet.com",
+              "cursor-cdn.com",
+              "cursor.com",
+              "cursor.sh",
+              "cursorapi.com",
+              "cursorvm.com",
+              "deepmind.com",
+              "deepmind.google",
+              "deepwiki.com",
+              "deepwiki.org",
+              "devin.ai",
+              "diabrowser.com",
+              "diabrowser.engineering",
+              "dify.ai",
+              "dola.com",
+              "dreamgen.com",
+              "duck.ai",
+              "elevenlabs.com",
+              "elevenlabs.io",
+              "envato-static.com",
+              "envato.com",
+              "envatousercontent.com",
+              "flow.google",
+              "flow.google.com",
+              "gateway.ai.cloudflare.com",
+              "geller-pa.googleapis.com",
+              "gemini.google",
+              "gemini.google.com",
+              "gemini.gstatic.com",
+              "generativeai.google",
+              "generativelanguage.googleapis.com",
+              "githubcopilot.com",
+              "grazie.ai",
+              "grazie.aws.intellij.net",
+              "grok.com",
+              "grok.x.com",
+              "grokipedia.com",
+              "groq.com",
+              "h2o.ai",
+              "hf.co",
+              "hf.space",
+              "host.livekit.cloud",
+              "huggingface.co",
+              "jasper.ai",
+              "jetbrains.ai",
+              "jules.google",
+              "jules.google.com",
+              "kimi.ai",
+              "kiro.dev",
+              "labs.google",
+              "labs.google.com",
+              "labstailwind.pa.googleapis.com",
+              "langchain.com",
+              "liveperson.net",
+              "lmstudio.ai",
+              "lovart.ai",
+              "lpsnmedia.net",
+              "makersuite.google.com",
+              "manus.im",
+              "manuscdn.com",
+              "marscode.com",
+              "meta.ai",
+              "metaaivm.com",
+              "midjourney.com",
+              "minimax.io",
+              "mistral.ai",
+              "moonshot.ai",
+              "mozilla.ai",
+              "muse.ai",
+              "notebook.google",
+              "notebook.google.com",
+              "notebooklm.google",
+              "notebooklm.google.com",
+              "notegpt.io",
+              "novelai.net",
+              "oaistatic.com",
+              "oaistatsig.com",
+              "oaiusercontent.com",
+              "ollama.com",
+              "opal.google",
+              "opal.google.com",
+              "openai.com",
+              "openai.com.cdn.cloudflare.net",
+              "openai.org",
+              "openart.ai",
+              "openclaw.ai",
+              "opencode.ai",
+              "openrouter.ai",
+              "openspec.dev",
+              "oystermercury.top",
+              "perplexity.ai",
+              "perplexity.com",
+              "plannotator.ai",
+              "poe.com",
+              "poecdn.net",
+              "pplx.ai",
+              "proactivebackend-pa.googleapis.com",
+              "qoder.com",
+              "robinfrontend-pa.googleapis.com",
+              "sider.ai",
+              "sora.com",
+              "spicywriter.com",
+              "stitch.withgoogle.com",
+              "syntx.ai",
+              "talkai.info",
+              "tapnow.ai",
+              "themeforest.net",
+              "trae.ai",
+              "tripo3d.ai",
+              "turn.livekit.cloud",
+              "typesafe.ai",
+              "windsurf.build",
+              "windsurf.com",
+              "x.ai",
+              "youmind.ai",
+              "youmind.com",
+              "youmind.site",
+              "byspotify.com",
+              "lifeatspotify.com",
+              "pscdn.co",
+              "scdn.co",
+              "spoti.fi",
+              "spotify-everywhere.com",
+              "spotify.com",
+              "spotify.design",
+              "spotify.link",
+              "spotifycdn.com",
+              "spotifycdn.net",
+              "spotifycharts.com",
+              "spotifycodes.com",
+              "spotifyforbrands.com",
+              "spotifyforvendors.com",
+              "spotifyjobs.com",
+              "tospotify.com",
+              "sndcdn.com",
+              "soundcloud.cloud",
+              "soundcloud.com",
+              "deezer.com",
+              "dzcdn.net",
+              "tidal.com",
+              "tidalhifi.com",
+              "wimpmusic.com"
+            ],
+            "domain_regex": [
+              "^chatgpt-async-webps-prod-\\S+-\\d+\\.webpubsub\\.azure\\.com$"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "inline",
+        "tag": "calls-whatsapp",
         "rules": [
           {
             "domain_suffix": [
@@ -1593,7 +1907,17 @@
               "whatsapp.net",
               "whatsapp.org",
               "whatsapp.tv",
-              "whatsappbrand.com",
+              "whatsappbrand.com"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "inline",
+        "tag": "calls-telegram",
+        "rules": [
+          {
+            "domain_suffix": [
               "cdn-telegram.org",
               "comments.app",
               "contest.com",
@@ -1614,7 +1938,17 @@
               "ton.org",
               "toncenter.com",
               "tx.me",
-              "usercontent.dev",
+              "usercontent.dev"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "inline",
+        "tag": "calls-meta",
+        "rules": [
+          {
+            "domain_suffix": [
               "achat-followers-instagram.com",
               "acheter-followers-instagram.com",
               "acheterdesfollowersinstagram.com",
@@ -2088,249 +2422,6 @@
             ],
             "domain": [
               "fbcdn-a.akamaihd.net"
-            ]
-          }
-        ]
-      },
-      {
-        "type": "inline",
-        "tag": "geosite-ai-music",
-        "rules": [
-          {
-            "domain": [
-              "ai.google.dev",
-              "alkalicore-pa.clients6.google.com",
-              "alkalimakersuite-pa.clients6.google.com",
-              "antigravity-pa.googleapis.com",
-              "antigravity.googleapis.com",
-              "browser-intake-datadoghq.com",
-              "cloudaicompanion.googleapis.com",
-              "cloudcode-pa.googleapis.com",
-              "copilot-proxy.githubusercontent.com",
-              "copilot-telemetry-service.githubusercontent.com",
-              "copilot-telemetry.githubusercontent.com",
-              "copilot-workspace.githubnext.com",
-              "copilotprodattachments.blob.core.windows.net",
-              "daily-cloudcode-pa.googleapis.com",
-              "geminiweb-pa.clients.google.com",
-              "geminiweb-pa.clients6.google.com",
-              "notebooklm-pa.googleapis.com",
-              "notebooklm.googleapis.com",
-              "o33249.ingest.sentry.io",
-              "openai.qualtrics.com",
-              "openaiapi-site.azureedge.net",
-              "openaiassets.blob.core.windows.net",
-              "openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net",
-              "openaicom.imgix.net",
-              "openaicomproductionae4b.blob.core.windows.net",
-              "ppl-ai-file-upload.s3.amazonaws.com",
-              "pplx-res.cloudinary.com",
-              "production-openaicom-storage.azureedge.net",
-              "servd-anthropic-website.b-cdn.net",
-              "webchannel-alkalimakersuite-pa.clients6.google.com",
-              "adeventtracker.spotify.com",
-              "adstudio-assets.scdn.co",
-              "audio-ak-spotify-com.akamaized.net",
-              "audio4-ak-spotify-com.akamaized.net",
-              "bloodhound.spotify.com",
-              "cdn-spotify-experiments.conductrics.com",
-              "heads-ak-spotify-com.akamaized.net",
-              "heads4-ak-spotify-com.akamaized.net",
-              "spotify.com.edgesuite.net",
-              "spotify.map.fastly.net",
-              "spotify.map.fastlylb.net"
-            ],
-            "domain_suffix": [
-              "agentclientprotocol.com",
-              "ai.studio",
-              "aicode.googleapis.com",
-              "aida.googleapis.com",
-              "aisandbox-pa.googleapis.com",
-              "aistudio.google.com",
-              "anthropic.com",
-              "antigravity-unleash.goog",
-              "antigravity.google",
-              "anythingllm.com",
-              "arena.ai",
-              "bard.google.com",
-              "cerebras.ai",
-              "chat.com",
-              "chatgpt.com",
-              "chatgpt.livekit.cloud",
-              "chatgpt.site",
-              "chutes.ai",
-              "cici.com",
-              "ciciai.com",
-              "ciciaicdn.com",
-              "clau.de",
-              "claude.ai",
-              "claude.com",
-              "claude.dev",
-              "claudemcpclient.com",
-              "claudemcpcontent.com",
-              "claudeusercontent.com",
-              "clawhub.ai",
-              "clipdrop.co",
-              "codeium.com",
-              "codeiumdata.com",
-              "coderabbit.ai",
-              "coderabbit.gallery.vsassets.io",
-              "cohere.ai",
-              "cohere.com",
-              "comfy.org",
-              "comfyci.org",
-              "comfyregistry.org",
-              "copilot-stg.com",
-              "copilot.cloud.microsoft",
-              "copilot.com",
-              "copilot.microsoft.com",
-              "coze.com",
-              "crewai.com",
-              "crixet.com",
-              "cursor-cdn.com",
-              "cursor.com",
-              "cursor.sh",
-              "cursorapi.com",
-              "cursorvm.com",
-              "deepmind.com",
-              "deepmind.google",
-              "deepwiki.com",
-              "deepwiki.org",
-              "devin.ai",
-              "diabrowser.com",
-              "diabrowser.engineering",
-              "dify.ai",
-              "dola.com",
-              "dreamgen.com",
-              "duck.ai",
-              "elevenlabs.com",
-              "elevenlabs.io",
-              "envato-static.com",
-              "envato.com",
-              "envatousercontent.com",
-              "flow.google",
-              "flow.google.com",
-              "gateway.ai.cloudflare.com",
-              "geller-pa.googleapis.com",
-              "gemini.google",
-              "gemini.google.com",
-              "gemini.gstatic.com",
-              "generativeai.google",
-              "generativelanguage.googleapis.com",
-              "githubcopilot.com",
-              "grazie.ai",
-              "grazie.aws.intellij.net",
-              "grok.com",
-              "grok.x.com",
-              "grokipedia.com",
-              "groq.com",
-              "h2o.ai",
-              "hf.co",
-              "hf.space",
-              "host.livekit.cloud",
-              "huggingface.co",
-              "jasper.ai",
-              "jetbrains.ai",
-              "jules.google",
-              "jules.google.com",
-              "kimi.ai",
-              "kiro.dev",
-              "labs.google",
-              "labs.google.com",
-              "labstailwind.pa.googleapis.com",
-              "langchain.com",
-              "liveperson.net",
-              "lmstudio.ai",
-              "lovart.ai",
-              "lpsnmedia.net",
-              "makersuite.google.com",
-              "manus.im",
-              "manuscdn.com",
-              "marscode.com",
-              "meta.ai",
-              "metaaivm.com",
-              "midjourney.com",
-              "minimax.io",
-              "mistral.ai",
-              "moonshot.ai",
-              "mozilla.ai",
-              "muse.ai",
-              "notebook.google",
-              "notebook.google.com",
-              "notebooklm.google",
-              "notebooklm.google.com",
-              "notegpt.io",
-              "novelai.net",
-              "oaistatic.com",
-              "oaistatsig.com",
-              "oaiusercontent.com",
-              "ollama.com",
-              "opal.google",
-              "opal.google.com",
-              "openai.com",
-              "openai.com.cdn.cloudflare.net",
-              "openai.org",
-              "openart.ai",
-              "openclaw.ai",
-              "opencode.ai",
-              "openrouter.ai",
-              "openspec.dev",
-              "oystermercury.top",
-              "perplexity.ai",
-              "perplexity.com",
-              "plannotator.ai",
-              "poe.com",
-              "poecdn.net",
-              "pplx.ai",
-              "proactivebackend-pa.googleapis.com",
-              "qoder.com",
-              "robinfrontend-pa.googleapis.com",
-              "sider.ai",
-              "sora.com",
-              "spicywriter.com",
-              "stitch.withgoogle.com",
-              "syntx.ai",
-              "talkai.info",
-              "tapnow.ai",
-              "themeforest.net",
-              "trae.ai",
-              "tripo3d.ai",
-              "turn.livekit.cloud",
-              "typesafe.ai",
-              "windsurf.build",
-              "windsurf.com",
-              "x.ai",
-              "youmind.ai",
-              "youmind.com",
-              "youmind.site",
-              "byspotify.com",
-              "lifeatspotify.com",
-              "pscdn.co",
-              "scdn.co",
-              "spoti.fi",
-              "spotify-everywhere.com",
-              "spotify.com",
-              "spotify.design",
-              "spotify.link",
-              "spotifycdn.com",
-              "spotifycdn.net",
-              "spotifycharts.com",
-              "spotifycodes.com",
-              "spotifyforbrands.com",
-              "spotifyforvendors.com",
-              "spotifyjobs.com",
-              "tospotify.com",
-              "sndcdn.com",
-              "soundcloud.cloud",
-              "soundcloud.com",
-              "deezer.com",
-              "dzcdn.net",
-              "tidal.com",
-              "tidalhifi.com",
-              "wimpmusic.com"
-            ],
-            "domain_regex": [
-              "^chatgpt-async-webps-prod-\\S+-\\d+\\.webpubsub\\.azure\\.com$"
             ]
           }
         ]
