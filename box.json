@@ -43,7 +43,7 @@
       {
         "tag": "dns_warp_3",
         "type": "udp",
-        "server": "78.157.42.100"
+        "server": "1.0.0.1"
       },
       {
         "type": "hosts",
@@ -317,7 +317,6 @@
         "🇦🇿 𝐀𝐳𝐞𝐫𝐛𝐚𝐢𝐣𝐚𝐧",
         "🇵🇱 𝐏𝐨𝐥𝐚𝐧𝐝",
         "🇧🇬 𝐁𝐮𝐥𝐠𝐚𝐫𝐢𝐚",
-        "🇭🇺 𝐇𝐮𝐧𝐠𝐚𝐫𝐲"
       ],
       "interrupt_exist_connections": true
     },
