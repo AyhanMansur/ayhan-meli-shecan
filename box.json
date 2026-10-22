@@ -7,10 +7,9 @@
   "dns": {
     "servers": [
       {
-        "type": "https",
+        "type": "tcp",
         "tag": "dns_proxy",
-        "server": "fastest-config-by-ayhan.umc-mansur13.workers.dev",
-        "path": "/dns-query",
+        "server": "185.55.224.24",
         "domain_resolver": "dns_direct",
         "detour": "🍁🕹️📟 𝐀𝐲𝐡𝐚𝐧𝐗-𝐅𝐫𝐞𝐞𝐝𝐨𝐦.👾🛡 ⚔️ 🔄"
       },
