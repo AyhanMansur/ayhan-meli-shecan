@@ -25,8 +25,8 @@
       },
       {
         "tag": "dns_direct",
-        "type": "udp",
-        "server": "1.0.0.1"
+        "type": "tcp",
+        "server": "185.55.226.26"
       },
       {
         "type": "hosts",
@@ -193,13 +193,13 @@
     {
       "type": "tun",
       "tag": "tun-in",
-      "mtu": 1430,
+      "mtu": 1480,
       "auto_route": true,
-      "strict_route": true,
+      "strict_route": false,
       "stack": "system",
       "address": [
         "172.16.0.1/30",
-        "fd00::1/126"
+        "fd00::1/126",
       ]
     }
   ],
@@ -393,7 +393,7 @@
     {
       "type": "trojan",
       "tag": "🍁🕹️📟 𝐀𝐲𝐡𝐚𝐧𝐗-𝐅𝐫𝐞𝐞𝐝𝐨𝐦.👾🛡⚔🔄",
-      "server": "185.148.107.106",
+      "server": "1hashtag.ir",
       "server_port": 8080,
       "password": "b51436a6-7716-ef2a-e450-8f2b95152b0b",
       "transport": {
@@ -407,7 +407,7 @@
     {
       "type": "trojan",
       "tag": "🕹️ 📟🫆𝐀𝐲𝐡𝐚𝐧𝐗-𝐅𝐫𝐞𝐞𝐝𝐨𝐦.🌌🍀 🔄",
-      "server": "185.148.107.106",
+      "server": "2606:4700::",
       "server_port": 8080,
       "password": "06a7c544-4936-d4c8-60ca-94a4cc839e08",
       "transport": {
@@ -421,7 +421,7 @@
     {
       "type": "trojan",
       "tag": "𝐉𝐨𝐢𝐧 .🍁🪾 <..@𝐚𝐲𝐡𝐚𝐧𝐝𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫..>🔄",
-      "server": "185.148.107.106",
+      "server": "2606:4700::",
       "server_port": 8080,
       "password": "70e2ffcb-9d4a-e745-d870-daaafe3f9116",
       "transport": {
@@ -435,7 +435,7 @@
     {
       "type": "trojan",
       "tag": "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
-      "server": "185.148.107.106",
+      "server": "1hashtag.ir",
       "server_port": 8080,
       "password": "c3575334-963b-0def-1578-ebad7dfe6c3b",
       "transport": {
@@ -449,7 +449,7 @@
     {
       "type": "trojan",
       "tag": "🇺🇿 𝐔𝐳𝐛𝐞𝐤𝐢𝐬𝐭𝐚𝐧",
-      "server": "185.148.107.106",
+      "server": "1hashtag.ir",
       "server_port": 8080,
       "password": "c4dd6666-39dd-9b12-f350-ae116370af1e",
       "transport": {
@@ -463,7 +463,7 @@
     {
       "type": "trojan",
       "tag": "🇮🇱 𝐈𝐬𝐫𝐚𝐞𝐥",
-      "server": "185.148.107.106",
+      "server": "1hashtag.ir",
       "server_port": 8080,
       "password": "9b88cf33-2fbe-e026-6d9e-b06af47d1f18",
       "transport": {
@@ -477,7 +477,7 @@
     {
       "type": "trojan",
       "tag": "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲",
-      "server": "185.148.107.106",
+      "server": "1hashtag.ir",
       "server_port": 8080,
       "password": "d03ac618-54ff-9712-9f7f-d11369f78c7e",
       "transport": {
@@ -491,7 +491,7 @@
     {
       "type": "trojan",
       "tag": "🇰🇿 𝐊𝐚𝐳𝐚𝐤𝐡𝐬𝐭𝐚𝐧",
-      "server": "185.148.107.106",
+      "server": "1hashtag.ir",
       "server_port": 8080,
       "password": "80d4cb87-ac70-e074-bc82-6313d2d1b539",
       "transport": {
@@ -505,7 +505,7 @@
     {
       "type": "trojan",
       "tag": "🇷🇺 𝐑𝐮𝐬𝐬𝐢𝐚",
-      "server": "185.148.107.106",
+      "server": "1hashtag.ir",
       "server_port": 8080,
       "password": "70e2ffcb-9d4a-e745-d870-daaafe3f9116",
       "transport": {
@@ -519,7 +519,7 @@
     {
       "type": "trojan",
       "tag": "🇮🇹 𝐈𝐭𝐚𝐥𝐲",
-      "server": "185.148.107.106",
+      "server": "1hashtag.ir",
       "server_port": 8080,
       "password": "f273e90b-28bf-345d-78fd-6dfb6d043033",
       "transport": {
@@ -533,7 +533,7 @@
     {
       "type": "trojan",
       "tag": "🇨🇭 𝐒𝐰𝐢𝐭𝐳𝐞𝐫𝐥𝐚𝐧𝐝",
-      "server": "185.148.107.106",
+      "server": "1hashtag.ir",
       "server_port": 8080,
       "password": "244fa069-181c-b386-ff5b-4fbd0f725fa0",
       "transport": {
@@ -547,7 +547,7 @@
     {
       "type": "trojan",
       "tag": "🇱🇻 𝐋𝐚𝐭𝐯𝐢𝐚",
-      "server": "185.148.107.106",
+      "server": "1hashtag.ir",
       "server_port": 8080,
       "password": "cd5b0478-bf0d-75de-e93a-ff6a14756ab2",
       "transport": {
@@ -561,7 +561,7 @@
     {
       "type": "trojan",
       "tag": "🇫🇮 𝐅𝐢𝐧𝐥𝐚𝐧𝐝",
-      "server": "185.148.107.106",
+      "server": "1hashtag.ir",
       "server_port": 8080,
       "password": "ce0bdef4-8780-14be-4a40-99a1604b1312",
       "transport": {
@@ -575,7 +575,7 @@
     {
       "type": "trojan",
       "tag": "🇩🇪 𝐆𝐞𝐫𝐦𝐚𝐧𝐲",
-      "server": "185.148.107.106",
+      "server": "1hashtag.ir",
       "server_port": 8080,
       "password": "6b458e6d-d808-23ca-9d1a-35e099734a79",
       "transport": {
