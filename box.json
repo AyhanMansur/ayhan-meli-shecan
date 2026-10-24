@@ -9,7 +9,15 @@
       {
         "type": "tcp",
         "tag": "dns_proxy",
-        "server": "185.55.224.24",
+        "server": "2001:4860:4860::8888",
+        "domain_resolver": "dns_direct",
+        "detour": "🍁🕹️📟 𝐀𝐲𝐡𝐚𝐧𝐗-𝐅𝐫𝐞𝐞𝐝𝐨𝐦.👾🛡 ⚔️ 🔄"
+      },
+      {
+        "type": "https",
+        "tag": "dns_proxy2",
+        "server": "fastest-config-by-ayhan.umc-mansur13.workers.dev",
+        "path": "/dns-query",
         "domain_resolver": "dns_direct",
         "detour": "🍁🕹️📟 𝐀𝐲𝐡𝐚𝐧𝐗-𝐅𝐫𝐞𝐞𝐝𝐨𝐦.👾🛡 ⚔️ 🔄"
       },
@@ -139,7 +147,7 @@
       }
     ],
     "final": "dns_proxy",
-    "strategy": "ipv4_only"
+    "strategy": "prefer_ipv6"
   },
   "ntp": {
     "enabled": true,
@@ -617,7 +625,7 @@
     {
       "type": "trojan",
       "tag": "🇳🇱 𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬",
-      "server": "185.148.107.106",
+      "server": "185.148.107.10",
       "server_port": 8080,
       "password": "4cb20c33-9839-d5b9-691c-9b6bbdc41a66",
       "transport": {
@@ -1037,7 +1045,7 @@
     {
       "type": "trojan",
       "tag": "🇩🇰 𝐃𝐞𝐧𝐦𝐚𝐫𝐤",
-      "server": "185.148.107.106",
+      "server": "1hashtag.ir",
       "server_port": 8080,
       "password": "c6cc2b6a-59b1-c8cf-b462-0b64a3e9fc9a",
       "transport": {
@@ -1401,7 +1409,7 @@
     {
       "type": "trojan",
       "tag": "🇩🇰 𝐃𝐞𝐧𝐦𝐚𝐫𝐤 ⅓",
-      "server": "atomicmail.io",
+      "server": "",
       "server_port": 8080,
       "password": "c6cc2b6a-59b1-c8cf-b462-0b64a3e9fc9a",
       "transport": {
