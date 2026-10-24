@@ -7,9 +7,9 @@
   "dns": {
     "servers": [
       {
-        "type": "tcp",
+        "type": "udp",
         "tag": "dns_proxy",
-        "server": "8.8.8.8",
+        "server": "2620:fe::fe",
         "domain_resolver": "dns_local",
         "detour": "🍁🕹️📟 𝐀𝐲𝐡𝐚𝐧𝐗-𝐅𝐫𝐞𝐞𝐝𝐨𝐦.👾🛡 ⚔️ 🔄"
       },
@@ -34,7 +34,7 @@
       {
         "tag": "dns_direct",
         "type": "tcp",
-        "server": "185.55.226.26"
+        "server": "2620:fe::fe"
       },
       {
         "tag": "dns_local",
@@ -52,6 +52,12 @@
           ]
         }
       },
+      {
+        "type": "fakeip",
+        "tag": "dns_fakeip",
+        "inet4_range": "198.18.0.0/15",
+        "inet6_range": "fc00::/18"
+      }
     ],
     "rules": [
       {
@@ -154,7 +160,6 @@
       "tag": "🍁🕹️📟 𝐀𝐲𝐡𝐚𝐧𝐗-𝐅𝐫𝐞𝐞𝐝𝐨𝐦.👾🛡 ⚔️ 🔄",
       "default": "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
       "outbounds": [
-        "🔄 𝐔𝐩𝐝𝐚𝐭𝐞 𝐃𝐚𝐢𝐥𝐲",
         "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
         "🇺🇿 𝐔𝐳𝐛𝐞𝐤𝐢𝐬𝐭𝐚𝐧",
         "🇮🇱 𝐈𝐬𝐫𝐚𝐞𝐥",
@@ -195,6 +200,7 @@
         "🇧🇪 𝐁𝐞𝐥𝐠𝐢𝐮𝐦",
         "🇿🇦 𝐒𝐨𝐮𝐭𝐡 𝐀𝐟𝐫𝐢𝐜𝐚",
         "🇮🇸 𝐈𝐜𝐞𝐥𝐚𝐧𝐝",
+        "🇻🇳 𝐕𝐢𝐞𝐭𝐧𝐚𝐦",
         "🇹🇭 𝐓𝐡𝐚𝐢𝐥𝐚𝐧𝐝",
         "🇩🇰 𝐃𝐞𝐧𝐦𝐚𝐫𝐤",
         "🇦🇲 𝐀𝐫𝐦𝐞𝐢𝐚",
@@ -1086,8 +1092,9 @@
     {
       "type": "trojan",
       "tag": "🇸🇦 𝐒𝐚𝐮𝐝𝐢 𝐀𝐫𝐚𝐛𝐢𝐚",
-      "server": "www.kali.org",
-      "server_port": 2086,
+      "server": "2606:4700::",
+      "server_port": 8080,
+      "domain_resolver": "dns_local",
       "password": "7357fee1-193b-6f03-09f1-4fad1d512042",
       "transport": {
         "type": "ws",
@@ -1100,8 +1107,9 @@
     {
       "type": "trojan",
       "tag": "🇦🇱 𝐀𝐥𝐛𝐚𝐧𝐢𝐚",
-      "server": "www.kali.org",
-      "server_port": 2095,
+      "server": "2606:4700::",
+      "server_port": 8080,
+      "domain_resolver": "dns_local",
       "password": "1a5f9142-d831-b8eb-636d-5983f59dc8de",
       "transport": {
         "type": "ws",
