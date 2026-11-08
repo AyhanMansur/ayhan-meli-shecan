@@ -37,6 +37,11 @@
         "server": "9.9.9.9"
       },
       {
+        "tag": "dns_ech",
+        "type": "udp",
+        "server": "78.157.42.100"
+      },
+      {
         "tag": "dns_local",
         "type": "local"
       },
@@ -60,6 +65,15 @@
       }
     ],
     "rules": [
+      {
+        "domain": [
+          "cloudflare-ech.com"
+        ],
+        "query_type": [
+          "HTTPS"
+        ],
+        "server": "dns_ech"
+      },
       {
         "domain_keyword": [
           "callofduty",
@@ -160,13 +174,13 @@
       "tag": "🍁🕹️📟 𝐀𝐲𝐡𝐚𝐧𝐗-𝐅𝐫𝐞𝐞𝐝𝐨𝐦.👾🛡 ⚔️ 🔄",
       "default": "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
       "outbounds": [
-        "🔄 𝐔𝐩𝐝𝐚𝐭𝐞 𝐃𝐚𝐢𝐥𝐲",
         "🍁🕹️📟 𝐀𝐲𝐡𝐚𝐧𝐗-𝐅𝐫𝐞𝐞𝐝𝐨𝐦.👾🛡⚔🔄",
         "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
         "🇺🇿 𝐔𝐳𝐛𝐞𝐤𝐢𝐬𝐭𝐚𝐧",
         "🇮🇱 𝐈𝐬𝐫𝐚𝐞𝐥",
         "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲",
         "🇰🇿 𝐊𝐚𝐳𝐚𝐤𝐡𝐬𝐭𝐚𝐧",
+				"🇮🇷 𝐢𝐫𝐚𝐧",
         "🇸🇦 𝐒𝐚𝐮𝐝𝐢 𝐀𝐫𝐚𝐛𝐢𝐚",
         "🇷🇺 𝐑𝐮𝐬𝐬𝐢𝐚",
         "🇮🇹 𝐈𝐭𝐚𝐥𝐲",
@@ -194,7 +208,6 @@
         "🇰🇷 𝐒𝐨𝐮𝐭𝐡 𝐊𝐨𝐫𝐞𝐚",
         "🇮🇳 𝐢𝐧𝐝𝐢𝐚",
         "🇭🇰 𝐇𝐨𝐧𝐠 𝐊𝐨𝐧𝐠",
-        "🇦🇷 𝐀𝐫𝐠𝐞𝐧𝐭𝐢𝐧𝐚",
         "🇦🇺 𝐀𝐮𝐬𝐭𝐫𝐚𝐥𝐢𝐚",
         "🇧🇪 𝐁𝐞𝐥𝐠𝐢𝐮𝐦",
         "🇿🇦 𝐒𝐨𝐮𝐭𝐡 𝐀𝐟𝐫𝐢𝐜𝐚",
@@ -232,7 +245,9 @@
         "🇪🇸 𝐒𝐩𝐚𝐢𝐧",
         "🇩🇰 𝐃𝐞𝐧𝐦𝐚𝐫𝐤",
         "🇬🇧 𝐔𝐧𝐢𝐭𝐞𝐝 𝐊𝐢𝐧𝐠𝐝𝐨𝐦",
-        "🇳🇱 𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬"
+        "🇳🇱 𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬",
+				"🇹🇼 𝐓𝐚𝐢𝐰𝐚𝐧",
+				
       ],
       "interrupt_exist_connections": true
     },
@@ -244,6 +259,7 @@
         "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲",
         "🇦🇪 𝐃𝐮𝐛𝐚𝐢",
         "🇦🇲 𝐀𝐫𝐦𝐞𝐢𝐚",
+				"🇭🇺 𝐇𝐮𝐧𝐠𝐚𝐫𝐲",
         "🇵🇱 𝐏𝐨𝐥𝐚𝐧𝐝",
         "🇧🇬 𝐁𝐮𝐥𝐠𝐚𝐫𝐢𝐚"
       ],
@@ -266,7 +282,8 @@
         "🇪🇪 𝐄𝐬𝐭𝐨𝐧𝐢𝐚",
         "🇺🇸 𝐔𝐧𝐢𝐭𝐞𝐝 𝐒𝐭𝐚𝐭𝐞𝐬",
         "🇷🇴 𝐑𝐨𝐦𝐚𝐢𝐚",
-        "🇪🇸 𝐒𝐩𝐚𝐢𝐧"
+        "🇪🇸 𝐒𝐩𝐚𝐢𝐧",
+				"🇦🇺 𝐀𝐮𝐬𝐭𝐫𝐚𝐥𝐢𝐚"
       ],
       "interrupt_exist_connections": true
     },
@@ -281,6 +298,7 @@
         "🇮🇱 𝐈𝐬𝐫𝐚𝐞𝐥",
         "🇹🇷 𝐓𝐮𝐫𝐤𝐞𝐲",
         "🇰🇿 𝐊𝐚𝐳𝐚𝐤𝐡𝐬𝐭𝐚𝐧",
+				"🇮🇷 𝐢𝐫𝐚𝐧",
         "🇷🇺 𝐑𝐮𝐬𝐬𝐢𝐚",
         "🇸🇦 𝐒𝐚𝐮𝐝𝐢 𝐀𝐫𝐚𝐛𝐢𝐚",
         "🇮🇹 𝐈𝐭𝐚𝐥𝐲",
@@ -309,7 +327,6 @@
         "🇭🇺 𝐇𝐮𝐧𝐠𝐚𝐫𝐲",
         "🇮🇳 𝐢𝐧𝐝𝐢𝐚",
         "🇭🇰 𝐇𝐨𝐧𝐠 𝐊𝐨𝐧𝐠",
-        "🇦🇷 𝐀𝐫𝐠𝐞𝐧𝐭𝐢𝐧𝐚",
         "🇧🇬 𝐁𝐮𝐥𝐠𝐚𝐫𝐢𝐚",
         "🇦🇺 𝐀𝐮𝐬𝐭𝐫𝐚𝐥𝐢𝐚",
         "🇧🇪 𝐁𝐞𝐥𝐠𝐢𝐮𝐦",
@@ -338,23 +355,25 @@
       "tag": "🍁🕹️📟 𝐀𝐲𝐡𝐚𝐧𝐗-𝐅𝐫𝐞𝐞𝐝𝐨𝐦.👾🛡⚔🔄",
       "server": "4.232.64.201",
       "server_port": 443,
-      "password": "huty10d2kx28n3fu",
+      "password": "4521da38-681c-25a8-f82f-39c5a371e576",
       "tls": {
         "enabled": true,
-        "server_name": "blacklegends.up.railway.app",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
+        "server_name": "ayhanmansur-zedmeli.kdns.fr",
         "alpn": [
           "http/1.1"
         ],
+        "ech": {
+          "enabled": true,
+          "query_server_name": "cloudflare-ech.com"
+        },
         "fragment": true
       },
       "transport": {
-        "type": "httpupgrade",
-        "host": "blacklegendsiran.up.railway.app",
-        "path": "/in1"
+        "type": "ws",
+        "path": "/eyJqdW5rIjoiZWgxOGN2ZlpKdVIiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
+        "headers": {
+          "Host": "ayhanmansur-zedmeli.kdns.fr"
+        }
       }
     },
     {
@@ -366,13 +385,13 @@
       "tls": {
         "enabled": true,
         "server_name": "ayhanmansur-zedmeli.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        },
         "alpn": [
           "http/1.1"
         ],
+        "ech": {
+          "enabled": true,
+          "query_server_name": "cloudflare-ech.com"
+        },
         "fragment": true
       },
       "transport": {
@@ -392,13 +411,13 @@
       "tls": {
         "enabled": true,
         "server_name": "ayhanmansur-zedmeli.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        },
         "alpn": [
           "http/1.1"
         ],
+        "ech": {
+          "enabled": true,
+          "query_server_name": "cloudflare-ech.com"
+        },
         "fragment": true
       },
       "transport": {
@@ -418,13 +437,13 @@
       "tls": {
         "enabled": true,
         "server_name": "ayhanmansur-zedmeli.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        },
         "alpn": [
           "http/1.1"
         ],
+        "ech": {
+          "enabled": true,
+          "query_server_name": "cloudflare-ech.com"
+        },
         "fragment": true
       },
       "transport": {
@@ -444,13 +463,13 @@
       "tls": {
         "enabled": true,
         "server_name": "ayhanmansur-zedmeli.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        },
         "alpn": [
           "http/1.1"
         ],
+        "ech": {
+          "enabled": true,
+          "query_server_name": "cloudflare-ech.com"
+        },
         "fragment": true
       },
       "transport": {
@@ -470,18 +489,45 @@
       "tls": {
         "enabled": true,
         "server_name": "ayhanmansur-zedmeli.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        },
         "alpn": [
           "http/1.1"
         ],
+        "ech": {
+          "enabled": true,
+          "query_server_name": "cloudflare-ech.com"
+        },
         "fragment": true
       },
       "transport": {
         "type": "ws",
         "path": "/eyJqdW5rIjoiOWowM2ZFOHR5dVMiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
+        "headers": {
+          "Host": "ayhanmansur-zedmeli.kdns.fr"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇰🇿 𝐊𝐚𝐳𝐚𝐤𝐡𝐬𝐭𝐚𝐧",
+      "server": "www.pdnczone.com",
+      "server_port": 2087,
+      "domain_resolver": "dns_local",
+      "password": "80d4cb87-ac70-e074-bc82-6313d2d1b539",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhanmansur-zedmeli.kdns.fr",
+        "alpn": [
+          "http/1.1"
+        ],
+        "ech": {
+          "enabled": true,
+          "query_server_name": "cloudflare-ech.com"
+        },
+        "fragment": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/eyJqdW5rIjoiZXJaQklLRUh1R0UiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "ayhanmansur-zedmeli.kdns.fr"
         }
@@ -496,13 +542,13 @@
       "tls": {
         "enabled": true,
         "server_name": "ayhanmansur-zedmeli.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        },
         "alpn": [
           "http/1.1"
         ],
+        "ech": {
+          "enabled": true,
+          "query_server_name": "cloudflare-ech.com"
+        },
         "fragment": true
       },
       "transport": {
@@ -515,32 +561,6 @@
     },
     {
       "type": "trojan",
-      "tag": "🇰🇿 𝐊𝐚𝐳𝐚𝐤𝐡𝐬𝐭𝐚𝐧",
-      "server": "4.232.64.201",
-      "server_port": 443,
-      "password": "blajeoia44xse5af",
-      "tls": {
-        "enabled": true,
-        "server_name": "up.railway.app",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        },
-        "alpn": [
-          "http/1.1"
-        ],
-        "fragment": true
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/in2",
-        "headers": {
-          "Host": "blacklegendsiran.up.railway.app"
-        }
-      }
-    },
-    {
-      "type": "trojan",
       "tag": "🇷🇺 𝐑𝐮𝐬𝐬𝐢𝐚",
       "server": "4.232.64.201",
       "server_port": 443,
@@ -548,44 +568,18 @@
       "tls": {
         "enabled": true,
         "server_name": "ayhanmansur-zedmeli.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        },
         "alpn": [
           "http/1.1"
         ],
+        "ech": {
+          "enabled": true,
+          "query_server_name": "cloudflare-ech.com"
+        },
         "fragment": true
       },
       "transport": {
         "type": "ws",
         "path": "/eyJqdW5rIjoiRjhLbGZ1N3o3dDUiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
-        "headers": {
-          "Host": "ayhanmansur-zedmeli.kdns.fr"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇸🇦 𝐒𝐚𝐮𝐝𝐢 𝐀𝐫𝐚𝐛𝐢𝐚",
-      "server": "4.232.64.201",
-      "server_port": 443,
-      "password": "7357fee1-193b-6f03-09f1-4fad1d512042",
-      "tls": {
-        "enabled": true,
-        "server_name": "ayhanmansur-zedmeli.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        },
-        "alpn": [
-          "http/1.1"
-        ],
-        "fragment": true
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/eyJqdW5rIjoiYjJQY0hMOXRVTmQiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "ayhanmansur-zedmeli.kdns.fr"
         }
@@ -600,18 +594,70 @@
       "tls": {
         "enabled": true,
         "server_name": "ayhanmansur-zedmeli.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        },
         "alpn": [
           "http/1.1"
         ],
+        "ech": {
+          "enabled": true,
+          "query_server_name": "cloudflare-ech.com"
+        },
         "fragment": true
       },
       "transport": {
         "type": "ws",
         "path": "/eyJqdW5rIjoiRlBmMDdZWEFWekMiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
+        "headers": {
+          "Host": "ayhanmansur-zedmeli.kdns.fr"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇸🇦 𝐒𝐚𝐮𝐝𝐢 𝐀𝐫𝐚𝐛𝐢𝐚",
+      "server": "4.232.64.201",
+      "server_port": 443,
+      "password": "7357fee1-193b-6f03-09f1-4fad1d512042",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhanmansur-zedmeli.kdns.fr",
+        "alpn": [
+          "http/1.1"
+        ],
+        "ech": {
+          "enabled": true,
+          "query_server_name": "cloudflare-ech.com"
+        },
+        "fragment": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/eyJqdW5rIjoiYjJQY0hMOXRVTmQiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
+        "headers": {
+          "Host": "ayhanmansur-zedmeli.kdns.fr"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇫🇮 𝐅𝐢𝐧𝐥𝐚𝐧𝐝",
+      "server": "4.232.64.201",
+      "server_port": 443,
+      "password": "ce0bdef4-8780-14be-4a40-99a1604b1312",
+      "tls": {
+        "enabled": true,
+        "server_name": "ayhanmansur-zedmeli.kdns.fr",
+        "alpn": [
+          "http/1.1"
+        ],
+        "ech": {
+          "enabled": true,
+          "query_server_name": "cloudflare-ech.com"
+        },
+        "fragment": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/eyJqdW5rIjoiZHkwYU5tOFRhTFAiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "ayhanmansur-zedmeli.kdns.fr"
         }
@@ -626,13 +672,13 @@
       "tls": {
         "enabled": true,
         "server_name": "ayhanmansur-zedmeli.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        },
         "alpn": [
           "http/1.1"
         ],
+        "ech": {
+          "enabled": true,
+          "query_server_name": "cloudflare-ech.com"
+        },
         "fragment": true
       },
       "transport": {
@@ -652,13 +698,13 @@
       "tls": {
         "enabled": true,
         "server_name": "ayhanmansur-zedmeli.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        },
         "alpn": [
           "http/1.1"
         ],
+        "ech": {
+          "enabled": true,
+          "query_server_name": "cloudflare-ech.com"
+        },
         "fragment": true
       },
       "transport": {
@@ -671,25 +717,25 @@
     },
     {
       "type": "trojan",
-      "tag": "🇫🇮 𝐅𝐢𝐧𝐥𝐚𝐧𝐝",
+      "tag": "🇩🇪 𝐆𝐞𝐫𝐦𝐚𝐧𝐲",
       "server": "4.232.64.201",
       "server_port": 443,
-      "password": "ce0bdef4-8780-14be-4a40-99a1604b1312",
+      "password": "6b458e6d-d808-23ca-9d1a-35e099734a79",
       "tls": {
         "enabled": true,
         "server_name": "ayhanmansur-zedmeli.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        },
         "alpn": [
           "http/1.1"
         ],
+        "ech": {
+          "enabled": true,
+          "query_server_name": "cloudflare-ech.com"
+        },
         "fragment": true
       },
       "transport": {
         "type": "ws",
-        "path": "/eyJqdW5rIjoiZHkwYU5tOFRhTFAiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
+        "path": "/eyJqdW5rIjoid2tNNkNGR1lncHAiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
         "headers": {
           "Host": "ayhanmansur-zedmeli.kdns.fr"
         }
@@ -697,47 +743,20 @@
     },
     {
       "type": "trojan",
-      "tag": "🇩🇪 𝐆𝐞𝐫𝐦𝐚𝐧𝐲",
+      "tag": "🇸🇪 𝐒𝐰𝐞𝐝𝐞𝐧",
       "server": "4.232.64.201",
       "server_port": 443,
-      "password": "2nc7swgls4ewy96c",
-      "tls": {
-        "enabled": true,
-        "server_name": "up.railway.app",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        },
-        "alpn": [
-          "http/1.1"
-        ],
-        "fragment": true
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/in3",
-        "headers": {
-          "Host": "blacklegendsiran.up.railway.app"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇸🇪 𝐒𝐰𝐞𝐝𝐞𝐧",
-      "server": "kali.org",
-      "server_port": 443,
-      "domain_resolver": "dns_local",
       "password": "b51436a6-7716-ef2a-e450-8f2b95152b0b",
       "tls": {
         "enabled": true,
         "server_name": "ayhanmansur-zedmeli.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        },
         "alpn": [
           "http/1.1"
         ],
+        "ech": {
+          "enabled": true,
+          "query_server_name": "cloudflare-ech.com"
+        },
         "fragment": true
       },
       "transport": {
@@ -757,13 +776,13 @@
       "tls": {
         "enabled": true,
         "server_name": "ayhanmansur-zedmeli.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        },
         "alpn": [
           "http/1.1"
         ],
+        "ech": {
+          "enabled": true,
+          "query_server_name": "cloudflare-ech.com"
+        },
         "fragment": true
       },
       "transport": {
@@ -779,23 +798,25 @@
       "tag": "🇳🇱 𝐍𝐞𝐭𝐡𝐞𝐫𝐥𝐚𝐧𝐝𝐬",
       "server": "4.232.64.201",
       "server_port": 443,
-      "password": "huty10d2kx28n3fu",
+      "password": "4cb20c33-9839-d5b9-691c-9b6bbdc41a66",
       "tls": {
         "enabled": true,
-        "server_name": "up.railway.app",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        },
+        "server_name": "ayhanmansur-zedmeli.kdns.fr",
         "alpn": [
           "http/1.1"
         ],
+        "ech": {
+          "enabled": true,
+          "query_server_name": "cloudflare-ech.com"
+        },
         "fragment": true
       },
       "transport": {
-        "type": "httpupgrade",
-        "host": "blacklegendsiran.up.railway.app",
-        "path": "/in1"
+        "type": "ws",
+        "path": "/eyJqdW5rIjoieG5RQ0pSSlBPeWsiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==",
+        "headers": {
+          "Host": "ayhanmansur-zedmeli.kdns.fr"
+        }
       }
     },
     {
@@ -807,13 +828,13 @@
       "tls": {
         "enabled": true,
         "server_name": "ayhanmansur-zedmeli.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        },
         "alpn": [
           "http/1.1"
         ],
+        "ech": {
+          "enabled": true,
+          "query_server_name": "cloudflare-ech.com"
+        },
         "fragment": true
       },
       "transport": {
@@ -833,13 +854,13 @@
       "tls": {
         "enabled": true,
         "server_name": "ayhanmansur-zedmeli.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        },
         "alpn": [
           "http/1.1"
         ],
+        "ech": {
+          "enabled": true,
+          "query_server_name": "cloudflare-ech.com"
+        },
         "fragment": true
       },
       "transport": {
@@ -859,13 +880,13 @@
       "tls": {
         "enabled": true,
         "server_name": "ayhanmansur-zedmeli.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        },
         "alpn": [
           "http/1.1"
         ],
+        "ech": {
+          "enabled": true,
+          "query_server_name": "cloudflare-ech.com"
+        },
         "fragment": true
       },
       "transport": {
@@ -885,13 +906,13 @@
       "tls": {
         "enabled": true,
         "server_name": "ayhanmansur-zedmeli.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        },
         "alpn": [
           "http/1.1"
         ],
+        "ech": {
+          "enabled": true,
+          "query_server_name": "cloudflare-ech.com"
+        },
         "fragment": true
       },
       "transport": {
@@ -1197,13 +1218,13 @@
       "tls": {
         "enabled": true,
         "server_name": "ayhanmansur-zedmeli.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        },
         "alpn": [
           "http/1.1"
         ],
+        "ech": {
+          "enabled": true,
+          "query_server_name": "cloudflare-ech.com"
+        },
         "fragment": true
       },
       "transport": {
@@ -1261,32 +1282,6 @@
       "transport": {
         "type": "ws",
         "path": "/eyJqdW5rIjoibGdtTUxtN3Q3WXEiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
-        "headers": {
-          "Host": "ayhanmansur-zedmeli.kdns.fr"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇦🇷 𝐀𝐫𝐠𝐞𝐧𝐭𝐢𝐧𝐚",
-      "server": "4.232.64.201",
-      "server_port": 443,
-      "password": "8c50f4f2-8202-0449-a37b-95e27a398560",
-      "tls": {
-        "enabled": true,
-        "server_name": "ayhanmansur-zedmeli.kdns.fr",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        },
-        "alpn": [
-          "http/1.1"
-        ],
-        "fragment": true
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/eyJqdW5rIjoiOXVNUHY3WktXb1oiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjoyfQ==",
         "headers": {
           "Host": "ayhanmansur-zedmeli.kdns.fr"
         }
@@ -1942,7 +1937,6 @@
               "geller-pa.googleapis.com",
               "gemini.google",
               "gemini.google.com",
-              "google.com",
               "gemini.gstatic.com",
               "generativeai.google",
               "generativelanguage.googleapis.com",
@@ -1985,6 +1979,7 @@
               "mozilla.ai",
               "muse.ai",
               "notebook.google",
+							"google.com",
               "notebook.google.com",
               "notebooklm.google",
               "notebooklm.google.com",
